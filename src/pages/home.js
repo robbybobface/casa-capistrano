@@ -1,0 +1,510 @@
+import React, { useContext, useEffect } from "react";
+import FadeIn from "react-fade-in";
+import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
+import {
+	Box,
+	Container,
+	Divider,
+	Typography,
+	Grid,
+	Card,
+	CardContent,
+	CardActionArea,
+	CardMedia,
+	Button,
+} from "@mui/material";
+import CookieBanner from "../components/cookie-banner";
+import backgroundArt from "../media/home-art.jpg";
+import { ReactComponent as HomeLogo } from "../media/home-logo-detailed.svg";
+// import blanco from "../media/blanco-copy.png";
+// import cristalino from "../media/cristalino-copy.png";
+// import reposado from "../media/Reposado-copy.png";
+import blancoFixed from "../media/blanco/blanco-setup.jpg";
+import cristalinoFixed from "../media/cristalino/cristalino-setup.jpg";
+import reposadoFixed from "../media/reposado/reposado-setup.jpg";
+
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
+import { AppContext } from "../utils/AppContext";
+
+const Home = () => {
+	const { userReject } = useContext(AppContext);
+	const [stateUserReject, setStateUserReject] = userReject;
+	const [cookies, setCookie] = useCookies(["age_verified", "accept_cookies"]);
+
+	const navigate = useNavigate();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+	return (
+		<Box sx={{ backgroundColor: "primaryBeige.main" }}>
+			<FadeIn>
+				{!cookies.accept_cookies ? stateUserReject ? "" : <CookieBanner /> : ""}
+				<Box
+					component='img'
+					src={backgroundArt}
+					alt='home-art'
+					sx={{
+						mt: {
+							xs: -7,
+							sm: -8,
+							md: -9.45,
+							lg: -9.45,
+						},
+						objectFit: "cover",
+						minHeight: { xs: "600px", md: "800px", lg: "900px" },
+						height: "100vh",
+						width: "100%",
+						position: "relative",
+						filter: "brightness(65%);",
+					}}
+				/>
+
+				<Box
+					sx={{
+						position: "absolute",
+						top: {
+							xs: "30%",
+							sm: "25%",
+							md: "32%",
+							lg: "25%",
+							xl: "30%",
+						},
+						width: "100%",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						flexDirection: "column",
+					}}>
+					<Typography
+						sx={{
+							textAlign: "center",
+							color: "white",
+							fontFamily: "calder-dark-grit-shadow",
+							fontSize: {
+								xs: "60px",
+								sm: "75px",
+								md: "100px",
+								lg: "120px",
+							},
+							// fontStyle: "italic",
+							width: {
+								xs: "90%",
+								sm: "90%",
+								md: "90%",
+								lg: "80%",
+							},
+						}}>
+						Auténico Tequila
+					</Typography>
+					<Typography
+						sx={{
+							textAlign: "center",
+							color: "white",
+							fontFamily: "Patrick Hand SC",
+							fontStyle: "italic",
+							fontSize: {
+								xs: "25px",
+								sm: "30px",
+								md: "40px",
+								lg: "50px",
+							},
+							width: {
+								xs: "90%",
+								sm: "70%",
+								lg: "50%",
+							},
+							letterSpacing: "8px",
+						}}>
+						Where every bottle has its own story to tell...
+					</Typography>
+				</Box>
+
+				<Box
+					sx={{
+						position: "relative",
+						top: 0,
+						width: "100%",
+						height: "100%",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						flexDirection: "column",
+					}}>
+					<Box
+						sx={{
+							position: "absolute",
+							bottom: 0,
+							width: "100%",
+							display: "flex",
+							alignItems: "center",
+							justifyContent: "center",
+							flexDirection: "column",
+						}}>
+						<Typography
+							sx={{
+								textAlign: "center",
+								color: "white",
+								fontFamily: "Patrick Hand SC",
+								fontSize: {
+									xs: "20px",
+									lg: "30px",
+								},
+								fontWeight: 600,
+								fontStyle: "italic",
+								letterSpacing: "5px",
+							}}>
+							Scroll To Explore
+						</Typography>
+						<KeyboardDoubleArrowDownIcon
+							sx={{
+								color: "white",
+								fontSize: {
+									xs: "75px",
+									lg: "100px",
+								},
+								mt: {
+									xs: -0.5,
+									lg: -2,
+								},
+							}}
+							fontSize='80px'
+						/>
+					</Box>
+				</Box>
+				<Box
+					sx={{
+						backgroundColor: "#fffdf7",
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+					}}>
+					<Container
+						sx={{
+							pt: 4,
+							display: "flex",
+							justifyContent: "center",
+							flexDirection: "column",
+							alignItems: "center",
+						}}>
+						<Box
+							sx={{
+								display: "flex",
+								justifyContent: "center",
+								width: {
+									xs: "90%",
+									md: "75%",
+								},
+							}}>
+							<HomeLogo />
+						</Box>
+
+						<Divider
+							sx={{ width: "65%", pt: 2, mb: 4, borderColor: "primaryRed.main", borderBottomWidth: 3 }}
+						/>
+						<Typography
+							sx={{
+								fontFamily: "Roboto",
+								fontSize: {
+									xs: "16px",
+									md: "20px",
+									lg: "22px",
+								},
+								color: "primaryBlack.main",
+								textAlign: "center",
+								width: "90%",
+								mb: 2,
+								fontWeight: 300,
+							}}>
+							Our tequilas are 100% de Agave made to our specifications using a careful mixture of
+							Highland and Lowland Agave, harvested and accurately trimmed for the best flavor. We use a
+							blend of cooked agave for which at least 50% cooks slowly in brick/stone ovens the
+							traditional way also using traditional mills in the process. All water used in production is
+							purified using modern technology and UV sterilization. Our products use distillery
+							cultivated yeast for slow to medium fermentation prior to a double distillation process.
+						</Typography>
+						<Button
+							variant='contained'
+							color='primaryRed'
+							sx={{
+								mb: 3,
+								textTransform: "none",
+								color: "white",
+								fontFamily: "Cabin",
+								fontSize: "16px",
+								borderRadius: "0px",
+							}}
+							onClick={() => {
+								navigate("/about");
+							}}>
+							Learn More
+						</Button>
+						<Divider
+							sx={{
+								width: "65%",
+								mt: 2,
+								mb: { xs: 2, md: 4 },
+								borderColor: "primaryDarkerBeige.main",
+								borderBottomWidth: 1,
+							}}
+						/>
+						<Typography
+							sx={{
+								fontFamily: "Cabin",
+								fontSize: "40px",
+								textAlign: "center",
+
+								fontWeight: 600,
+								color: "primaryBlack.main",
+								textTransform: "uppercase",
+								letterSpacing: "9.9px",
+								// fontStyle: "italic",
+							}}>
+							Our Tequilas
+						</Typography>
+						<Divider
+							sx={{
+								width: { xs: "50%", md: "30%" },
+								pt: 0,
+								mb: { xs: 2, md: 4 },
+								borderColor: "primaryRed.main",
+								borderBottomWidth: 3,
+							}}
+						/>
+					</Container>
+					<Container>
+						<Grid container mb={3} spacing={2} sx={{ display: "flex", justifyContent: "center" }}>
+							<Grid
+								item
+								xs={11}
+								// sm={6}
+								md={4}
+								sx={
+									{
+										// zIndex: 1,
+										// "&:hover": {
+										// 	zIndex: 20,
+										// },
+									}
+								}>
+								<Card
+									sx={{
+										borderRadius: "0px",
+										boxShadow: "1px 1px 5px 1px #01223399",
+										backgroundColor: "#fffdf7",
+
+										"&:hover": {
+											boxShadow: "0px 0px 5px 3px #012233DD",
+										},
+									}}
+									onClick={() => {
+										navigate("/blanco");
+									}}>
+									<CardActionArea sx={{ p: 2 }}>
+										<Box
+											className='gradient'
+											sx={{
+												height: "100%",
+												width: "100%",
+											}}>
+											<CardMedia
+												component='img'
+												height='500px'
+												image={blancoFixed}
+												alt='blanco tequila'
+											/>
+										</Box>
+										<CardContent
+											sx={{
+												display: "flex",
+												justifyContent: "center",
+												flexDirection: "column",
+												p: 0,
+											}}>
+											<Typography
+												component='div'
+												sx={{
+													textAlign: "center",
+													fontFamily: "Cabin",
+													fontWeight: 400,
+													fontSize: "18px",
+													letterSpacing: "2px",
+													color: "white",
+													mt: -7,
+													zIndex: 1,
+												}}>
+												Blanco
+											</Typography>
+										</CardContent>
+									</CardActionArea>
+								</Card>
+							</Grid>
+							<Grid
+								item
+								xs={11}
+								// sm={6}
+								md={4}
+								sx={
+									{
+										// zIndex: 1,
+										// "&:hover": {
+										// 	zIndex: 20,
+										// },
+									}
+								}>
+								<Card
+									sx={{
+										borderRadius: "0px",
+										boxShadow: "1px 1px 5px 1px #01223399",
+										backgroundColor: "#fffdf7",
+
+										"&:hover": {
+											boxShadow: "0px 0px 5px 3px #012233DD",
+										},
+										transition: "all 0.2s ease-in",
+									}}
+									onClick={() => {
+										navigate("/reposado");
+									}}>
+									<CardActionArea sx={{ p: 2 }}>
+										<Box
+											className='gradient'
+											sx={{
+												height: "100%",
+												width: "100%",
+											}}>
+											<CardMedia
+												component='img'
+												height='500px'
+												image={reposadoFixed}
+												alt='reposado tequila'
+												sx={{ zIndex: 1 }}
+											/>
+										</Box>
+										<CardContent
+											sx={{
+												display: "flex",
+												justifyContent: "center",
+												flexDirection: "column",
+												p: 0,
+											}}>
+											<Typography
+												component='div'
+												sx={{
+													textAlign: "center",
+													fontFamily: "Cabin",
+													fontWeight: 400,
+													fontSize: "18px",
+													letterSpacing: "2px",
+													color: "white",
+													mt: -7,
+													zIndex: 1,
+												}}>
+												Reposado
+											</Typography>
+										</CardContent>
+									</CardActionArea>
+								</Card>
+							</Grid>
+							<Grid
+								item
+								xs={11}
+								// sm={6}
+								md={4}
+								sx={
+									{
+										// zIndex: 1,
+										// "&:hover": {
+										// 	zIndex: 20,
+										// },
+									}
+								}>
+								<Card
+									sx={{
+										borderRadius: "0px",
+										boxShadow: "1px 1px 5px 1px #01223399",
+										backgroundColor: "#fffdf7",
+
+										"&:hover": {
+											boxShadow: "0px 0px 5px 3px #012233DD",
+										},
+										transition: "all 0.2s ease-in",
+									}}
+									onClick={() => {
+										navigate("/cristalino");
+									}}>
+									<CardActionArea sx={{ p: 2 }}>
+										<Box
+											className='gradient'
+											sx={{
+												height: "100%",
+												width: "100%",
+											}}>
+											<CardMedia
+												component='img'
+												height='500px'
+												image={cristalinoFixed}
+												alt='cristalino tequila'
+											/>
+										</Box>
+										<CardContent
+											sx={{
+												display: "flex",
+												justifyContent: "center",
+												flexDirection: "column",
+												p: 0,
+											}}>
+											<Typography
+												component='div'
+												sx={{
+													textAlign: "center",
+													fontFamily: "Cabin",
+													fontWeight: 400,
+													fontSize: "18px",
+													letterSpacing: "2px",
+													color: "white",
+													mt: -7,
+													zIndex: 1,
+												}}>
+												Añejo Cristalino
+											</Typography>
+										</CardContent>
+									</CardActionArea>
+								</Card>
+							</Grid>
+							<Grid item xs={10} mt={1} sx={{ display: "flex", justifyContent: "center" }}>
+								<Button
+									variant='outlined'
+									color='primaryBlue'
+									sx={{
+										mb: 3,
+										textTransform: "none",
+										color: "primaryBlue.main",
+										fontFamily: "Cabin",
+										fontSize: "18px",
+										borderRadius: "0px",
+										backgroundColor: "white",
+										borderColor: "primaryBlue.main",
+										boxShadow: "2px 2px 4px 2px #012233",
+										"&:hover": {
+											backgroundColor: "primaryBlue.main",
+											color: "white",
+											boxShadow: "2px 2px 4px 2px rgb(1 34 51 / 44%)",
+										},
+										transition: "all 200ms ease-in",
+									}}
+									onClick={() => {
+										navigate("/products");
+									}}>
+									View All Tequilas
+								</Button>
+							</Grid>
+						</Grid>
+					</Container>
+				</Box>
+			</FadeIn>
+		</Box>
+	);
+};
+
+export default Home;
