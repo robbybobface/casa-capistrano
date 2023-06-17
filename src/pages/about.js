@@ -2,8 +2,6 @@ import { Container, Grid, Box, Typography, Divider } from "@mui/material";
 import React, { useEffect } from "react";
 import FadeIn from "react-fade-in";
 
-import barrels from "../media/barrels.jpg";
-
 const About = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -50,8 +48,8 @@ const About = () => {
 							/>
 							<Box
 								component='img'
-								src={barrels}
-								alt='home-art'
+								src={"https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/barrels.jpg"}
+								alt='barrels'
 								sx={{
 									objectFit: "cover",
 									width: "100%",
@@ -99,6 +97,7 @@ const About = () => {
 											lg: "14px",
 										},
 										lineHeight: "2.5em",
+										textAlign: "justify",
 										pb: 1,
 									}}>
 									My father always said, "Every bottle has its own story to tell." Bearing the name he

@@ -3,17 +3,12 @@ import React, { useEffect, useRef } from "react";
 import FadeIn from "react-fade-in";
 
 import BuyNowBanner from "../components/buy-banner";
-import cristalino from "../media/cristalino/cristalino.png";
-import CristalinoLogo from "../media/cristalino/Cristalino-Logo-Alt.png";
 import { ReactComponent as CristalinoLogoAlt } from "../media/cristalino/cristalino-tequila.svg";
 import { ReactComponent as CristalinoColor } from "../media/cristalino/cristalino-color.svg";
 import { ReactComponent as CristalinoAroma } from "../media/cristalino/cristalino-aroma.svg";
 import { ReactComponent as CristalinoTaste } from "../media/cristalino/cristalino-taste.svg";
 import { ReactComponent as CristalinoFinish } from "../media/cristalino/cristalino-finish.svg";
 import { ReactComponent as CristalinoAwards } from "../media/cristalino/cristalino-awards.svg";
-
-import cristalinoProofSilver from "../media/cristalino/2021.Proof.Cristalino.Silver.jpg";
-import cristalinoSunsetBronze from "../media/cristalino/2021.Sunset.Cristalino.Bronze.jpg";
 
 const Cristalino = () => {
 	const ref = useRef(null);
@@ -33,7 +28,7 @@ const Cristalino = () => {
 				<FadeIn>
 					<Box
 						component='img'
-						src={CristalinoLogo}
+						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Cristalino-Logo-Alt.png'
 						sx={{
 							width: {
 								xs: "90%",
@@ -105,9 +100,10 @@ const Cristalino = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -138,7 +134,7 @@ const Cristalino = () => {
 							}}>
 							<Box
 								component='img'
-								src={cristalino}
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino.png'
 								alt='blanco-art'
 								sx={{
 									objectFit: "contain",
@@ -190,9 +186,10 @@ const Cristalino = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -247,9 +244,10 @@ const Cristalino = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -303,9 +301,10 @@ const Cristalino = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -715,7 +714,7 @@ const Cristalino = () => {
 									component='img'
 									// height='345px'
 									sx={{ height: { xs: "220px", sm: "300px", lg: "345px" } }}
-									image={cristalinoProofSilver}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Cristalino.Silver.jpg'
 									alt='cristalino PR%F Silver'
 									// sx={{ objectFit: "contain" }}
 								/>
@@ -774,7 +773,7 @@ const Cristalino = () => {
 									component='img'
 									// height='345px'
 									sx={{ height: { xs: "220px", sm: "300px", lg: "345px" } }}
-									image={cristalinoSunsetBronze}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Sunset.Cristalino.Bronze.jpg'
 									alt='cristalino sunset award broinze'
 								/>
 								<CardContent

@@ -1,7 +1,6 @@
-import { Box, Grid, Typography, Button, Fade } from "@mui/material";
+import { Box, Grid, Typography, Button, Paper } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import React, { useState } from "react";
-import background from "../media/background.jpg";
 import FadeIn from "react-fade-in";
 import { ReactComponent as Logo } from "../media/logo-alt.svg";
 import { useCookies } from "react-cookie";
@@ -18,7 +17,7 @@ const AgeGate = () => {
 		<>
 			<Box
 				component='img'
-				src={background}
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg'
 				alt='home-art'
 				sx={{
 					display: "block",
@@ -47,7 +46,8 @@ const AgeGate = () => {
 					justifyContent: "center",
 					alignItems: "center",
 				}}>
-				<Box
+				<Paper
+					elevation={3}
 					sx={{
 						backgroundColor: "white",
 						height: {
@@ -57,10 +57,6 @@ const AgeGate = () => {
 						minHeight: "525px",
 						width: "80%",
 						maxWidth: "500px",
-						// position: "absolute",
-						// top: "50%",
-						// left: "50%",
-						// transform: "translate(-50%, -50%)",
 						zIndex: 999999,
 						display: "flex",
 						flexDirection: "column",
@@ -82,20 +78,19 @@ const AgeGate = () => {
 							}}>
 							<Logo />
 						</Box>
-
 						<Typography
 							sx={{
-								fontFamily: "basic-sans",
+								fontFamily: "indie-flower, Roboto",
 								fontSize: {
 									xs: "32px",
 									sm: "45px",
 								},
 								color: "primaryBlue.main",
-								fontWeight: 500,
+								fontWeight: 900,
 								textAlign: "center",
 								px: { xs: 0, md: 4 },
-								fontStyle: "italic",
-								letterSpacing: "3px",
+								// fontStyle: "italic",
+								letterSpacing: "1px",
 								mx: "auto",
 							}}>
 							Welcome to Casa Capistrano!
@@ -103,7 +98,7 @@ const AgeGate = () => {
 						{!oldEnough ? (
 							<Typography
 								sx={{
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, Roboto",
 									fontSize: {
 										xs: "13px",
 										sm: "18px",
@@ -123,10 +118,10 @@ const AgeGate = () => {
 
 						<Typography
 							sx={{
-								fontFamily: "Roboto",
+								fontFamily: "calder-script, Roboto",
 								fontSize: {
-									xs: "14px",
-									sm: "18px",
+									xs: "16px",
+									sm: "24px",
 								},
 								color: "primaryBlue.main",
 								fontWeight: 300,
@@ -156,9 +151,9 @@ const AgeGate = () => {
 										alignItems: "center",
 										textTransform: "none",
 										color: "white",
-										fontFamily: "Roboto",
+										fontFamily: "calder-script, Roboto",
 										fontWeight: 300,
-										fontSize: "18px",
+										fontSize: "24px",
 										borderRadius: "0px",
 										backgroundColor: "primaryBlue.main",
 										borderColor: "primaryBlue.main",
@@ -195,9 +190,9 @@ const AgeGate = () => {
 										justifyContent: "center",
 										alignItems: "center",
 										color: "primaryBlue.main",
-										fontFamily: "Roboto",
+										fontFamily: "calder-script, Roboto",
 										fontWeight: 300,
-										fontSize: "18px",
+										fontSize: "24px",
 										borderRadius: "0px",
 										backgroundColor: "white",
 										borderColor: "primaryBlue.main",
@@ -235,7 +230,7 @@ const AgeGate = () => {
 							in which you reside.
 						</Typography>
 					</FadeIn>
-				</Box>
+				</Paper>
 			</Box>
 		</>
 	);

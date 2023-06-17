@@ -1,9 +1,7 @@
-import { Typography, Box, Container, Button } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 import React, { useEffect } from "react";
 import FadeIn from "react-fade-in";
-import background from "../media/cactus.jpg";
 import { useNavigate } from "react-router-dom";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const NotFound = () => {
 	const navigate = useNavigate();
@@ -14,8 +12,8 @@ const NotFound = () => {
 		<>
 			<Box
 				component='img'
-				src={background}
-				alt='home-art'
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cactus.jpg'
+				alt='cactus-art'
 				sx={{
 					display: "block",
 					verticalAlign: "bottom",

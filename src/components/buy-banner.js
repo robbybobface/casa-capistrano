@@ -1,14 +1,12 @@
 import React from "react";
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
 
-import background from "../media/background.jpg";
-
 const BuyNowBanner = () => {
 	return (
 		<Box sx={{ position: "relative", textAlign: "center" }}>
 			<Box
 				component='img'
-				src={background}
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg'
 				alt='buy-now-banner-art'
 				sx={{
 					objectFit: "cover",
@@ -70,12 +68,13 @@ const BuyNowBanner = () => {
 							sx={{
 								textTransform: "none",
 								color: "primaryBlack.main",
-								fontFamily: "Roboto",
+								fontFamily: "calder-script, roboto",
 								fontWeight: 300,
 								fontSize: {
-									xs: "16px",
-									md: "20px",
+									xs: "20px",
+									md: "24px",
 								},
+								py: 0,
 								width: "160px",
 								boxShadow: "1px 1px 3px 1px #012233",
 								backgroundColor: "white",

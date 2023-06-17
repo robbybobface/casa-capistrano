@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
-import Logo from "../media/logo_white.png";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -32,7 +31,7 @@ const Footer = () => {
 							}}>
 							<Box
 								component='img'
-								src={Logo}
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png'
 								alt='NavBar-Logo'
 								sx={{
 									width: "90%",
@@ -41,7 +40,7 @@ const Footer = () => {
 							/>
 							<Typography
 								sx={{
-									fontFamily: "Roboto",
+									fontFamily: "cabin, Roboto",
 									fontSize: "14px",
 									fontWeight: 300,
 									color: "white",

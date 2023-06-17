@@ -55,7 +55,7 @@ const CookieBanner = () => {
 						<Typography
 							sx={{
 								color: !changeColor ? "primaryBlack.main" : "white",
-								fontFamily: "Roboto",
+								fontFamily: "cabin, Roboto",
 								fontWeight: 300,
 								fontSize: { xs: "14px", md: "14px", lg: "16px" },
 								transition: "all 0.1s ease-in",

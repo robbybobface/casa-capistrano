@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import FadeIn from "react-fade-in";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
@@ -15,14 +15,10 @@ import {
 	Button,
 } from "@mui/material";
 import CookieBanner from "../components/cookie-banner";
-import backgroundArt from "../media/home-art.jpg";
 import { ReactComponent as HomeLogo } from "../media/home-logo-detailed.svg";
 // import blanco from "../media/blanco-copy.png";
 // import cristalino from "../media/cristalino-copy.png";
 // import reposado from "../media/Reposado-copy.png";
-import blancoFixed from "../media/blanco/blanco-setup.jpg";
-import cristalinoFixed from "../media/cristalino/cristalino-setup.jpg";
-import reposadoFixed from "../media/reposado/reposado-setup.jpg";
 
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import { AppContext } from "../utils/AppContext";
@@ -30,10 +26,22 @@ import { AppContext } from "../utils/AppContext";
 const Home = () => {
 	const { userReject } = useContext(AppContext);
 	const [stateUserReject, setStateUserReject] = userReject;
+	const [hideScrollIndicator, setHideScrollIndicator] = useState(false);
 	const [cookies, setCookie] = useCookies(["age_verified", "accept_cookies"]);
 
 	const navigate = useNavigate();
+	const changeText = () => {
+		// console.log(window.scrollY);
+		if (window.scrollY >= 66) {
+			setHideScrollIndicator(false);
+		} else {
+			setHideScrollIndicator(true);
+		}
+	};
 	useEffect(() => {
+		// adding the event when scroll hide scroll indicator
+		changeText();
+		window.addEventListener("scroll", changeText);
 		window.scrollTo(0, 0);
 	}, []);
 	return (
@@ -42,7 +50,7 @@ const Home = () => {
 				{!cookies.accept_cookies ? stateUserReject ? "" : <CookieBanner /> : ""}
 				<Box
 					component='img'
-					src={backgroundArt}
+					src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/home-art.jpg'
 					alt='home-art'
 					sx={{
 						mt: {
@@ -101,13 +109,13 @@ const Home = () => {
 						sx={{
 							textAlign: "center",
 							color: "white",
-							fontFamily: "Patrick Hand SC",
+							fontFamily: "calder-script, Patrick Hand SC, Roboto",
 							fontStyle: "italic",
 							fontSize: {
-								xs: "25px",
-								sm: "30px",
-								md: "40px",
-								lg: "50px",
+								xs: "35px",
+								sm: "40px",
+								md: "60px",
+								lg: "70px",
 							},
 							width: {
 								xs: "90%",
@@ -122,6 +130,7 @@ const Home = () => {
 
 				<Box
 					sx={{
+						opacity: hideScrollIndicator ? 1 : 0,
 						position: "relative",
 						top: 0,
 						width: "100%",
@@ -130,6 +139,7 @@ const Home = () => {
 						alignItems: "center",
 						justifyContent: "center",
 						flexDirection: "column",
+						transition: "all 0.4s ease-in-out",
 					}}>
 					<Box
 						sx={{
@@ -145,7 +155,7 @@ const Home = () => {
 							sx={{
 								textAlign: "center",
 								color: "white",
-								fontFamily: "Patrick Hand SC",
+								fontFamily: "calder-script, Patrick Hand SC, cabin",
 								fontSize: {
 									xs: "20px",
 									lg: "30px",
@@ -204,7 +214,7 @@ const Home = () => {
 						/>
 						<Typography
 							sx={{
-								fontFamily: "Roboto",
+								fontFamily: "cabin, Roboto",
 								fontSize: {
 									xs: "16px",
 									md: "20px",
@@ -230,9 +240,10 @@ const Home = () => {
 								mb: 3,
 								textTransform: "none",
 								color: "white",
-								fontFamily: "Cabin",
-								fontSize: "16px",
+								fontFamily: "calder-script, cabin, Roboto",
+								fontSize: "24px",
 								borderRadius: "0px",
+								py: 0,
 							}}
 							onClick={() => {
 								navigate("/about");
@@ -310,7 +321,7 @@ const Home = () => {
 											<CardMedia
 												component='img'
 												height='500px'
-												image={blancoFixed}
+												image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg'
 												alt='blanco tequila'
 											/>
 										</Box>
@@ -376,7 +387,7 @@ const Home = () => {
 											<CardMedia
 												component='img'
 												height='500px'
-												image={reposadoFixed}
+												image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg'
 												alt='reposado tequila'
 												sx={{ zIndex: 1 }}
 											/>
@@ -424,7 +435,6 @@ const Home = () => {
 										borderRadius: "0px",
 										boxShadow: "1px 1px 5px 1px #01223399",
 										backgroundColor: "#fffdf7",
-
 										"&:hover": {
 											boxShadow: "0px 0px 5px 3px #012233DD",
 										},
@@ -443,7 +453,7 @@ const Home = () => {
 											<CardMedia
 												component='img'
 												height='500px'
-												image={cristalinoFixed}
+												image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg'
 												alt='cristalino tequila'
 											/>
 										</Box>
@@ -480,8 +490,9 @@ const Home = () => {
 										mb: 3,
 										textTransform: "none",
 										color: "primaryBlue.main",
-										fontFamily: "Cabin",
-										fontSize: "18px",
+										fontFamily: "calder-script, cabin, roboto",
+										fontSize: "24px",
+										py: 0,
 										borderRadius: "0px",
 										backgroundColor: "white",
 										borderColor: "primaryBlue.main",

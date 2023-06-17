@@ -5,9 +5,6 @@ import FadeIn from "react-fade-in";
 import { Box, Container, Typography, Divider, Grid, Card, CardContent, CardMedia, Button } from "@mui/material";
 
 import { ReactComponent as OurTequilas } from "../media/our-tequilas.svg";
-import blancoSetup from "../media/blanco/blanco-setup.jpg";
-import cristalinoSetup from "../media/cristalino/cristalino-setup.jpg";
-import reposadoSetup from "../media/reposado/reposado-setup.jpg";
 
 const Products = () => {
 	const navigate = useNavigate();
@@ -91,7 +88,12 @@ const Products = () => {
 								// }}
 							>
 								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia component='img' height='450px' image={blancoSetup} alt='blanco tequila' />
+								<CardMedia
+									component='img'
+									height='450px'
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg'
+									alt='blanco tequila'
+								/>
 								<CardContent
 									sx={{
 										display: "flex",
@@ -106,7 +108,7 @@ const Products = () => {
 											textAlign: "center",
 											fontFamily: "Roboto",
 											fontWeight: 300,
-											fontSize: "22px",
+											fontSize: "30px",
 											letterSpacing: "2px",
 										}}>
 										Blanco
@@ -127,7 +129,7 @@ const Products = () => {
 										<Typography
 											component='div'
 											sx={{
-												fontFamily: "Roboto",
+												fontFamily: "Cabin, Roboto",
 												fontWeight: 300,
 												color: "primaryBlack.main",
 												lineHeight: 2,
@@ -153,12 +155,13 @@ const Products = () => {
 											sx={{
 												textTransform: "none",
 												color: "primaryBlack.main",
-												fontFamily: "Roboto",
+												fontFamily: "calder-script, Roboto",
 												fontWeight: 300,
-												fontSize: "16px",
+												fontSize: "24px",
 												width: "75%",
 												boxShadow: "none",
 												borderRadius: "0px",
+												py: 0,
 												"&:hover": {
 													backgroundColor: "primaryBlanco.main",
 													color: "white",
@@ -204,7 +207,7 @@ const Products = () => {
 								<CardMedia
 									component='img'
 									height='450px'
-									image={reposadoSetup}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg'
 									alt='reposado tequila'
 								/>
 								<CardContent
@@ -229,7 +232,7 @@ const Products = () => {
 											textAlign: "center",
 											fontFamily: "Roboto",
 											fontWeight: 300,
-											fontSize: "22px",
+											fontSize: "30px",
 											letterSpacing: "2px",
 										}}>
 										Reposado
@@ -237,7 +240,7 @@ const Products = () => {
 									<Typography
 										component='div'
 										sx={{
-											fontFamily: "Roboto",
+											fontFamily: "Cabin, Roboto",
 											fontWeight: 300,
 											color: "primaryBlack.main",
 											lineHeight: 2,
@@ -263,9 +266,10 @@ const Products = () => {
 										sx={{
 											textTransform: "none",
 											color: "primaryBlack.main",
-											fontFamily: "Roboto",
+											fontFamily: "calder-script, Roboto",
+											py: 0,
 											fontWeight: 300,
-											fontSize: "16px",
+											fontSize: "24px",
 											width: "75%",
 											boxShadow: "none",
 											borderRadius: "0px",
@@ -313,7 +317,7 @@ const Products = () => {
 								<CardMedia
 									component='img'
 									height='450px'
-									image={cristalinoSetup}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg'
 									alt='cristalino tequila'
 								/>
 								<CardContent
@@ -328,9 +332,9 @@ const Products = () => {
 										component='div'
 										sx={{
 											textAlign: "center",
-											fontFamily: "Roboto",
+											fontFamily: " Roboto",
 											fontWeight: 300,
-											fontSize: "22px",
+											fontSize: "30px",
 											letterSpacing: "2px",
 										}}>
 										Añejo Cristalino
@@ -351,7 +355,7 @@ const Products = () => {
 										<Typography
 											component='div'
 											sx={{
-												fontFamily: "Roboto",
+												fontFamily: "Cabin, Roboto",
 												fontWeight: 300,
 												color: "primaryBlack.main",
 												lineHeight: 2,
@@ -373,9 +377,10 @@ const Products = () => {
 											sx={{
 												textTransform: "none",
 												color: "primaryBlack.main",
-												fontFamily: "Roboto",
+												fontFamily: "calder-script, Roboto",
+												py: 0,
 												fontWeight: 300,
-												fontSize: "16px",
+												fontSize: "24px",
 												width: "75%",
 												boxShadow: "none",
 												mt: "auto",

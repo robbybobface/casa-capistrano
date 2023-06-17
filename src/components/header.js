@@ -21,8 +21,6 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-import Logo from "../media/logo_white.png";
-
 const Header = () => {
 	const drawerWidth = 240;
 	const pageTitles = ["HOME", "ABOUT", "PRODUCTS"];
@@ -52,10 +50,6 @@ const Header = () => {
 		setMobileOpen(!mobileOpen);
 	};
 
-	const handleOpenNavMenu = (event) => {
-		setAnchorElNav(event.currentTarget);
-	};
-
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
 	};
@@ -73,7 +67,7 @@ const Header = () => {
 		<Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
 			<Box
 				component='img'
-				src={Logo}
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png'
 				alt='NavBar-Logo'
 				sx={{
 					width: {
@@ -193,7 +187,7 @@ const Header = () => {
 						)}
 						<Box
 							component='img'
-							src={Logo}
+							src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png'
 							alt='NavBar-Logo'
 							sx={{
 								height: "80%",

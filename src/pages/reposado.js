@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import FadeIn from "react-fade-in";
 
 import BuyNowBanner from "../components/buy-banner";
-import reposado from "../media/reposado/reposado.png";
 
 // import { ReactComponent as ReposadoLogo } from "../media/reposado/Reposado-Logo-Alt.svg";
 import { ReactComponent as ReposadoLogoAlt } from "../media/reposado/reposado-tequila.svg";
@@ -12,13 +11,6 @@ import { ReactComponent as ReposadoAroma } from "../media/reposado/reposado-arom
 import { ReactComponent as ReposadoTaste } from "../media/reposado/reposado-taste.svg";
 import { ReactComponent as ReposadoFinish } from "../media/reposado/reposado-finish.svg";
 import { ReactComponent as ReposadoAwards } from "../media/reposado/reposado-awards.svg";
-
-import ReposadoLogo from "../media/reposado/Reposado-Logo-New.png";
-
-import reposadoProofBronze from "../media/reposado/2021.Proof.Reposado.Bronze.jpg";
-import reposadoSanDiegoSilver from "../media/reposado/2021.SanDiego.Reposado.Silver.png";
-import reposadoSunsetSilver from "../media/reposado/2021.Sunset.Reposado.Silver.jpg";
-import reposadoLVGGold from "../media/reposado/2021.LVG.Reposado.Gold.jpg";
 
 const Reposado = () => {
 	const ref = useRef(null);
@@ -38,7 +30,7 @@ const Reposado = () => {
 				<FadeIn>
 					<Box
 						component='img'
-						src={ReposadoLogo}
+						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Reposado-Logo-New.png'
 						sx={{
 							width: {
 								xs: "90%",
@@ -113,9 +105,10 @@ const Reposado = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -146,7 +139,7 @@ const Reposado = () => {
 							}}>
 							<Box
 								component='img'
-								src={reposado}
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado.png'
 								alt='reposado-art'
 								sx={{
 									objectFit: "contain",
@@ -198,9 +191,10 @@ const Reposado = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -311,9 +305,10 @@ const Reposado = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -722,7 +717,7 @@ const Reposado = () => {
 									component='img'
 									// height='345px'
 									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image={reposadoLVGGold}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.LVG.Reposado.Gold.jpg'
 									alt='reposado LVG Gold'
 									// sx={{ objectFit: "contain"  }}
 								/>
@@ -780,7 +775,7 @@ const Reposado = () => {
 									component='img'
 									// height='345px'
 									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image={reposadoSunsetSilver}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Sunset.Reposado.Silver.jpg'
 									alt='reposado sunset award silver'
 								/>
 								<CardContent
@@ -851,7 +846,7 @@ const Reposado = () => {
 											objectFit: "scale-down",
 										},
 									}}
-									image={reposadoSanDiegoSilver}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Reposado.Silver.png'
 									alt='reposado San Diego Silver'
 									// sx={{ objectFit: "scale-down" }}
 								/>
@@ -915,7 +910,7 @@ const Reposado = () => {
 									component='img'
 									// height='345px'
 									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image={reposadoProofBronze}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Reposado.Bronze.jpg'
 									alt='reposado PR%F bronze'
 									// sx={{ objectFit: "contain" }}
 								/>

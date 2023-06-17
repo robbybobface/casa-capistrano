@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import FadeIn from "react-fade-in";
 
 import BuyNowBanner from "../components/buy-banner";
-import blanco from "../media/blanco/blanco.png";
 // import { ReactComponent as BlancoLogo } from "../media/blanco/Blanco-Logo-Alt-New.svg";
 import { ReactComponent as BlancoLogoAlt } from "../media/blanco/blanco-tequila.svg";
 import { ReactComponent as BlancoColor } from "../media/blanco/blanco-color.svg";
@@ -11,13 +10,6 @@ import { ReactComponent as BlancoAroma } from "../media/blanco/blanco-aroma.svg"
 import { ReactComponent as BlancoTaste } from "../media/blanco/blanco-taste.svg";
 import { ReactComponent as BlancoFinish } from "../media/blanco/blanco-finish.svg";
 import { ReactComponent as BlancoAwards } from "../media/blanco/blanco-awards.svg";
-
-import BlancoLogo from "../media/blanco/blanco-logo.png";
-
-import blancoProofGold from "../media/blanco/2021.Proof.Blanco.Gold.jpg";
-import blancoSanDiegoGold from "../media/blanco/2021.SanDiego.Blanco.Gold.png";
-import blancoSunsetGold from "../media/blanco/2021.Sunset.Blanco.Gold.jpg";
-import blancoLVGSilver from "../media/blanco/2021.LVG.Blanco.Silver.jpg";
 
 const Blanco = () => {
 	const ref = useRef(null);
@@ -37,7 +29,7 @@ const Blanco = () => {
 				<FadeIn>
 					<Box
 						component='img'
-						src={BlancoLogo}
+						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-logo.png'
 						sx={{
 							width: {
 								xs: "90%",
@@ -112,9 +104,10 @@ const Blanco = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -145,7 +138,7 @@ const Blanco = () => {
 							}}>
 							<Box
 								component='img'
-								src={blanco}
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco.png'
 								alt='blanco-art'
 								sx={{
 									objectFit: "contain",
@@ -197,9 +190,10 @@ const Blanco = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -254,9 +248,10 @@ const Blanco = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -310,9 +305,10 @@ const Blanco = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -734,7 +730,7 @@ const Blanco = () => {
 									component='img'
 									// height='345px'
 									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image={blancoSunsetGold}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Sunset.Blanco.Gold.jpg'
 									alt='blanco sunset award gold'
 								/>
 								<CardContent
@@ -796,7 +792,7 @@ const Blanco = () => {
 									component='img'
 									// height='345px'
 									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image={blancoProofGold}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Blanco.Gold.jpg'
 									alt='blanco PR%F gold'
 									// sx={{ objectFit: "contain" }}
 								/>
@@ -862,7 +858,7 @@ const Blanco = () => {
 											objectFit: "scale-down",
 										},
 									}}
-									image={blancoSanDiegoGold}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Blanco.Gold.png'
 									alt='blanco San Diego gold'
 									// sx={{ objectFit: "scale-down" }}
 								/>
@@ -920,7 +916,7 @@ const Blanco = () => {
 									component='img'
 									// height='345px'
 									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image={blancoLVGSilver}
+									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.LVG.Blanco.Silver.jpg'
 									alt='blanco LVG silver'
 									// sx={{ objectFit: "contain"  }}
 								/>
