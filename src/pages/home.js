@@ -22,6 +22,7 @@ import { ReactComponent as HomeLogo } from "../media/home-logo-detailed.svg";
 
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import { AppContext } from "../utils/AppContext";
+import BlurHashedImage from "../components/BlurHashedImage";
 
 const Home = () => {
 	const { userReject } = useContext(AppContext);
@@ -45,27 +46,25 @@ const Home = () => {
 		window.scrollTo(0, 0);
 	}, []);
 	return (
-		<Box sx={{ backgroundColor: "primaryBeige.main" }}>
+		<Box sx={{ backgroundColor: "primaryBeige.main", minHeight: "100vh" }}>
 			<FadeIn>
 				{!cookies.accept_cookies ? stateUserReject ? "" : <CookieBanner /> : ""}
-				<Box
-					component='img'
+				<BlurHashedImage
 					src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/home-art.jpg'
-					alt='home-art'
-					sx={{
-						mt: {
-							xs: -7,
-							sm: -8,
-							md: -9.45,
-							lg: -9.45,
-						},
-						objectFit: "cover",
-						minHeight: { xs: "600px", md: "800px", lg: "900px" },
-						height: "100vh",
-						width: "100%",
-						position: "relative",
-						filter: "brightness(65%);",
+					hash='L9C=;v%M00MdEl-o$%NG00w[~pbw'
+					alt='home art'
+					height='100vh'
+					width='100%'
+					objectFit='cover'
+					mt={{
+						xs: -7,
+						sm: -8,
+						md: -9.45,
+						lg: -9.45,
 					}}
+					minHeight={{ xs: "600px", md: "800px", lg: "900px" }}
+					position='relative'
+					filter='brightness(65%);'
 				/>
 
 				<Box
@@ -83,6 +82,7 @@ const Home = () => {
 						alignItems: "center",
 						justifyContent: "center",
 						flexDirection: "column",
+						zIndex: 18,
 					}}>
 					<Typography
 						sx={{
@@ -90,14 +90,14 @@ const Home = () => {
 							color: "white",
 							fontFamily: "calder-dark-grit-shadow",
 							fontSize: {
-								xs: "60px",
+								xs: "55px",
 								sm: "75px",
 								md: "100px",
 								lg: "120px",
 							},
 							// fontStyle: "italic",
 							width: {
-								xs: "90%",
+								xs: "95%",
 								sm: "90%",
 								md: "90%",
 								lg: "80%",
@@ -112,17 +112,17 @@ const Home = () => {
 							fontFamily: "calder-script, Patrick Hand SC, Roboto",
 							fontStyle: "italic",
 							fontSize: {
-								xs: "35px",
+								xs: "40px",
 								sm: "40px",
-								md: "60px",
+								md: "65px",
 								lg: "70px",
 							},
 							width: {
 								xs: "90%",
-								sm: "70%",
+								sm: "60%",
 								lg: "50%",
 							},
-							letterSpacing: "8px",
+							letterSpacing: { xs: "3px", sm: "4px", md: "5px", lg: "8px" },
 						}}>
 						Where every bottle has its own story to tell...
 					</Typography>
@@ -157,7 +157,9 @@ const Home = () => {
 								color: "white",
 								fontFamily: "calder-script, Patrick Hand SC, cabin",
 								fontSize: {
-									xs: "20px",
+									xs: "22px",
+									sm: "24px",
+									md: "26px",
 									lg: "30px",
 								},
 								fontWeight: 600,
@@ -318,11 +320,13 @@ const Home = () => {
 												height: "100%",
 												width: "100%",
 											}}>
-											<CardMedia
-												component='img'
-												height='500px'
-												image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg'
+											<BlurHashedImage
+												src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg'
+												hash='LCFiJb~p?csq00D$4T4oInEL-pt7'
 												alt='blanco tequila'
+												cardMedia={true}
+												height='500px'
+												sx={{ zIndex: 1 }}
 											/>
 										</Box>
 										<CardContent
@@ -342,7 +346,7 @@ const Home = () => {
 													letterSpacing: "2px",
 													color: "white",
 													mt: -7,
-													zIndex: 1,
+													zIndex: 18,
 												}}>
 												Blanco
 											</Typography>
@@ -384,11 +388,12 @@ const Home = () => {
 												height: "100%",
 												width: "100%",
 											}}>
-											<CardMedia
-												component='img'
-												height='500px'
-												image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg'
+											<BlurHashedImage
+												src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg'
+												hash='L9DSK|K600r?00#+=rELQRkC_N%M'
 												alt='reposado tequila'
+												cardMedia={true}
+												height='500px'
 												sx={{ zIndex: 1 }}
 											/>
 										</Box>
@@ -409,7 +414,7 @@ const Home = () => {
 													letterSpacing: "2px",
 													color: "white",
 													mt: -7,
-													zIndex: 1,
+													zIndex: 18,
 												}}>
 												Reposado
 											</Typography>
@@ -450,11 +455,13 @@ const Home = () => {
 												height: "100%",
 												width: "100%",
 											}}>
-											<CardMedia
-												component='img'
-												height='500px'
-												image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg'
+											<BlurHashedImage
+												src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg'
+												hash='LHD+;:_N%gjYE2xYD%M{00D%IAD%'
 												alt='cristalino tequila'
+												height='500px'
+												cardMedia={true}
+												sx={{ zIndex: 1 }}
 											/>
 										</Box>
 										<CardContent
@@ -474,7 +481,7 @@ const Home = () => {
 													letterSpacing: "2px",
 													color: "white",
 													mt: -7,
-													zIndex: 1,
+													zIndex: 18,
 												}}>
 												Añejo Cristalino
 											</Typography>

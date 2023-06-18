@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Divider, Button, Card, CardMedia, CardContent } from "@mui/material";
+import { Box, Container, Grid, Typography, Divider, Button, Card, CardContent } from "@mui/material";
 import React, { useEffect, useRef } from "react";
 import FadeIn from "react-fade-in";
 
@@ -11,6 +11,7 @@ import { ReactComponent as ReposadoAroma } from "../media/reposado/reposado-arom
 import { ReactComponent as ReposadoTaste } from "../media/reposado/reposado-taste.svg";
 import { ReactComponent as ReposadoFinish } from "../media/reposado/reposado-finish.svg";
 import { ReactComponent as ReposadoAwards } from "../media/reposado/reposado-awards.svg";
+import BlurHashedImage from "../components/BlurHashedImage";
 
 const Reposado = () => {
 	const ref = useRef(null);
@@ -36,7 +37,6 @@ const Reposado = () => {
 								xs: "90%",
 								sm: "80%",
 								md: "60%",
-
 								lg: "60%",
 								xl: "60%",
 							},
@@ -48,9 +48,16 @@ const Reposado = () => {
 							mx: "auto",
 						}}
 					/>
-					{/* <ReposadoLogo /> */}
-					{/* </Box> */}
-
+					{/* <BlurHashedImage
+						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Reposado-Logo-New.png'
+						hash='LDRyg4xtx]t7M{ayM{j[_NofD%ay'
+						alt='reposado logo'
+						width={{ xs: "90%", sm: "80%", md: "60%", lg: "60%", xl: "60%" }}
+						display='flex'
+						justifyContent='center'
+						mb={2}
+						mx='auto'
+					/> */}
 					<Grid
 						container
 						spacing={2}
@@ -155,6 +162,21 @@ const Reposado = () => {
 									filter: "brightness(75%);",
 								}}
 							/>
+							{/* <BlurHashedImage
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado.png'
+								hash='LvNwG?j[~qj[?bayoffR-;ayWBj['
+								alt='reposado bottle'
+								objectFit='contain'
+								height={{
+									xs: "45vh",
+									sm: "50vh",
+									md: "65vh",
+									lg: "63vh",
+									xl: "63vh",
+								}}
+								position='relative'
+								filter='brightness(75%)'
+							/> */}
 						</Grid>
 						<Grid
 							item
@@ -249,9 +271,10 @@ const Reposado = () => {
 								sx={{
 									textTransform: "none",
 									color: "primaryBlack.main",
-									fontFamily: "Roboto",
+									fontFamily: "calder-script, cabin, roboto",
 									fontWeight: 300,
-									fontSize: "16px",
+									py: 0,
+									fontSize: "24px",
 									width: "80%",
 									boxShadow: "none",
 									borderRadius: "0px",
@@ -712,14 +735,12 @@ const Reposado = () => {
 										boxShadow: "0px 0px 10px 2px #6c0d0f;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.LVG.Reposado.Gold.jpg'
-									alt='reposado LVG Gold'
-									// sx={{ objectFit: "contain"  }}
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.LVG.Reposado.Gold.jpg'
+									hash='LEJ7{;t6EWj@?wofRkbI8{aybca}'
+									alt='Reposado Las Vegas Global Gold Award Photo'
+									height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -751,7 +772,6 @@ const Reposado = () => {
 											fontSize: "16px",
 										}}>{`Gold`}</Typography>
 								</CardContent>
-								{/* </CardActionArea> */}
 							</Card>
 						</Grid>
 						<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
@@ -770,13 +790,12 @@ const Reposado = () => {
 										boxShadow: "0px 0px 10px 2px #6c0d0f;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Sunset.Reposado.Silver.jpg'
-									alt='reposado sunset award silver'
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Sunset.Reposado.Silver.jpg'
+									hash='LMFiPx9F4n-;~qIUaet700of%MM{'
+									alt='Reposado Sunset Award Photo'
+									height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -784,7 +803,6 @@ const Reposado = () => {
 										justifyContent: "center",
 										flexDirection: "column",
 										alignItems: "center",
-										// pb: 1,
 									}}>
 									<Typography
 										component='div'
@@ -813,7 +831,6 @@ const Reposado = () => {
 											fontSize: "16px",
 										}}>{`Silver`}</Typography>
 								</CardContent>
-								{/* </CardActionArea> */}
 							</Card>
 						</Grid>
 
@@ -833,22 +850,18 @@ const Reposado = () => {
 										boxShadow: "0px 0px 10px 2px #6c0d0f;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{
-										height: {
-											xs: "220px",
-											sm: "300px",
-											md: "300px",
-											lg: "345px",
-											objectFit: "scale-down",
-										},
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Reposado.Silver.png'
+									hash='L3E:0p~q00%M~q_3-;xu00-;4mRj'
+									alt='Reposado San Diego Award Photo'
+									height={{
+										xs: "220px",
+										sm: "300px",
+										md: "300px",
+										lg: "345px",
 									}}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Reposado.Silver.png'
-									alt='reposado San Diego Silver'
-									// sx={{ objectFit: "scale-down" }}
+									objectFit='scale-down'
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -905,14 +918,12 @@ const Reposado = () => {
 										boxShadow: "0px 0px 10px 2px #6c0d0f;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Reposado.Bronze.jpg'
-									alt='reposado PR%F bronze'
-									// sx={{ objectFit: "contain" }}
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Reposado.Bronze.jpg'
+									hash='L8Km%_4T00~WhL=dMdS$00NGWTOY'
+									alt='Reposado PR%F Award Photo'
+									height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -944,7 +955,6 @@ const Reposado = () => {
 											fontSize: "16px",
 										}}>{`Bronze`}</Typography>
 								</CardContent>
-								{/* </CardActionArea> */}
 							</Card>
 						</Grid>
 					</Grid>

@@ -8,10 +8,8 @@ import {
 	Toolbar,
 	IconButton,
 	Typography,
-	Menu,
 	Container,
 	Button,
-	MenuItem,
 	Divider,
 	List,
 	ListItem,
@@ -26,7 +24,6 @@ const Header = () => {
 	const pageTitles = ["HOME", "ABOUT", "PRODUCTS"];
 	const pageURLs = ["", "about", "products"];
 	const [mobileOpen, setMobileOpen] = useState(false);
-	const [anchorElNav, setAnchorElNav] = useState(null);
 	const [activePage, setActivePage] = useState("home");
 	const [transparent, setTransparent] = useState(true);
 
@@ -48,10 +45,6 @@ const Header = () => {
 
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
-	};
-
-	const handleCloseNavMenu = () => {
-		setAnchorElNav(null);
 	};
 
 	const changeBackground = () => {
@@ -87,7 +80,31 @@ const Header = () => {
 							}}>
 							<ListItemText
 								primary={
-									<Typography sx={{ fontFamily: "Cabin", fontSize: "1.2rem" }}>{item}</Typography>
+									<Typography
+										sx={{
+											fontFamily: "Cabin",
+											fontSize: "1.2rem",
+											"&:hover": {
+												textDecoration: "underline",
+											},
+											color:
+												activePage === "home"
+													? transparent
+														? "primaryBlue.main"
+														: "primaryBlue.main"
+													: "primaryBlue.main",
+											...(pageURLs.at(index) === activePage && {
+												color: "primaryRed.main",
+												textDecoration: "underline",
+											}),
+											...(activePage === "home" &&
+												pageURLs.at(index) === "" && {
+													color: "primaryRed.main",
+													textDecoration: "underline",
+												}),
+										}}>
+										{item}
+									</Typography>
 								}
 							/>
 						</ListItemButton>
@@ -130,61 +147,26 @@ const Header = () => {
 				}}>
 				<Container maxWidth='xl'>
 					<Toolbar disableGutters sx={{ display: "flex", justifyContent: "space-between" }}>
-						{activePage !== "login" && (
-							<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-								<IconButton
-									size='large'
-									aria-label='account of current user'
-									aria-controls='menu-appbar'
-									aria-haspopup='true'
-									onClick={handleDrawerToggle}
-									color='inherit'>
-									<MenuIcon
-										sx={{
-											color:
-												activePage === "home"
-													? transparent
-														? "primaryBeige.main"
-														: "primaryBlack.main"
-													: "primaryBlack.main",
-										}}
-									/>
-								</IconButton>
-								<Menu
-									id='menu-appbar'
-									anchorEl={anchorElNav}
-									anchorOrigin={{
-										vertical: "bottom",
-										horizontal: "left",
-									}}
-									keepMounted
-									transformOrigin={{
-										vertical: "top",
-										horizontal: "left",
-									}}
-									open={Boolean(anchorElNav)}
-									onClose={handleCloseNavMenu}
+						<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+							<IconButton
+								size='large'
+								aria-label='account of current user'
+								aria-controls='menu-appbar'
+								aria-haspopup='true'
+								onClick={handleDrawerToggle}
+								color='inherit'>
+								<MenuIcon
 									sx={{
-										display: { xs: "block", md: "none" },
-									}}>
-									{pageTitles.map((page, index) => (
-										<MenuItem key={page} onClick={handleCloseNavMenu}>
-											<Typography
-												textAlign='center'
-												sx={{
-													color: "primaryBlue",
-													textTransform: "none",
-												}}
-												onClick={() => {
-													navigate(pageURLs.at(index));
-												}}>
-												{page}
-											</Typography>
-										</MenuItem>
-									))}
-								</Menu>
-							</Box>
-						)}
+										color:
+											activePage === "home"
+												? transparent
+													? "primaryBeige.main"
+													: "primaryBlack.main"
+												: "primaryBlack.main",
+									}}
+								/>
+							</IconButton>
+						</Box>
 						<Box
 							component='img'
 							src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png'
@@ -192,7 +174,7 @@ const Header = () => {
 							sx={{
 								height: "80%",
 								width: {
-									xs: "300px",
+									xs: "80%",
 									sm: "400px",
 									md: "400px",
 									lg: "350px",
@@ -223,7 +205,7 @@ const Header = () => {
 								fontSize: "14px",
 							}}></Typography>
 						<Box sx={{ display: { xs: "none", md: "flex" }, ml: { xs: 1, lg: 3, xl: 4 } }}>
-							{activePage !== "login" &&
+							{pageTitles.length > 0 &&
 								pageTitles.map((page, index) => (
 									<Button
 										key={page}
@@ -276,7 +258,11 @@ const Header = () => {
 					}}
 					sx={{
 						display: { xs: "block", lg: "none" },
-						"& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+						"& .MuiDrawer-paper": {
+							boxSizing: "border-box",
+							width: drawerWidth,
+							backgroundColor: "#fffdf7",
+						},
 					}}
 					onClick={handleDrawerToggle}>
 					{drawer}

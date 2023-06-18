@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Divider, Button, Card, CardMedia, CardContent } from "@mui/material";
+import { Box, Container, Grid, Typography, Divider, Button, Card, CardContent } from "@mui/material";
 import React, { useEffect, useRef } from "react";
 import FadeIn from "react-fade-in";
 
@@ -9,6 +9,7 @@ import { ReactComponent as CristalinoAroma } from "../media/cristalino/cristalin
 import { ReactComponent as CristalinoTaste } from "../media/cristalino/cristalino-taste.svg";
 import { ReactComponent as CristalinoFinish } from "../media/cristalino/cristalino-finish.svg";
 import { ReactComponent as CristalinoAwards } from "../media/cristalino/cristalino-awards.svg";
+import BlurHashedImage from "../components/BlurHashedImage";
 
 const Cristalino = () => {
 	const ref = useRef(null);
@@ -709,14 +710,12 @@ const Cristalino = () => {
 										boxShadow: "0px 0px 10px 2px #020406;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{ height: { xs: "220px", sm: "300px", lg: "345px" } }}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Cristalino.Silver.jpg'
-									alt='cristalino PR%F Silver'
-									// sx={{ objectFit: "contain" }}
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Cristalino.Silver.jpg'
+									hash='L9KK$m4T4U~WM_-pD%e.00OXI:S#'
+									alt='Cristalino PR%F Silver Award Photo'
+									height={{ xs: "220px", sm: "300px", lg: "345px" }}
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -724,7 +723,6 @@ const Cristalino = () => {
 										justifyContent: "center",
 										flexDirection: "column",
 										alignItems: "center",
-										// pb: 1,
 									}}>
 									<Typography
 										component='div'
@@ -735,8 +733,6 @@ const Cristalino = () => {
 											lineHeight: 2,
 											fontSize: "16px",
 											textAlign: "center",
-											// px: 2,
-											// py: 1,
 										}}>
 										2021 PR%F Awards
 									</Typography>
@@ -747,9 +743,10 @@ const Cristalino = () => {
 											fontFamily: "Cabin",
 											lineHeight: 2,
 											fontSize: "16px",
-										}}>{`Silver`}</Typography>
+										}}>
+										Silver
+									</Typography>
 								</CardContent>
-								{/* </CardActionArea> */}
 							</Card>
 						</Grid>
 						<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
@@ -768,13 +765,12 @@ const Cristalino = () => {
 										boxShadow: "0px 0px 10px 2px #020406;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{ height: { xs: "220px", sm: "300px", lg: "345px" } }}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Sunset.Cristalino.Bronze.jpg'
-									alt='cristalino sunset award broinze'
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Sunset.Cristalino.Bronze.jpg'
+									hash='LIEV7,M{5rRj~VM{o#WB5sM|$#WV'
+									alt='Cristalino Sunset Bronze Award Photo'
+									height={{ xs: "220px", sm: "300px", lg: "345px" }}
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -782,7 +778,6 @@ const Cristalino = () => {
 										justifyContent: "center",
 										flexDirection: "column",
 										alignItems: "center",
-										// pb: 1,
 									}}>
 									<Typography
 										component='div'
@@ -793,8 +788,6 @@ const Cristalino = () => {
 											lineHeight: 2,
 											fontSize: "16px",
 											textAlign: "center",
-											// px: 2,
-											// py: 1,
 											mx: {
 												xs: 0,
 												md: -1.5,
@@ -810,9 +803,10 @@ const Cristalino = () => {
 											fontFamily: "Cabin",
 											lineHeight: 2,
 											fontSize: "16px",
-										}}>{`Bronze`}</Typography>
+										}}>
+										Bronze
+									</Typography>
 								</CardContent>
-								{/* </CardActionArea> */}
 							</Card>
 						</Grid>
 					</Grid>

@@ -2,6 +2,7 @@ import { Typography, Box, Button } from "@mui/material";
 import React, { useEffect } from "react";
 import FadeIn from "react-fade-in";
 import { useNavigate } from "react-router-dom";
+import BlurHashedImage from "../components/BlurHashedImage";
 
 const NotFound = () => {
 	const navigate = useNavigate();
@@ -10,7 +11,7 @@ const NotFound = () => {
 	}, []);
 	return (
 		<>
-			<Box
+			{/* <Box
 				component='img'
 				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cactus.jpg'
 				alt='cactus-art'
@@ -25,16 +26,34 @@ const NotFound = () => {
 					filter: "brightness(60%) blur(3px)",
 					zIndex: 10,
 					p: 0,
-					// mt: "-4px",
 				}}
+			/> */}
+			<BlurHashedImage
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cactus.jpg'
+				hash='LECu6fIU?]M|%MoztRt7?vWCMdjt'
+				display='block'
+				verticalAlign='bottom'
+				objectFit='cover'
+				alt='cactus art'
+				height='100vh'
+				width='100%'
+				mt={{
+					xs: -7,
+					sm: -8,
+					md: -9.45,
+					lg: -9.45,
+				}}
+				minHeight={{ xs: "600px", md: "800px", lg: "900px" }}
+				position='relative'
+				filter='brightness(60%) blur(3px)'
+				zIndex={10}
+				p={0}
 			/>
 			<Box
 				sx={{
-					// maxWidth: "500px",
 					position: "absolute",
 					top: "30%",
 					width: "100%",
-					// transform: "translate(-50%, -50%)",
 					zIndex: 10,
 					display: "flex",
 					flexDirection: "column",
@@ -43,7 +62,7 @@ const NotFound = () => {
 				}}>
 				<Box
 					sx={{
-						backgroundColor: "#FFFFFFCC",
+						backgroundColor: "#fffdf7CC",
 						height: {
 							xs: "52%",
 							md: "55%",

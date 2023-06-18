@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import FadeIn from "react-fade-in";
 import { ReactComponent as Logo } from "../media/logo-alt.svg";
 import { useCookies } from "react-cookie";
+import BlurHashedImage from "./BlurHashedImage";
 
 const AgeGate = () => {
 	const [oldEnough, setOldEnough] = useState(true);
@@ -15,7 +16,7 @@ const AgeGate = () => {
 	}
 	return (
 		<>
-			<Box
+			{/* <Box
 				component='img'
 				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg'
 				alt='home-art'
@@ -30,8 +31,22 @@ const AgeGate = () => {
 					filter: "brightness(80%) blur(1px)",
 					zIndex: 1000,
 					p: 0,
-					// mt: "-4px",
 				}}
+			/> */}
+			<BlurHashedImage
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg?tr=w-1920'
+				hash='L.Ko4RRjM{t7~qofkCof%2s.ayof'
+				display='block'
+				verticalAlign='bottom'
+				objectFit='cover'
+				alt='cactus art'
+				height='100vh'
+				width='100%'
+				minHeight={{ xs: "600px", md: "800px", lg: "700px" }}
+				position='relative'
+				filter='brightness(80%) blur(1px)'
+				zIndex={1000}
+				p={0}
 			/>
 			<Box
 				sx={{

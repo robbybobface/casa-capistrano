@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import FadeIn from "react-fade-in";
 
-import { Box, Container, Typography, Divider, Grid, Card, CardContent, CardMedia, Button } from "@mui/material";
+import { Box, Container, Typography, Divider, Grid, Card, CardContent, Button } from "@mui/material";
 
 import { ReactComponent as OurTequilas } from "../media/our-tequilas.svg";
+import BlurHashedImage from "../components/BlurHashedImage";
 
 const Products = () => {
 	const navigate = useNavigate();
@@ -88,11 +89,12 @@ const Products = () => {
 								// }}
 							>
 								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									height='450px'
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg'
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg'
+									hash='LCFiJb~p?csq00D$4T4oInEL-pt7'
 									alt='blanco tequila'
+									cardMedia={true}
+									height='450px'
 								/>
 								<CardContent
 									sx={{
@@ -204,11 +206,12 @@ const Products = () => {
 								// }}
 							>
 								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									height='450px'
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg'
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg'
+									hash='L9DSK|K600r?00#+=rELQRkC_N%M'
 									alt='reposado tequila'
+									cardMedia={true}
+									height='450px'
 								/>
 								<CardContent
 									sx={{
@@ -314,11 +317,12 @@ const Products = () => {
 								// }}
 							>
 								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									height='450px'
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg'
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg'
+									hash='LHD+;:_N%gjYE2xYD%M{00D%IAD%'
 									alt='cristalino tequila'
+									height='450px'
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{

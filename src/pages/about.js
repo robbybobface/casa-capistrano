@@ -1,6 +1,7 @@
 import { Container, Grid, Box, Typography, Divider } from "@mui/material";
 import React, { useEffect } from "react";
 import FadeIn from "react-fade-in";
+import BlurHashedImage from "../components/BlurHashedImage";
 
 const About = () => {
 	useEffect(() => {
@@ -46,18 +47,26 @@ const About = () => {
 									borderBottomWidth: 3,
 								}}
 							/>
-							<Box
+							{/* <Box
 								component='img'
-								src={"https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/barrels.jpg"}
+								src={"https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/barrels.jpg?tr=w-1000"}
 								alt='barrels'
 								sx={{
 									objectFit: "cover",
 									width: "100%",
 									// filter: "brightness(75%);",
 									boxShadow: "0px 0px 15px 2px #012233",
-
 									zIndex: 10,
 								}}
+							/> */}
+							<BlurHashedImage
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/barrels.jpg?tr=w-1000'
+								hash='LNE3C%$zs8-;.ARjM{kC%ixtWBRj'
+								alt='barrlels'
+								zIndex={10}
+								width='100%'
+								objectFit='cover'
+								boxShadow='0px 0px 15px 2px #012233'
 							/>
 						</Grid>
 						<Grid item xs={12} md={6} lg={6.5}>

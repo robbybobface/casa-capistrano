@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, Divider, Button, Card, CardMedia, CardContent } from "@mui/material";
+import { Box, Container, Grid, Typography, Divider, Button, Card, CardContent } from "@mui/material";
 import React, { useEffect, useRef } from "react";
 import FadeIn from "react-fade-in";
 
@@ -10,6 +10,7 @@ import { ReactComponent as BlancoAroma } from "../media/blanco/blanco-aroma.svg"
 import { ReactComponent as BlancoTaste } from "../media/blanco/blanco-taste.svg";
 import { ReactComponent as BlancoFinish } from "../media/blanco/blanco-finish.svg";
 import { ReactComponent as BlancoAwards } from "../media/blanco/blanco-awards.svg";
+import BlurHashedImage from "../components/BlurHashedImage";
 
 const Blanco = () => {
 	const ref = useRef(null);
@@ -725,13 +726,12 @@ const Blanco = () => {
 										boxShadow: "0px 0px 10px 2px #194792;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Sunset.Blanco.Gold.jpg'
-									alt='blanco sunset award gold'
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Sunset.Blanco.Gold.jpg'
+									hash='LRGk{vR%0PRj~oRjRpWB0RRj-mj['
+									alt='Blanco Sunset Gold Award Photo'
+									height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -739,7 +739,6 @@ const Blanco = () => {
 										justifyContent: "center",
 										flexDirection: "column",
 										alignItems: "center",
-										// pb: 1,
 									}}>
 									<Typography
 										component='div'
@@ -750,8 +749,6 @@ const Blanco = () => {
 											lineHeight: 2,
 											fontSize: "16px",
 											textAlign: "center",
-											// px: 2,
-											// py: 1,
 											mx: {
 												xs: 0,
 												md: -1.5,
@@ -766,9 +763,10 @@ const Blanco = () => {
 											fontFamily: "Cabin",
 											lineHeight: 2,
 											fontSize: "16px",
-										}}>{`Gold`}</Typography>
+										}}>
+										Gold
+									</Typography>
 								</CardContent>
-								{/* </CardActionArea> */}
 							</Card>
 						</Grid>
 						<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
@@ -787,14 +785,12 @@ const Blanco = () => {
 										boxShadow: "0px 0px 10px 2px #194792;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Blanco.Gold.jpg'
-									alt='blanco PR%F gold'
-									// sx={{ objectFit: "contain" }}
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Blanco.Gold.jpg'
+									hash='L9L;HRqGMH%hM5}nD%JC4ToZI@O?'
+									alt='Blanco PR%F Gold Award Photo'
+									height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -802,7 +798,6 @@ const Blanco = () => {
 										justifyContent: "center",
 										flexDirection: "column",
 										alignItems: "center",
-										// pb: 1,
 									}}>
 									<Typography
 										component='div'
@@ -813,8 +808,6 @@ const Blanco = () => {
 											lineHeight: 2,
 											fontSize: "16px",
 											textAlign: "center",
-											// px: 2,
-											// py: 1,
 										}}>
 										2021 PR%F Awards
 									</Typography>
@@ -824,9 +817,10 @@ const Blanco = () => {
 											fontFamily: "Cabin",
 											lineHeight: 2,
 											fontSize: "16px",
-										}}>{`Gold`}</Typography>
+										}}>
+										Gold
+									</Typography>
 								</CardContent>
-								{/* </CardActionArea> */}
 							</Card>
 						</Grid>
 						<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
@@ -845,22 +839,18 @@ const Blanco = () => {
 										boxShadow: "0px 0px 10px 2px #194792;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{
-										height: {
-											xs: "220px",
-											sm: "300px",
-											md: "300px",
-											lg: "345px",
-											objectFit: "scale-down",
-										},
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Blanco.Gold.png'
+									hash='LYNS=#-iyGIXocoeofay%$RntSf+'
+									alt='Blanco San Diego Gold Award Photo'
+									height={{
+										xs: "220px",
+										sm: "300px",
+										md: "300px",
+										lg: "345px",
 									}}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Blanco.Gold.png'
-									alt='blanco San Diego gold'
-									// sx={{ objectFit: "scale-down" }}
+									objectFit='scale-down'
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -868,7 +858,6 @@ const Blanco = () => {
 										justifyContent: "center",
 										flexDirection: "column",
 										alignItems: "center",
-										// pb: 1,
 									}}>
 									<Typography
 										component='div'
@@ -879,8 +868,6 @@ const Blanco = () => {
 											lineHeight: 2,
 											fontSize: "16px",
 											textAlign: "center",
-											// px: 2,
-											// py: 1,
 										}}>
 										2021 San Diego Spirits Festival
 									</Typography>
@@ -890,9 +877,10 @@ const Blanco = () => {
 											fontFamily: "Cabin",
 											lineHeight: 2,
 											fontSize: "16px",
-										}}>{`Gold`}</Typography>
+										}}>
+										Gold
+									</Typography>
 								</CardContent>
-								{/* </CardActionArea> */}
 							</Card>
 						</Grid>
 						<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
@@ -911,14 +899,12 @@ const Blanco = () => {
 										boxShadow: "0px 0px 10px 2px #194792;",
 									},
 								}}>
-								{/* <CardActionArea sx={{ pb: 3 }}> */}
-								<CardMedia
-									component='img'
-									// height='345px'
-									sx={{ height: { xs: "220px", sm: "300px", md: "300px", lg: "345px" } }}
-									image='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.LVG.Blanco.Silver.jpg'
-									alt='blanco LVG silver'
-									// sx={{ objectFit: "contain"  }}
+								<BlurHashedImage
+									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.LVG.Blanco.Silver.jpg'
+									hash='L8IX]g%2rsWB~WofIUay8yWCNHj['
+									alt='Blanco Las Vegas Global Silver Award Photo'
+									height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
+									cardMedia={true}
 								/>
 								<CardContent
 									sx={{
@@ -926,7 +912,6 @@ const Blanco = () => {
 										justifyContent: "center",
 										flexDirection: "column",
 										alignItems: "center",
-										// pb: 1,
 									}}>
 									<Typography
 										component='div'
@@ -937,8 +922,6 @@ const Blanco = () => {
 											lineHeight: 2,
 											fontSize: "16px",
 											textAlign: "center",
-											// px: 2,
-											// py: 1,
 										}}>
 										2021 Las Vegas Global Spirit Awards
 									</Typography>
@@ -949,9 +932,10 @@ const Blanco = () => {
 											fontFamily: "Cabin",
 											lineHeight: 2,
 											fontSize: "16px",
-										}}>{`Silver`}</Typography>
+										}}>
+										Silver
+									</Typography>
 								</CardContent>
-								{/* </CardActionArea> */}
 							</Card>
 						</Grid>
 					</Grid>

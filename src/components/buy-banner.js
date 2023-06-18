@@ -1,10 +1,11 @@
 import React from "react";
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
+import BlurHashedImage from "./BlurHashedImage";
 
 const BuyNowBanner = () => {
 	return (
 		<Box sx={{ position: "relative", textAlign: "center" }}>
-			<Box
+			{/* <Box
 				component='img'
 				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg'
 				alt='buy-now-banner-art'
@@ -16,6 +17,17 @@ const BuyNowBanner = () => {
 					filter: "brightness(65%);",
 					mb: -1,
 				}}
+			/> */}
+			<BlurHashedImage
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg'
+				hash='L.Ko4RRjM{t7~qofkCof%2s.ayof'
+				alt='Buy Now Banner Art'
+				objectFit='cover'
+				objectPosition='bottom'
+				height='200px'
+				width='100%'
+				filter='brightness(65%)'
+				mb={-1}
 			/>
 
 			<Container
@@ -30,7 +42,7 @@ const BuyNowBanner = () => {
 						<Typography
 							sx={{
 								color: "white",
-								fontFamily: "Roboto",
+								fontFamily: "roboto",
 								fontWeight: 600,
 								fontSize: {
 									xs: "16px",
