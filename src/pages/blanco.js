@@ -28,18 +28,29 @@ const Blanco = () => {
 					alignItems: "center",
 				}}>
 				<FadeIn>
-					<BlurHashedImage
-						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-logo.png?tr=w-1000'
-						hash='LCRfh0t7?ZxtM}fQRPay~ot64:WB'
-						alt='Blanco Logo'
-						edges={true}
-						width={{ xs: "90%", sm: "80%", md: "60%", lg: "60%", xl: "60%" }}
-						display='flex'
-						justifyContent='center'
-						// mb={2}
-						mx='auto'
-						height={"275px"}
-					/>
+					<Box
+						sx={{
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+							minHeight: { xs: "150px", md: "245px", lg: "275px" },
+							maxHeight: { xs: "150px", sm: "250px", md: "245px", lg: "275px" },
+						}}>
+						<BlurHashedImage
+							src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-logo.png?tr=w-1000'
+							hash='LCRfh0t7?ZxtM}fQRPay~ot64:WB'
+							alt='Blanco Logo'
+							edges={true}
+							width={{ xs: "90%", sm: "80%", md: "60%", lg: "60%", xl: "60%" }}
+							height={{ xs: "150px", sm: "250px", md: "245px", lg: "275px" }}
+							display='flex'
+							justifyContent='center'
+							ignoreHeight={true}
+							// mb={2}
+							mx='auto'
+							// height={"275px"}
+						/>
+					</Box>
 					<Grid
 						container
 						spacing={2}

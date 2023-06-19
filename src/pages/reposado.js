@@ -29,17 +29,29 @@ const Reposado = () => {
 					alignItems: "center",
 				}}>
 				<FadeIn>
-					<BlurHashedImage
-						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Reposado-Logo-New.png?tr=w-1000'
-						hash='LDRyg4xtx]t7M{ayM{j[_NofD%ay'
-						alt='reposado logo'
-						edges={true}
-						width={{ xs: "90%", sm: "80%", md: "60%", lg: "60%", xl: "60%" }}
-						display='flex'
-						justifyContent='center'
-						mx='auto'
-						height={"275px"}
-					/>
+					<Box
+						sx={{
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+							minHeight: { xs: "150px", md: "245px", lg: "275px" },
+							maxHeight: { xs: "150px", sm: "250px", md: "245px", lg: "275px" },
+						}}>
+						<BlurHashedImage
+							src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Reposado-Logo-New.png?tr=w-1000'
+							hash='LDRyg4xtx]t7M{ayM{j[_NofD%ay'
+							alt='reposado logo'
+							edges={true}
+							width={{ xs: "90%", sm: "80%", md: "60%", lg: "60%", xl: "60%" }}
+							height={{ xs: "150px", sm: "250px", md: "245px", lg: "275px" }}
+							display='flex'
+							justifyContent='center'
+							ignoreHeight={true}
+							// mb={2}
+							mx='auto'
+							// height={"275px"}
+						/>
+					</Box>
 					<Grid
 						container
 						spacing={2}
