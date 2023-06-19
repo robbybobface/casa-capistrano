@@ -2,7 +2,7 @@ import { Box, CardMedia } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
 
-function BlurHashedImage({ cardMedia, src, hash, alt, height, mt, removeShadow, ...props }) {
+function BlurHashedImage({ cardMedia, src, hash, alt, height, mt, removeShadow, edges, ...props }) {
 	const [imageLoaded, setImageLoaded] = useState(false);
 
 	useEffect(() => {
@@ -20,17 +20,18 @@ function BlurHashedImage({ cardMedia, src, hash, alt, height, mt, removeShadow, 
 					sx={{
 						display: "flex",
 						width: "100%",
-						height: height ?? "300px",
+						height: height ?? "270px",
 					}}>
 					<Blurhash
 						hash={hash}
 						width={"100%"}
 						height={height ?? "300px"}
-						resolutionX={32}
-						resolutionY={32}
+						resolutionX={64}
+						resolutionY={64}
 						punch={1}
 					/>
-					<Box className='skeleton-loading' />
+					<Box className={`skeleton-loading`} />
+					{edges && <Box className='inset-edges' />}
 				</Box>
 			) : cardMedia ? (
 				<CardMedia
@@ -40,6 +41,7 @@ function BlurHashedImage({ cardMedia, src, hash, alt, height, mt, removeShadow, 
 					alt={alt}
 					height={height}
 					image={src}
+					sx={{ height: height, ...props }}
 					{...props}
 				/>
 			) : (
@@ -50,7 +52,7 @@ function BlurHashedImage({ cardMedia, src, hash, alt, height, mt, removeShadow, 
 					alt={alt}
 					height={height}
 					mt={mt}
-					sx={{ ...props }}
+					sx={{ height: height, ...props }}
 					src={src}
 					{...props}
 				/>

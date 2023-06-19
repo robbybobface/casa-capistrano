@@ -107,6 +107,7 @@ const Footer = () => {
 									transition: "color 0.1s ease-in",
 								}}
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/");
 								}}>
 								Home
@@ -125,6 +126,7 @@ const Footer = () => {
 									transition: "color 0.1s ease-in",
 								}}
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/about");
 								}}>
 								About
@@ -143,6 +145,7 @@ const Footer = () => {
 									transition: "color 0.1s ease-in",
 								}}
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/products");
 								}}>
 								Products
@@ -259,14 +262,19 @@ const Footer = () => {
 								component='div'
 								onClick={() => {
 									if (navigator.language === "en-US" || navigator.language === "en-us") {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-us");
 									} else if (navigator.language === "en-CA" || navigator.language === "en-ca") {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-ca");
 									} else if (navigator.language === "en-GB" || navigator.language === "en-gb") {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-uk");
 									} else if (navigator.language === "en") {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-eu");
 									} else {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-us");
 									}
 								}}
@@ -290,14 +298,19 @@ const Footer = () => {
 								component='div'
 								onClick={() => {
 									if (navigator.language === "en-US" || navigator.language === "en-us") {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-us");
 									} else if (navigator.language === "en-CA" || navigator.language === "en-ca") {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-ca");
 									} else if (navigator.language === "en-GB" || navigator.language === "en-gb") {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-uk");
 									} else if (navigator.language === "en") {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-eu");
 									} else {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-us");
 									}
 								}}
@@ -324,6 +337,7 @@ const Footer = () => {
 							<Typography
 								component='div'
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/imprint");
 								}}
 								sx={{
@@ -346,6 +360,7 @@ const Footer = () => {
 							<Typography
 								component='div'
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/disclaimer");
 								}}
 								sx={{

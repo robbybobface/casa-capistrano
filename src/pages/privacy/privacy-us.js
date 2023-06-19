@@ -59,6 +59,7 @@ const PrivacyUS = () => {
 									},
 								}}
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/");
 								}}>
 								https://casacapistrano.com
@@ -182,6 +183,7 @@ const PrivacyUS = () => {
 									},
 								}}
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/cookie-policy-us");
 								}}>
 								Cookie Policy (US)
@@ -293,6 +295,7 @@ const PrivacyUS = () => {
 									},
 								}}
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/");
 								}}>
 								https://casacapistrano.com

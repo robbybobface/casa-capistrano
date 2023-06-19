@@ -74,6 +74,7 @@ const CookiesCA = () => {
 									},
 								}}
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/");
 								}}>
 								https://casacapistrano.com
@@ -275,6 +276,7 @@ const CookiesCA = () => {
 									},
 								}}
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/");
 								}}>
 								https://casacapistrano.com

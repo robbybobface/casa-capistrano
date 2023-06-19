@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import React, { useState, useEffect, useContext } from "react";
 import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AppContext } from "../utils/AppContext";
 import CookieOutlinedIcon from "@mui/icons-material/CookieOutlined";
 
@@ -9,17 +9,32 @@ const CookieBanner = () => {
 	const { userReject } = useContext(AppContext);
 	const [stateUserReject, setStateUserReject] = userReject;
 	const [cookies, setCookie] = useCookies(["age_verified", "accept_cookies"]);
-	const [changeColor, setChangeColor] = useState(false);
+	const [changeColor, setChangeColor] = useState(null);
+	const [fontColor, setFontColor] = useState("primaryBlack.main");
 	const navigate = useNavigate();
+	const location = useLocation();
+	// location.pathname.split("/")[1] !== "" ? "primaryBlack.main" : !changeColor ? "primaryBlack.main" : "white";
 
 	const changeText = () => {
-		// console.log(window.scrollY);
 		if (window.scrollY >= 66) {
-			setChangeColor(false);
-		} else {
 			setChangeColor(true);
+		} else {
+			setChangeColor(false);
 		}
 	};
+
+	useEffect(() => {
+		// console.log(location.pathname.split("/")[1] !== "");
+		if (location.pathname.split("/")[1] !== "") {
+			setFontColor("primaryBlack.main");
+		} else {
+			// console.log(changeColor === null);
+			setFontColor(
+				changeColor === null ? "primaryBlack.main" : !changeColor ? "primaryWhite.main" : "primaryBlack.main"
+			);
+		}
+	}, [location.pathname, changeColor]);
+
 	useEffect(() => {
 		changeText();
 		// adding the event when scroll change background
@@ -53,8 +68,8 @@ const CookieBanner = () => {
 					sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 					<Grid item xs={12} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Typography
+							color={fontColor}
 							sx={{
-								color: !changeColor ? "primaryBlack.main" : "white",
 								fontFamily: "cabin, Roboto",
 								fontWeight: 300,
 								fontSize: { xs: "14px", md: "14px", lg: "16px" },
@@ -67,7 +82,7 @@ const CookieBanner = () => {
 							<Typography
 								component='span'
 								sx={{
-									color: !changeColor ? "primaryBlack.main" : "white",
+									color: fontColor,
 									textDecoration: "underline",
 									fontFamily: "Roboto",
 									fontWeight: 500,
@@ -79,14 +94,19 @@ const CookieBanner = () => {
 								}}
 								onClick={() => {
 									if (navigator.language === "en-US" || navigator.language === "en-us") {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-us");
 									} else if (navigator.language === "en-CA" || navigator.language === "en-ca") {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-ca");
 									} else if (navigator.language === "en-GB" || navigator.language === "en-gb") {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-uk");
 									} else if (navigator.language === "en") {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-eu");
 									} else {
+										window.scrollTo(0, 0);
 										navigate("/cookie-policy-us");
 									}
 								}}>
@@ -115,9 +135,7 @@ const CookieBanner = () => {
 								fontSize: { xs: "14px", md: "14px", lg: "16px" },
 								borderRadius: "0px",
 								border: "1px solid rgba( 1, 34, 51, 0.4 )",
-
 								background: "rgba( 1, 34, 51, 0.7 );",
-								// boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 );",
 								backdropFilter: "blur( 20px );",
 								webkitBackdropFilter: "blur( 20px );",
 							}}

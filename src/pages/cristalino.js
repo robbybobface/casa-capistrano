@@ -10,6 +10,7 @@ import { ReactComponent as CristalinoTaste } from "../media/cristalino/cristalin
 import { ReactComponent as CristalinoFinish } from "../media/cristalino/cristalino-finish.svg";
 import { ReactComponent as CristalinoAwards } from "../media/cristalino/cristalino-awards.svg";
 import BlurHashedImage from "../components/BlurHashedImage";
+import OtherTequilas from "../components/OtherTequilas";
 
 const Cristalino = () => {
 	const ref = useRef(null);
@@ -27,25 +28,18 @@ const Cristalino = () => {
 					alignItems: "center",
 				}}>
 				<FadeIn>
-					<Box
-						component='img'
-						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Cristalino-Logo-Alt.png'
-						sx={{
-							width: {
-								xs: "90%",
-								sm: "80%",
-								md: "60%",
-
-								lg: "60%",
-								xl: "60%",
-							},
-							display: "flex",
-							justifyContent: "center",
-							mb: {
-								xs: 0,
-							},
-							mx: "auto",
-						}}></Box>
+					<BlurHashedImage
+						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Cristalino-Logo-Alt.png?tr=w-1000'
+						hash='LHRfd?t7t8ofM{fPM{az~qj[Rkj['
+						alt='Cristalino Logo'
+						edges={true}
+						width={{ xs: "90%", sm: "80%", md: "60%", lg: "60%", xl: "60%" }}
+						display='flex'
+						justifyContent='center'
+						// mb={2}
+						mx='auto'
+						height={"275px"}
+					/>
 
 					<Grid
 						container
@@ -54,8 +48,7 @@ const Cristalino = () => {
 							mt: {
 								xs: 0,
 								sm: 0,
-								md: -3,
-								lg: -3,
+								md: -2,
 							},
 							mb: {
 								xs: 0,
@@ -133,23 +126,18 @@ const Cristalino = () => {
 								justifyContent: "center",
 								alignItems: "center",
 							}}>
-							<Box
-								component='img'
-								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino.png'
-								alt='blanco-art'
+							<BlurHashedImage
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino.png?tr=h-1000'
+								hash='LmR3G:of~oay%MfQM{fQ%MayIoj['
+								alt='Cristalino Bottle'
+								edges={true}
 								sx={{
 									objectFit: "contain",
-									height: {
-										xs: "45vh",
-										sm: "50vh",
-										md: "65vh",
-										lg: "63vh",
-										xl: "63vh",
-									},
 									// width: "100%",
 									position: "relative",
 									filter: "brightness(75%);",
 								}}
+								height={{ xs: "45vh", sm: "50vh", md: "65vh", lg: "63vh", xl: "63vh" }}
 							/>
 						</Grid>
 						<Grid
@@ -209,7 +197,7 @@ const Cristalino = () => {
 								onClick={() => {
 									// navigate("/blanco");
 								}}>
-								Buy Now
+								Coming Soon
 							</Button>
 						</Grid>
 						<Grid
@@ -267,7 +255,7 @@ const Cristalino = () => {
 								onClick={() => {
 									// navigate("/blanco");
 								}}>
-								Buy Now
+								Coming Soon
 							</Button>
 						</Grid>
 						<Grid
@@ -812,6 +800,7 @@ const Cristalino = () => {
 					</Grid>
 				</FadeIn>
 			</Container>
+			<OtherTequilas current='cristalino' />
 			<BuyNowBanner />
 		</Box>
 	);

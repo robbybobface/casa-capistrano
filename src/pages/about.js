@@ -65,7 +65,7 @@ const About = () => {
 								alt='barrlels'
 								zIndex={10}
 								width='100%'
-								objectFit='cover'
+								sx={{ objectFit: "cover" }}
 								boxShadow='0px 0px 15px 2px #012233'
 							/>
 						</Grid>

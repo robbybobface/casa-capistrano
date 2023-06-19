@@ -16,6 +16,8 @@ import {
 	ListItemText,
 	ListItemButton,
 	Drawer,
+	Menu,
+	MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -26,9 +28,12 @@ const Header = () => {
 	const [mobileOpen, setMobileOpen] = useState(false);
 	const [activePage, setActivePage] = useState("home");
 	const [transparent, setTransparent] = useState(true);
+	const [anchorEl, setAnchorEl] = useState(null);
 
 	const location = useLocation();
 	const navigate = useNavigate();
+
+	const open = Boolean(anchorEl);
 
 	const pageHandler = () => {
 		const url = location.pathname.split("/");
@@ -41,6 +46,9 @@ const Header = () => {
 			// console.log(page);
 			setActivePage("home");
 		}
+	};
+	const handleClose = () => {
+		setAnchorEl(null);
 	};
 
 	const handleDrawerToggle = () => {
@@ -76,6 +84,7 @@ const Header = () => {
 						<ListItemButton
 							sx={{ textAlign: "center" }}
 							onClick={() => {
+								window.scrollTo(0, 0);
 								navigate(pageURLs.at(index));
 							}}>
 							<ListItemText
@@ -184,6 +193,7 @@ const Header = () => {
 								},
 							}}
 							onClick={() => {
+								window.scrollTo(0, 0);
 								navigate("/");
 							}}
 						/>
@@ -206,44 +216,147 @@ const Header = () => {
 							}}></Typography>
 						<Box sx={{ display: { xs: "none", md: "flex" }, ml: { xs: 1, lg: 3, xl: 4 } }}>
 							{pageTitles.length > 0 &&
-								pageTitles.map((page, index) => (
-									<Button
-										key={page}
-										onClick={() => {
-											navigate(pageURLs.at(index));
-										}}
-										color={activePage !== "home" ? "primaryBlack" : "primaryBeige"}
-										sx={{
-											mx: 1,
-											my: 2,
-											px: 2,
-											display: "block",
-											textTransform: "none",
-											fontFamily: "Cabin",
-											fontWeight: 600,
-											fontSize: "18px",
-											"&:hover": {
-												textDecoration: "underline",
-											},
-											color:
-												activePage === "home"
-													? transparent
-														? "primaryWhite.main"
-														: "primaryBlue.main"
-													: "primaryBlue.main",
-											...(pageURLs.at(index) === activePage && {
-												color: "primaryRed.main",
-												textDecoration: "underline",
-											}),
-											...(activePage === "home" &&
-												pageURLs.at(index) === "" && {
-													color: "primaryRed.main",
-													textDecoration: "underline",
-												}),
-										}}>
-										{page}
-									</Button>
-								))}
+								pageTitles.map((page, index) => {
+									if (page !== "PRODUCTS") {
+										return (
+											<Button
+												key={index}
+												onClick={() => {
+													window.scrollTo(0, 0);
+													navigate(pageURLs.at(index));
+												}}
+												color={activePage !== "home" ? "primaryBlack" : "primaryBeige"}
+												sx={{
+													mx: 1,
+													my: 2,
+													px: 2,
+													display: "block",
+													textTransform: "none",
+													fontFamily: "Cabin",
+													fontWeight: 600,
+													fontSize: "18px",
+													"&:hover": {
+														textDecoration: "underline",
+													},
+													color:
+														activePage === "home"
+															? transparent
+																? "primaryWhite.main"
+																: "primaryBlue.main"
+															: "primaryBlue.main",
+													...(pageURLs.at(index) === activePage && {
+														color: "primaryRed.main",
+														textDecoration: "underline",
+													}),
+													...(activePage === "home" &&
+														pageURLs.at(index) === "" && {
+															color: "primaryRed.main",
+															textDecoration: "underline",
+														}),
+												}}>
+												{page}
+											</Button>
+										);
+									} else {
+										return (
+											<React.Fragment key={index}>
+												<Button
+													key={page}
+													onClick={() => {
+														window.scrollTo(0, 0);
+														navigate(pageURLs.at(index));
+													}}
+													aria-owns={open ? "mouse-over-popover" : undefined}
+													aria-haspopup='true'
+													// onMouseOver={(e) => setAnchorEl(e.currentTarget)}
+													// onMouseEnter={(e) => setAnchorEl(e.currentTarget)}
+													color={activePage !== "home" ? "primaryBlack" : "primaryBeige"}
+													sx={{
+														mx: 1,
+														my: 2,
+														px: 2,
+														display: "block",
+														textTransform: "none",
+														fontFamily: "Cabin",
+														fontWeight: 600,
+														fontSize: "18px",
+														"&:hover": {
+															textDecoration: "underline",
+														},
+														color:
+															activePage === "home"
+																? transparent
+																	? "primaryWhite.main"
+																	: "primaryBlue.main"
+																: "primaryBlue.main",
+														...(pageURLs.at(index) === activePage && {
+															color: "primaryRed.main",
+															textDecoration: "underline",
+														}),
+														...(activePage === "home" &&
+															pageURLs.at(index) === "" && {
+																color: "primaryRed.main",
+																textDecoration: "underline",
+															}),
+													}}>
+													{page}
+												</Button>
+											</React.Fragment>
+										);
+									}
+								})}
+							<Menu
+								id='mouse-over-popover'
+								MenuListProps={{
+									"aria-labelledby": "fade-button",
+									onMouseLeave: handleClose,
+									textAlign: "center",
+								}}
+								anchorEl={anchorEl}
+								open={open}
+								onClose={handleClose}
+								// TransitionComponent={Fade}
+								anchorOrigin={{
+									vertical: "bottom",
+									horizontal: "center",
+								}}
+								transformOrigin={{
+									vertical: "top",
+									horizontal: "center",
+								}}
+								disableRestoreFocus
+								sx={{
+									"& .MuiPaper-root": {
+										display: "flex",
+										justifyContent: "center",
+										alignItems: "center",
+
+										textAlign: "center",
+									},
+									"& .MuiMenuItem-root": {
+										display: "flex",
+										justifyContent: "center",
+										alignItems: "center",
+										textAlign: "center",
+										px: 3,
+									},
+								}}>
+								<MenuItem
+									onClick={handleClose}
+									sx={{ fontFamily: "Cabin", textTransform: "uppercase", textAlign: "center" }}>
+									Blanco
+								</MenuItem>
+								<MenuItem
+									onClick={handleClose}
+									sx={{ fontFamily: "Cabin", textTransform: "uppercase" }}>
+									Reposado
+								</MenuItem>
+								<MenuItem
+									onClick={handleClose}
+									sx={{ fontFamily: "Cabin", textTransform: "uppercase" }}>
+									Cristalino
+								</MenuItem>
+							</Menu>
 						</Box>
 					</Toolbar>
 				</Container>

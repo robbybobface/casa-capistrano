@@ -2,19 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import FadeIn from "react-fade-in";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
-import {
-	Box,
-	Container,
-	Divider,
-	Typography,
-	Grid,
-	Card,
-	CardContent,
-	CardActionArea,
-	CardMedia,
-	Button,
-} from "@mui/material";
-import CookieBanner from "../components/cookie-banner";
+import { Box, Container, Divider, Typography, Grid, Card, CardContent, CardActionArea, Button } from "@mui/material";
 import { ReactComponent as HomeLogo } from "../media/home-logo-detailed.svg";
 // import blanco from "../media/blanco-copy.png";
 // import cristalino from "../media/cristalino-copy.png";
@@ -25,10 +13,7 @@ import { AppContext } from "../utils/AppContext";
 import BlurHashedImage from "../components/BlurHashedImage";
 
 const Home = () => {
-	const { userReject } = useContext(AppContext);
-	const [stateUserReject, setStateUserReject] = userReject;
 	const [hideScrollIndicator, setHideScrollIndicator] = useState(false);
-	const [cookies, setCookie] = useCookies(["age_verified", "accept_cookies"]);
 
 	const navigate = useNavigate();
 	const changeText = () => {
@@ -46,88 +31,85 @@ const Home = () => {
 		window.scrollTo(0, 0);
 	}, []);
 	return (
-		<Box sx={{ backgroundColor: "primaryBeige.main", minHeight: "100vh" }}>
-			<FadeIn>
-				{!cookies.accept_cookies ? stateUserReject ? "" : <CookieBanner /> : ""}
-				<BlurHashedImage
-					src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/home-art.jpg'
-					hash='L9C=;v%M00MdEl-o$%NG00w[~pbw'
-					alt='home art'
-					height='100vh'
-					width='100%'
-					objectFit='cover'
-					mt={{
-						xs: -7,
-						sm: -8,
-						md: -9.45,
-						lg: -9.45,
-					}}
-					minHeight={{ xs: "600px", md: "800px", lg: "900px" }}
-					position='relative'
-					filter='brightness(65%);'
-				/>
-
-				<Box
+		<Box
+			sx={{
+				backgroundColor: "primaryBeige.main",
+				minHeight: "100vh",
+			}}>
+			<BlurHashedImage
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/home-art.jpg'
+				hash='L9C=;v%M00MdEl-o$%NG00w[~pbw'
+				alt='home art'
+				height='100vh'
+				width='100%'
+				mt={{
+					xs: -7,
+					sm: -8,
+					md: -9.45,
+					lg: -9.45,
+					objectFit: "cover",
+				}}
+				minHeight={{ xs: "600px", md: "800px", lg: "900px" }}
+				position='relative'
+				filter='brightness(65%);'
+			/>
+			<Box
+				sx={{
+					position: "absolute",
+					top: "50%",
+					left: "50%",
+					transform: "translate(-50%, -50%)",
+					width: "100%",
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "center",
+					flexDirection: "column",
+					zIndex: 18,
+				}}>
+				<Typography
 					sx={{
-						position: "absolute",
-						top: {
-							xs: "30%",
-							sm: "25%",
-							md: "32%",
-							lg: "25%",
-							xl: "30%",
+						textAlign: "center",
+						color: "white",
+						fontFamily: "calder-dark-grit-shadow, cabin",
+						fontSize: {
+							xs: "55px",
+							sm: "75px",
+							md: "100px",
+							lg: "120px",
 						},
-						width: "100%",
-						display: "flex",
-						alignItems: "center",
-						justifyContent: "center",
-						flexDirection: "column",
-						zIndex: 18,
+						// fontStyle: "italic",
+						width: {
+							xs: "100%",
+							sm: "90%",
+							md: "90%",
+							lg: "80%",
+						},
 					}}>
-					<Typography
-						sx={{
-							textAlign: "center",
-							color: "white",
-							fontFamily: "calder-dark-grit-shadow",
-							fontSize: {
-								xs: "55px",
-								sm: "75px",
-								md: "100px",
-								lg: "120px",
-							},
-							// fontStyle: "italic",
-							width: {
-								xs: "95%",
-								sm: "90%",
-								md: "90%",
-								lg: "80%",
-							},
-						}}>
-						Auténico Tequila
-					</Typography>
-					<Typography
-						sx={{
-							textAlign: "center",
-							color: "white",
-							fontFamily: "calder-script, Patrick Hand SC, Roboto",
-							fontStyle: "italic",
-							fontSize: {
-								xs: "40px",
-								sm: "40px",
-								md: "65px",
-								lg: "70px",
-							},
-							width: {
-								xs: "90%",
-								sm: "60%",
-								lg: "50%",
-							},
-							letterSpacing: { xs: "3px", sm: "4px", md: "5px", lg: "8px" },
-						}}>
-						Where every bottle has its own story to tell...
-					</Typography>
-				</Box>
-
+					Auténico Tequila
+				</Typography>
+				<Typography
+					sx={{
+						textAlign: "center",
+						color: "white",
+						fontFamily: "calder-script, Patrick Hand SC, Roboto",
+						fontStyle: "italic",
+						fontSize: {
+							xs: "40px",
+							sm: "40px",
+							md: "65px",
+							lg: "70px",
+						},
+						width: {
+							xs: "90%",
+							sm: "60%",
+							lg: "50%",
+						},
+						letterSpacing: { xs: "3px", sm: "4px", md: "5px", lg: "8px" },
+					}}>
+					Where every bottle has its own story to tell...
+				</Typography>
+			</Box>
+			<FadeIn>
 				<Box
 					sx={{
 						opacity: hideScrollIndicator ? 1 : 0,
@@ -248,6 +230,7 @@ const Home = () => {
 								py: 0,
 							}}
 							onClick={() => {
+								window.scrollTo(0, 0);
 								navigate("/about");
 							}}>
 							Learn More
@@ -311,6 +294,7 @@ const Home = () => {
 										},
 									}}
 									onClick={() => {
+										window.scrollTo(0, 0);
 										navigate("/blanco");
 									}}>
 									<CardActionArea sx={{ p: 2 }}>
@@ -354,19 +338,7 @@ const Home = () => {
 									</CardActionArea>
 								</Card>
 							</Grid>
-							<Grid
-								item
-								xs={11}
-								// sm={6}
-								md={4}
-								sx={
-									{
-										// zIndex: 1,
-										// "&:hover": {
-										// 	zIndex: 20,
-										// },
-									}
-								}>
+							<Grid item xs={11} md={4}>
 								<Card
 									sx={{
 										borderRadius: "0px",
@@ -379,6 +351,7 @@ const Home = () => {
 										transition: "all 0.2s ease-in",
 									}}
 									onClick={() => {
+										window.scrollTo(0, 0);
 										navigate("/reposado");
 									}}>
 									<CardActionArea sx={{ p: 2 }}>
@@ -422,19 +395,7 @@ const Home = () => {
 									</CardActionArea>
 								</Card>
 							</Grid>
-							<Grid
-								item
-								xs={11}
-								// sm={6}
-								md={4}
-								sx={
-									{
-										// zIndex: 1,
-										// "&:hover": {
-										// 	zIndex: 20,
-										// },
-									}
-								}>
+							<Grid item xs={11} md={4}>
 								<Card
 									sx={{
 										borderRadius: "0px",
@@ -446,6 +407,7 @@ const Home = () => {
 										transition: "all 0.2s ease-in",
 									}}
 									onClick={() => {
+										window.scrollTo(0, 0);
 										navigate("/cristalino");
 									}}>
 									<CardActionArea sx={{ p: 2 }}>
@@ -512,6 +474,7 @@ const Home = () => {
 										transition: "all 200ms ease-in",
 									}}
 									onClick={() => {
+										window.scrollTo(0, 0);
 										navigate("/products");
 									}}>
 									View All Tequilas

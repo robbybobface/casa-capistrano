@@ -33,10 +33,10 @@ const NotFound = () => {
 				hash='LECu6fIU?]M|%MoztRt7?vWCMdjt'
 				display='block'
 				verticalAlign='bottom'
-				objectFit='cover'
 				alt='cactus art'
 				height='100vh'
 				width='100%'
+				sx={{ objectFit: "cover" }}
 				mt={{
 					xs: -7,
 					sm: -8,
@@ -106,13 +106,13 @@ const NotFound = () => {
 						</Typography>
 						<Typography
 							sx={{
-								fontFamily: "Cabin",
+								fontFamily: "calder-script, cabin, roboto",
 								fontWeight: 700,
 								fontSize: {
-									xs: "26px",
-									sm: "28px",
-									md: "32px",
-									lg: "40px",
+									xs: "30px",
+									sm: "32px",
+									md: "36px",
+									lg: "48px",
 								},
 								textAlign: "left",
 							}}>
@@ -120,8 +120,8 @@ const NotFound = () => {
 						</Typography>
 						<Typography
 							sx={{
-								fontFamily: "Roboto",
-								fontWeight: 200,
+								fontFamily: "cabin, roboto",
+								fontWeight: 300,
 								fontSize: {
 									xs: "16px",
 									sm: "18px",
@@ -140,12 +140,13 @@ const NotFound = () => {
 								mb: 3,
 								textTransform: "none",
 								color: "primaryBlue.main",
-								fontFamily: "Roboto",
+								fontFamily: "calder-script, cabin, roboto",
 								fontWeight: 300,
 								fontSize: {
-									xs: "16px",
-									md: "18px",
+									xs: "20px",
+									md: "24px",
 								},
+								py: 0,
 								width: "150px",
 								borderRadius: "0px",
 								backgroundColor: "white",
@@ -159,6 +160,7 @@ const NotFound = () => {
 								transition: "all 200ms ease-in",
 							}}
 							onClick={() => {
+								window.scrollTo(0, 0);
 								navigate("/");
 							}}>
 							Go Home

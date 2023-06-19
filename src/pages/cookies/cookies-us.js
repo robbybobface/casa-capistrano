@@ -74,6 +74,7 @@ const CookiesUS = () => {
 									},
 								}}
 								onClick={() => {
+									window.scrollTo(0, 0);
 									navigate("/");
 								}}>
 								https://casacapistrano.com
@@ -230,14 +231,19 @@ const CookiesUS = () => {
 								}}
 								onClick={() => {
 									if (navigator.language === "en-US" || navigator.language === "en-us") {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-us");
 									} else if (navigator.language === "en-CA" || navigator.language === "en-ca") {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-ca");
 									} else if (navigator.language === "en-GB" || navigator.language === "en-gb") {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-uk");
 									} else if (navigator.language === "en") {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-eu");
 									} else {
+										window.scrollTo(0, 0);
 										navigate("/privacy-statement-us");
 									}
 								}}>

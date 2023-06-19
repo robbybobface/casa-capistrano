@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import FadeIn from "react-fade-in";
 
 import BuyNowBanner from "../components/buy-banner";
-// import { ReactComponent as BlancoLogo } from "../media/blanco/Blanco-Logo-Alt-New.svg";
 import { ReactComponent as BlancoLogoAlt } from "../media/blanco/blanco-tequila.svg";
 import { ReactComponent as BlancoColor } from "../media/blanco/blanco-color.svg";
 import { ReactComponent as BlancoAroma } from "../media/blanco/blanco-aroma.svg";
@@ -11,6 +10,7 @@ import { ReactComponent as BlancoTaste } from "../media/blanco/blanco-taste.svg"
 import { ReactComponent as BlancoFinish } from "../media/blanco/blanco-finish.svg";
 import { ReactComponent as BlancoAwards } from "../media/blanco/blanco-awards.svg";
 import BlurHashedImage from "../components/BlurHashedImage";
+import OtherTequilas from "../components/OtherTequilas";
 
 const Blanco = () => {
 	const ref = useRef(null);
@@ -28,29 +28,18 @@ const Blanco = () => {
 					alignItems: "center",
 				}}>
 				<FadeIn>
-					<Box
-						component='img'
-						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-logo.png'
-						sx={{
-							width: {
-								xs: "90%",
-								sm: "80%",
-								md: "60%",
-
-								lg: "60%",
-								xl: "60%",
-							},
-							display: "flex",
-							justifyContent: "center",
-							mb: {
-								xs: 0,
-							},
-							mx: "auto",
-						}}
+					<BlurHashedImage
+						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-logo.png?tr=w-1000'
+						hash='LCRfh0t7?ZxtM}fQRPay~ot64:WB'
+						alt='Blanco Logo'
+						edges={true}
+						width={{ xs: "90%", sm: "80%", md: "60%", lg: "60%", xl: "60%" }}
+						display='flex'
+						justifyContent='center'
+						// mb={2}
+						mx='auto'
+						height={"275px"}
 					/>
-
-					{/* <BlancoLogo /> */}
-
 					<Grid
 						container
 						spacing={2}
@@ -58,8 +47,7 @@ const Blanco = () => {
 							mt: {
 								xs: 0,
 								sm: 0,
-								md: -3,
-								lg: -3,
+								md: -2,
 							},
 							mb: {
 								xs: 0,
@@ -137,9 +125,9 @@ const Blanco = () => {
 								justifyContent: "center",
 								alignItems: "center",
 							}}>
-							<Box
+							{/* <Box
 								component='img'
-								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco.png'
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco.png?tr=h-1000'
 								alt='blanco-art'
 								sx={{
 									objectFit: "contain",
@@ -153,6 +141,24 @@ const Blanco = () => {
 									// width: "100%",
 									position: "relative",
 									filter: "brightness(75%);",
+								}}
+							/> */}
+							<BlurHashedImage
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco.png?tr=h-1000'
+								hash='LqQ,8doe~ofQ%MfQM{j[%LazM{j['
+								alt='Blanco Bottle'
+								edges={true}
+								sx={{
+									objectFit: "contain",
+									position: "relative",
+									filter: "brightness(75%);",
+								}}
+								height={{
+									xs: "45vh",
+									sm: "50vh",
+									md: "65vh",
+									lg: "63vh",
+									xl: "63vh",
 								}}
 							/>
 						</Grid>
@@ -213,7 +219,7 @@ const Blanco = () => {
 								onClick={() => {
 									// navigate("/blanco");
 								}}>
-								Buy Now
+								Coming Soon
 							</Button>
 						</Grid>
 						<Grid
@@ -271,7 +277,7 @@ const Blanco = () => {
 								onClick={() => {
 									// navigate("/blanco");
 								}}>
-								Buy Now
+								Coming Soon
 							</Button>
 						</Grid>
 						<Grid
@@ -843,12 +849,8 @@ const Blanco = () => {
 									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Blanco.Gold.png'
 									hash='LYNS=#-iyGIXocoeofay%$RntSf+'
 									alt='Blanco San Diego Gold Award Photo'
-									height={{
-										xs: "220px",
-										sm: "300px",
-										md: "300px",
-										lg: "345px",
-									}}
+									height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
+									// sx={{ objectFit: "scale-down" }}
 									objectFit='scale-down'
 									cardMedia={true}
 								/>
@@ -941,6 +943,7 @@ const Blanco = () => {
 					</Grid>
 				</FadeIn>
 			</Container>
+			<OtherTequilas current='blanco' />
 			<BuyNowBanner />
 		</Box>
 	);

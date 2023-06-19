@@ -38,7 +38,7 @@ const AgeGate = () => {
 				hash='L.Ko4RRjM{t7~qofkCof%2s.ayof'
 				display='block'
 				verticalAlign='bottom'
-				objectFit='cover'
+				sx={{ objectFit: "cover" }}
 				alt='cactus art'
 				height='100vh'
 				width='100%'
@@ -135,13 +135,13 @@ const AgeGate = () => {
 							sx={{
 								fontFamily: "calder-script, Roboto",
 								fontSize: {
-									xs: "16px",
-									sm: "24px",
+									xs: "26px",
+									sm: "30px",
 								},
 								color: "primaryBlue.main",
 								fontWeight: 300,
 								textAlign: "center",
-								px: 4,
+								px: { xs: 2, md: 4 },
 								mx: "auto",
 								pb: 1,
 							}}>
@@ -173,6 +173,7 @@ const AgeGate = () => {
 										backgroundColor: "primaryBlue.main",
 										borderColor: "primaryBlue.main",
 										width: "90%",
+										py: { xs: 0, md: 0 },
 										// boxShadow: "2px 2px 4px 2px #012233",
 										"&:hover": {
 											boxShadow: "0 0.7em 0.7em -0.4em #0122336f",
@@ -212,6 +213,7 @@ const AgeGate = () => {
 										backgroundColor: "white",
 										borderColor: "primaryBlue.main",
 										width: "90%",
+										py: { xs: 0, md: 0 },
 										// boxShadow: "2px 2px 4px 2px #012233",
 										"&:hover": {
 											boxShadow: "0 0.7em 0.7em -0.4em #0122336f",

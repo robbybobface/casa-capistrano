@@ -4,7 +4,6 @@ import FadeIn from "react-fade-in";
 
 import BuyNowBanner from "../components/buy-banner";
 
-// import { ReactComponent as ReposadoLogo } from "../media/reposado/Reposado-Logo-Alt.svg";
 import { ReactComponent as ReposadoLogoAlt } from "../media/reposado/reposado-tequila.svg";
 import { ReactComponent as ReposadoColor } from "../media/reposado/reposado-color.svg";
 import { ReactComponent as ReposadoAroma } from "../media/reposado/reposado-aroma.svg";
@@ -12,6 +11,7 @@ import { ReactComponent as ReposadoTaste } from "../media/reposado/reposado-tast
 import { ReactComponent as ReposadoFinish } from "../media/reposado/reposado-finish.svg";
 import { ReactComponent as ReposadoAwards } from "../media/reposado/reposado-awards.svg";
 import BlurHashedImage from "../components/BlurHashedImage";
+import OtherTequilas from "../components/OtherTequilas";
 
 const Reposado = () => {
 	const ref = useRef(null);
@@ -29,35 +29,17 @@ const Reposado = () => {
 					alignItems: "center",
 				}}>
 				<FadeIn>
-					<Box
-						component='img'
-						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Reposado-Logo-New.png'
-						sx={{
-							width: {
-								xs: "90%",
-								sm: "80%",
-								md: "60%",
-								lg: "60%",
-								xl: "60%",
-							},
-							display: "flex",
-							justifyContent: "center",
-							mb: {
-								xs: 0,
-							},
-							mx: "auto",
-						}}
-					/>
-					{/* <BlurHashedImage
-						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Reposado-Logo-New.png'
+					<BlurHashedImage
+						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/Reposado-Logo-New.png?tr=w-1000'
 						hash='LDRyg4xtx]t7M{ayM{j[_NofD%ay'
 						alt='reposado logo'
+						edges={true}
 						width={{ xs: "90%", sm: "80%", md: "60%", lg: "60%", xl: "60%" }}
 						display='flex'
 						justifyContent='center'
-						mb={2}
 						mx='auto'
-					/> */}
+						height={"275px"}
+					/>
 					<Grid
 						container
 						spacing={2}
@@ -65,8 +47,7 @@ const Reposado = () => {
 							mt: {
 								xs: 0,
 								sm: 0,
-								md: -3,
-								lg: -3,
+								md: -2,
 							},
 							mb: {
 								xs: 0,
@@ -144,29 +125,12 @@ const Reposado = () => {
 								justifyContent: "center",
 								alignItems: "center",
 							}}>
-							<Box
-								component='img'
-								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado.png'
-								alt='reposado-art'
-								sx={{
-									objectFit: "contain",
-									height: {
-										xs: "45vh",
-										sm: "50vh",
-										md: "65vh",
-										lg: "63vh",
-										xl: "63vh",
-									},
-									// width: "100%",
-									position: "relative",
-									filter: "brightness(75%);",
-								}}
-							/>
-							{/* <BlurHashedImage
-								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado.png'
-								hash='LvNwG?j[~qj[?bayoffR-;ayWBj['
+							<BlurHashedImage
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado.png?tr=h-1000'
+								hash='LqQ,2Lj[~poe%gfQMxfQt7fQRjfQ'
 								alt='reposado bottle'
-								objectFit='contain'
+								sx={{ objectFit: "contain" }}
+								edges={true}
 								height={{
 									xs: "45vh",
 									sm: "50vh",
@@ -176,7 +140,7 @@ const Reposado = () => {
 								}}
 								position='relative'
 								filter='brightness(75%)'
-							/> */}
+							/>
 						</Grid>
 						<Grid
 							item
@@ -235,7 +199,7 @@ const Reposado = () => {
 								onClick={() => {
 									// navigate("/blanco");
 								}}>
-								Buy Now
+								Coming Soon
 							</Button>
 						</Grid>
 						<Grid
@@ -293,7 +257,7 @@ const Reposado = () => {
 								onClick={() => {
 									// navigate("/blanco");
 								}}>
-								Buy Now
+								Coming Soon
 							</Button>
 						</Grid>
 						<Grid
@@ -854,14 +818,10 @@ const Reposado = () => {
 									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Reposado.Silver.png'
 									hash='L3E:0p~q00%M~q_3-;xu00-;4mRj'
 									alt='Reposado San Diego Award Photo'
-									height={{
-										xs: "220px",
-										sm: "300px",
-										md: "300px",
-										lg: "345px",
-									}}
-									objectFit='scale-down'
+									// sx={{ objectFit: "scale-down" }}
+									height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
 									cardMedia={true}
+									objectFit='scale-down'
 								/>
 								<CardContent
 									sx={{
@@ -880,8 +840,7 @@ const Reposado = () => {
 											lineHeight: 2,
 											fontSize: "16px",
 											textAlign: "center",
-											// px: 2,
-											// py: 1,
+
 											mx: {
 												xs: 0,
 												sm: -1.5,
@@ -960,6 +919,7 @@ const Reposado = () => {
 					</Grid>
 				</FadeIn>
 			</Container>
+			<OtherTequilas current='reposado' />
 			<BuyNowBanner />
 		</Box>
 	);

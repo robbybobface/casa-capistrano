@@ -19,14 +19,12 @@ const BuyNowBanner = () => {
 				}}
 			/> */}
 			<BlurHashedImage
-				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg'
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg?tr=w-1800'
 				hash='L.Ko4RRjM{t7~qofkCof%2s.ayof'
 				alt='Buy Now Banner Art'
-				objectFit='cover'
-				objectPosition='bottom'
+				sx={{ objectFit: "cover", objectPosition: "bottom", filter: "brightness(65%)" }}
 				height='200px'
 				width='100%'
-				filter='brightness(65%)'
 				mb={-1}
 			/>
 
@@ -73,7 +71,7 @@ const BuyNowBanner = () => {
 							Buy Casa Capistrano Now
 						</Typography>
 					</Grid>
-					<Grid item xs={4} md={4} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+					<Grid item xs={6} md={4} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Button
 							variant='outlined'
 							color='primaryBlack'
@@ -83,11 +81,12 @@ const BuyNowBanner = () => {
 								fontFamily: "calder-script, roboto",
 								fontWeight: 300,
 								fontSize: {
-									xs: "20px",
+									xs: "22px",
 									md: "24px",
+									lg: "28px",
 								},
 								py: 0,
-								width: "160px",
+								maxWidth: "180px",
 								boxShadow: "1px 1px 3px 1px #012233",
 								backgroundColor: "white",
 								borderColor: "white",
@@ -105,7 +104,7 @@ const BuyNowBanner = () => {
 							onClick={() => {
 								// ref.current?.scrollIntoView({ behavior: "smooth" });
 							}}>
-							Buy Now
+							Coming Soon
 						</Button>
 					</Grid>
 				</Grid>

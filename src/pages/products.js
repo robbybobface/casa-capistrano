@@ -173,6 +173,7 @@ const Products = () => {
 												},
 											}}
 											onClick={() => {
+												window.scrollTo(0, 0);
 												navigate("/blanco");
 											}}>
 											Explore Blanco
@@ -285,6 +286,7 @@ const Products = () => {
 											},
 										}}
 										onClick={() => {
+											window.scrollTo(0, 0);
 											navigate("/reposado");
 										}}>
 										Explore Reposado
@@ -398,6 +400,7 @@ const Products = () => {
 												},
 											}}
 											onClick={() => {
+												window.scrollTo(0, 0);
 												navigate("/cristalino");
 											}}>
 											Explore Cristalino
