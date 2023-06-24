@@ -1,16 +1,21 @@
 import React, { useEffect } from "react";
 import FadeIn from "react-fade-in";
 import { Container, Box, Typography, Divider } from "@mui/material";
+import { Helmet } from "react-helmet";
 
 const Disclaimer = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 	return (
-		<Box>
+		<>
+			<Helmet>
+				<title>Disclaimer</title>
+			</Helmet>
 			<Container>
 				<FadeIn>
 					<Typography
+						component='h1'
 						sx={{
 							fontFamily: "Cabin",
 							fontWeight: 600,
@@ -31,7 +36,11 @@ const Disclaimer = () => {
 							borderBottomWidth: 1,
 						}}
 					/>
-					<Box sx={{ py: { xs: 2, md: 4 }, px: { xs: 2, md: 8 }, textAlign: "justify" }}>
+					<Box
+						component='article'
+						role='main'
+						aria-label='Casa Capistrano Disclaimer'
+						sx={{ py: { xs: 2, md: 4 }, px: { xs: 2, md: 8 }, textAlign: "justify" }}>
 						<Typography
 							sx={{
 								fontFamily: "Roboto",
@@ -46,7 +55,6 @@ const Disclaimer = () => {
 							will then look at this as soon as possible. Please send your response by email to:
 							martin@casacapistrano
 						</Typography>
-
 						<Typography
 							sx={{
 								fontFamily: "Roboto",
@@ -75,7 +83,6 @@ const Disclaimer = () => {
 							of 1 month at the latest. In the case of complex requests, we will let you know within 1
 							month if we need a maximum of 3 months.
 						</Typography>
-
 						<Typography
 							sx={{
 								fontFamily: "Roboto",
@@ -87,7 +94,6 @@ const Disclaimer = () => {
 							Any personal data you provide us with in the context of your response or request for
 							information will only be used in accordance with our privacy statement.
 						</Typography>
-
 						<Typography
 							sx={{
 								fontFamily: "Roboto",
@@ -103,7 +109,6 @@ const Disclaimer = () => {
 							a user of the website, which arises as a result of the unlawful use of its systems by a
 							third party.
 						</Typography>
-
 						<Typography
 							sx={{
 								fontFamily: "Roboto",
@@ -153,7 +158,7 @@ const Disclaimer = () => {
 					</Box>
 				</FadeIn>
 			</Container>
-		</Box>
+		</>
 	);
 };
 

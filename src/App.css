@@ -186,6 +186,135 @@
 	z-index: 1; */
 }
 
+.blanco-hover {
+	background-color: #1947921b !important;
+}
+
+.reposado-hover {
+	background-color: #6c0d0f1b !important;
+}
+
+.cristalino-hover {
+	background-color: #0204061b !important;
+}
+
+.szh-menu {
+	background-color: rgba(255, 253, 247, 0.8) !important;
+	backdrop-filter: blur(20px) !important;
+	-webkit-backdrop-filter: blur(20px) !important;
+	transition: all 0.2s ease-in;
+}
+
+.szh-menu.scroll {
+	background-color: #fffdf7 !important;
+	transition: all 0.2s ease-in;
+}
+
+.szh-menu__arrow {
+	border: none !important;
+	background-color: #012233ff !important;
+	backdrop-filter: blur(20px) !important;
+	-webkit-backdrop-filter: blur(20px) !important;
+	transition: all 0.2s ease-in;
+}
+
+.szh-menu__arrow.scroll {
+	border: none !important;
+	background-color: #fffdf7 !important;
+	transition: all 0.2s ease-in;
+}
+
 /* .gradient img {
 	display: block;
 } */
+
+/* cabin-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Cabin";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./fonts/cabin-v26-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* cabin-500 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Cabin";
+	font-style: normal;
+	font-weight: 500;
+	src: url("./fonts/cabin-v26-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* cabin-600 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Cabin";
+	font-style: normal;
+	font-weight: 600;
+	src: url("./fonts/cabin-v26-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* cabin-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Cabin";
+	font-style: normal;
+	font-weight: 700;
+	src: url("./fonts/cabin-v26-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-100 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 100;
+	src: url("./fonts/roboto-v30-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-300 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 300;
+	src: url("./fonts/roboto-v30-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./fonts/roboto-v30-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-500 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 500;
+	src: url("./fonts/roboto-v30-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	src: url("./fonts/roboto-v30-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-900 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 900;
+	src: url("./fonts/roboto-v30-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dawning-of-a-new-day-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Dawning of a New Day";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./fonts/dawning-of-a-new-day-v16-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

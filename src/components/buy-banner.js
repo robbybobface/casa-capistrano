@@ -4,24 +4,15 @@ import BlurHashedImage from "./BlurHashedImage";
 
 const BuyNowBanner = () => {
 	return (
-		<Box sx={{ position: "relative", textAlign: "center" }}>
-			{/* <Box
-				component='img'
-				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg'
-				alt='buy-now-banner-art'
-				sx={{
-					objectFit: "cover",
-					height: "200px",
-					width: "100%",
-					// position: "relative",
-					filter: "brightness(65%);",
-					mb: -1,
-				}}
-			/> */}
+		<Box
+			component='section'
+			role='banner'
+			aria-label='Buy Casa Capistrano Now Banner'
+			sx={{ position: "relative", textAlign: "center" }}>
 			<BlurHashedImage
-				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg?tr=w-1800'
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg?tr=q-70'
 				hash='L.Ko4RRjM{t7~qofkCof%2s.ayof'
-				alt='Buy Now Banner Art'
+				alt='Buy Now Banner Background Art'
 				sx={{ objectFit: "cover", objectPosition: "bottom", filter: "brightness(65%)" }}
 				height='200px'
 				width='100%'
@@ -38,6 +29,7 @@ const BuyNowBanner = () => {
 				<Grid container spacing={2} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 					<Grid item xs={11} sm={11} md={6} lg={6} sx={{ textAlign: "center" }}>
 						<Typography
+							component='h2'
 							sx={{
 								color: "white",
 								fontFamily: "roboto",
@@ -55,6 +47,7 @@ const BuyNowBanner = () => {
 							Tequila Crafted For You
 						</Typography>
 						<Typography
+							component='h1'
 							sx={{
 								color: "white",
 								fontFamily: "Roboto",
@@ -73,6 +66,9 @@ const BuyNowBanner = () => {
 					</Grid>
 					<Grid item xs={6} md={4} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Button
+							role='link'
+							aria-label='Buy Now'
+							disabled
 							variant='outlined'
 							color='primaryBlack'
 							sx={{

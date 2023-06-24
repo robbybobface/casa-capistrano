@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import FadeIn from "react-fade-in";
 import { useNavigate } from "react-router-dom";
 import BlurHashedImage from "../components/BlurHashedImage";
+import { Helmet } from "react-helmet";
 
 const NotFound = () => {
 	const navigate = useNavigate();
@@ -11,29 +12,14 @@ const NotFound = () => {
 	}, []);
 	return (
 		<>
-			{/* <Box
-				component='img'
-				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cactus.jpg'
-				alt='cactus-art'
-				sx={{
-					display: "block",
-					verticalAlign: "bottom",
-					objectFit: "cover",
-					minHeight: { xs: "600px", md: "800px", lg: "900px" },
-					height: "100vh",
-					width: "100%",
-					position: "relative",
-					filter: "brightness(60%) blur(3px)",
-					zIndex: 10,
-					p: 0,
-				}}
-			/> */}
+			<Helmet>
+				<title>Not Found</title>
+			</Helmet>
 			<BlurHashedImage
-				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cactus.jpg'
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cactus.jpg?tr=q-70'
 				hash='LECu6fIU?]M|%MoztRt7?vWCMdjt'
 				display='block'
-				verticalAlign='bottom'
-				alt='cactus art'
+				alt='background cactus art'
 				height='100vh'
 				width='100%'
 				sx={{ objectFit: "cover" }}
@@ -50,6 +36,8 @@ const NotFound = () => {
 				p={0}
 			/>
 			<Box
+				role='main'
+				aria-label='Page Not found'
 				sx={{
 					position: "absolute",
 					top: "30%",
@@ -84,6 +72,8 @@ const NotFound = () => {
 					}}>
 					<FadeIn>
 						<Typography
+							component={"h1"}
+							aria-label='404 Error'
 							sx={{
 								textAlign: "left",
 								color: "primaryRed.main",
@@ -105,6 +95,8 @@ const NotFound = () => {
 							404
 						</Typography>
 						<Typography
+							component={"h2"}
+							aria-label='Page Not Found'
 							sx={{
 								fontFamily: "calder-script, cabin, roboto",
 								fontWeight: 700,
@@ -119,6 +111,8 @@ const NotFound = () => {
 							We can't find the page you are looking for
 						</Typography>
 						<Typography
+							component={"h3"}
+							aria-label='Page has been relocated or removed'
 							sx={{
 								fontFamily: "cabin, roboto",
 								fontWeight: 300,
@@ -134,6 +128,8 @@ const NotFound = () => {
 							This page has been relocated or removed.
 						</Typography>
 						<Button
+							role='navigation'
+							aria-label='Home'
 							variant='outlined'
 							color='primaryBlue'
 							sx={{

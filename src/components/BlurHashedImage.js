@@ -15,6 +15,7 @@ function BlurHashedImage({ cardMedia, src, hash, alt, height, mt, removeShadow, 
 		<>
 			{!imageLoaded ? (
 				<Box
+					aria-busy
 					mt={mt}
 					position={"relative"}
 					sx={{
@@ -41,7 +42,7 @@ function BlurHashedImage({ cardMedia, src, hash, alt, height, mt, removeShadow, 
 					alt={alt}
 					height={ignoreHeight ? "" : height}
 					image={src}
-					sx={{ height: ignoreHeight ? "" : height, ...props }}
+					sx={{ height: ignoreHeight ? "" : height, objectFit: props.objectfit, ...props }}
 					{...props}
 				/>
 			) : (

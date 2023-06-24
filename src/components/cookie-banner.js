@@ -42,6 +42,9 @@ const CookieBanner = () => {
 	}, []);
 	return (
 		<Box
+			component='section'
+			role='banner'
+			aria-label='Cookie Banner'
 			sx={{
 				width: "100%",
 				// backgroundColor: "white",
@@ -49,7 +52,7 @@ const CookieBanner = () => {
 				position: "fixed",
 				bottom: 0,
 				zIndex: 10000,
-				background: "rgba( 255, 255, 255, 0.3 );",
+				background: "rgba(255, 253, 247, 0.3);",
 				boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 );",
 				backdropFilter: "blur( 8px );",
 				webkitBackdropFilter: "blur( 8px );",
@@ -68,6 +71,7 @@ const CookieBanner = () => {
 					sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 					<Grid item xs={12} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Typography
+							aria-label='Cookie Banner Text/Disclosure'
 							color={fontColor}
 							sx={{
 								fontFamily: "cabin, Roboto",
@@ -80,7 +84,10 @@ const CookieBanner = () => {
 							By clicking "Accept", you agree to the storing of cookies on your device to enhance site
 							navigation and to analyze site usage. Read more{" "}
 							<Typography
+								role='link'
+								tabIndex={0}
 								component='span'
+								aria-label='Cookie policy'
 								sx={{
 									color: fontColor,
 									textDecoration: "underline",
@@ -121,6 +128,7 @@ const CookieBanner = () => {
 						lg={2}
 						sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Button
+							aria-label='Accept'
 							variant='contained'
 							color='primaryBlue'
 							startIcon={<CookieOutlinedIcon fontSize='small' sx={{ color: "white" }} />}
@@ -154,6 +162,7 @@ const CookieBanner = () => {
 						lg={2}
 						sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Button
+							aria-label='Reject'
 							variant='contained'
 							color='primaryDarkerBeige'
 							sx={{
@@ -165,8 +174,8 @@ const CookieBanner = () => {
 								letterSpacing: "1.2px",
 								fontSize: { xs: "14px", md: "14px", lg: "16px" },
 								borderRadius: "0px",
-								border: "1px solid rgba( 232, 232, 232, 0.3 );",
-								background: "rgba( 232, 232, 232, 0.7 );",
+								border: "1px solid rgba(255, 253, 247, 0.1);",
+								background: "rgba(255, 253, 247, 0.5);",
 								// boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 );",
 								backdropFilter: "blur( 20px );",
 								webkitBackdropFilter: "blur( 20px );",

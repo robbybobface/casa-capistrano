@@ -7,8 +7,12 @@ function OtherTequilas({ current }) {
 	const navigate = useNavigate();
 	return (
 		<Container
+			component='section'
+			role='region'
+			aria-label='Other Tequilas'
 			sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", mb: -2 }}>
 			<Typography
+				component={"h2"}
 				sx={{
 					fontFamily: "Cabin",
 					fontSize: { xs: "28px", sm: "32px", md: "40px" },
@@ -31,184 +35,198 @@ function OtherTequilas({ current }) {
 					borderBottomWidth: 3,
 				}}
 			/>
-			<Grid container mb={3} spacing={2} sx={{ display: "flex", justifyContent: "center" }}>
+			<Grid
+				component='nav'
+				role='navigation'
+				aria-label='Other Tequilas'
+				container
+				mb={3}
+				spacing={2}
+				sx={{ display: "flex", justifyContent: "center" }}>
 				{current !== "blanco" && (
 					<Grid item xs={6} sm={5} md={4}>
-						<Card
-							sx={{
-								borderRadius: "0px",
-								boxShadow: "1px 1px 5px 1px #01223399",
-								backgroundColor: "#fffdf7",
+						<Box component='article' role='button' aria-label='Blanco Tequila'>
+							<Card
+								sx={{
+									borderRadius: "0px",
+									boxShadow: "1px 1px 5px 1px #01223399",
+									backgroundColor: "#fffdf7",
 
-								"&:hover": {
-									boxShadow: "0px 0px 5px 3px #012233DD",
-								},
-							}}
-							onClick={() => {
-								window.scrollTo(0, 0);
-								navigate("/blanco");
-							}}>
-							<CardActionArea sx={{ p: { xs: 1, md: 2 } }}>
-								<Box
-									className='gradient'
-									sx={{
-										height: "100%",
-										width: "100%",
-									}}>
-									<BlurHashedImage
-										src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg?tr=h-600'
-										hash='LCFiJb~p?csq00D$4T4oInEL-pt7'
-										alt='blanco tequila'
-										cardMedia={true}
-										height='225px'
-										sx={{ zIndex: 1, objectPosition: "50% 80%" }}
-									/>
-								</Box>
-								<CardContent
-									sx={{
-										display: "flex",
-										justifyContent: "center",
-										flexDirection: "column",
-										p: 0,
-									}}>
-									<Typography
-										component='div'
+									"&:hover": {
+										boxShadow: "0px 0px 5px 3px #012233DD",
+									},
+								}}
+								onClick={() => {
+									window.scrollTo(0, 0);
+									navigate("/blanco");
+								}}>
+								<CardActionArea sx={{ p: { xs: 1, md: 2 } }}>
+									<Box
+										className='gradient'
 										sx={{
-											textAlign: "center",
-											fontFamily: "Cabin",
-											fontWeight: 400,
-											fontSize: "18px",
-											letterSpacing: "2px",
-											color: "white",
-											mt: -7,
-											zIndex: 18,
+											height: "100%",
+											width: "100%",
 										}}>
-										Blanco
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
+										<BlurHashedImage
+											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg?tr=q-50'
+											hash='LCFiJb~p?csq00D$4T4oInEL-pt7'
+											alt='Blanco tequila'
+											cardMedia={true}
+											height='225px'
+											sx={{ zIndex: 1, objectPosition: "50% 80%" }}
+										/>
+									</Box>
+									<CardContent
+										sx={{
+											display: "flex",
+											justifyContent: "center",
+											flexDirection: "column",
+											p: 0,
+										}}>
+										<Typography
+											component='h3'
+											sx={{
+												textAlign: "center",
+												fontFamily: "Cabin",
+												fontWeight: 400,
+												fontSize: "18px",
+												letterSpacing: "2px",
+												color: "white",
+												mt: -7,
+												zIndex: 18,
+											}}>
+											Blanco
+										</Typography>
+									</CardContent>
+								</CardActionArea>
+							</Card>
+						</Box>
 					</Grid>
 				)}
 				{current !== "reposado" && (
 					<Grid item xs={6} sm={5} md={4}>
-						<Card
-							sx={{
-								borderRadius: "0px",
-								boxShadow: "1px 1px 5px 1px #01223399",
-								backgroundColor: "#fffdf7",
+						<Box component='article' role='button' aria-label='Reposado Tequila'>
+							<Card
+								sx={{
+									borderRadius: "0px",
+									boxShadow: "1px 1px 5px 1px #01223399",
+									backgroundColor: "#fffdf7",
 
-								"&:hover": {
-									boxShadow: "0px 0px 5px 3px #012233DD",
-								},
-								transition: "all 0.2s ease-in",
-							}}
-							onClick={() => {
-								window.scrollTo(0, 0);
-								navigate("/reposado");
-							}}>
-							<CardActionArea sx={{ p: { xs: 1, md: 2 } }}>
-								<Box
-									className='gradient'
-									sx={{
-										height: "100%",
-										width: "100%",
-									}}>
-									<BlurHashedImage
-										src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg?tr=h-600'
-										hash='L9DSK|K600r?00#+=rELQRkC_N%M'
-										alt='reposado tequila'
-										cardMedia={true}
-										height='225px'
-										sx={{ zIndex: 1 }}
-									/>
-								</Box>
-								<CardContent
-									sx={{
-										display: "flex",
-										justifyContent: "center",
-										flexDirection: "column",
-										p: 0,
-									}}>
-									<Typography
-										component='div'
+									"&:hover": {
+										boxShadow: "0px 0px 5px 3px #012233DD",
+									},
+									transition: "all 0.2s ease-in",
+								}}
+								onClick={() => {
+									window.scrollTo(0, 0);
+									navigate("/reposado");
+								}}>
+								<CardActionArea sx={{ p: { xs: 1, md: 2 } }}>
+									<Box
+										className='gradient'
 										sx={{
-											textAlign: "center",
-											fontFamily: "Cabin",
-											fontWeight: 400,
-											fontSize: "18px",
-											letterSpacing: "2px",
-											color: "white",
-											mt: -7,
-											zIndex: 18,
+											height: "100%",
+											width: "100%",
 										}}>
-										Reposado
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
+										<BlurHashedImage
+											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg?tr=q-50'
+											hash='L9DSK|K600r?00#+=rELQRkC_N%M'
+											alt='Reposado tequila'
+											cardMedia={true}
+											height='225px'
+											sx={{ zIndex: 1 }}
+										/>
+									</Box>
+									<CardContent
+										sx={{
+											display: "flex",
+											justifyContent: "center",
+											flexDirection: "column",
+											p: 0,
+										}}>
+										<Typography
+											component='h3'
+											sx={{
+												textAlign: "center",
+												fontFamily: "Cabin",
+												fontWeight: 400,
+												fontSize: "18px",
+												letterSpacing: "2px",
+												color: "white",
+												mt: -7,
+												zIndex: 18,
+											}}>
+											Reposado
+										</Typography>
+									</CardContent>
+								</CardActionArea>
+							</Card>
+						</Box>
 					</Grid>
 				)}
 				{current !== "cristalino" && (
 					<Grid item xs={6} sm={5} md={4}>
-						<Card
-							sx={{
-								borderRadius: "0px",
-								boxShadow: "1px 1px 5px 1px #01223399",
-								backgroundColor: "#fffdf7",
-								"&:hover": {
-									boxShadow: "0px 0px 5px 3px #012233DD",
-								},
-								transition: "all 0.2s ease-in",
-							}}
-							onClick={() => {
-								window.scrollTo(0, 0);
-								navigate("/cristalino");
-							}}>
-							<CardActionArea sx={{ p: { xs: 1, md: 2 } }}>
-								<Box
-									className='gradient'
-									sx={{
-										height: "100%",
-										width: "100%",
-									}}>
-									<BlurHashedImage
-										src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg?tr=h-600'
-										hash='LHD+;:_N%gjYE2xYD%M{00D%IAD%'
-										alt='cristalino tequila'
-										height='225px'
-										cardMedia={true}
-										sx={{ zIndex: 1 }}
-									/>
-								</Box>
-								<CardContent
-									sx={{
-										display: "flex",
-										justifyContent: "center",
-										flexDirection: "column",
-										p: 0,
-									}}>
-									<Typography
-										component='div'
+						<Box component='article' role='button' aria-label='Cristalino Tequila'>
+							<Card
+								sx={{
+									borderRadius: "0px",
+									boxShadow: "1px 1px 5px 1px #01223399",
+									backgroundColor: "#fffdf7",
+									"&:hover": {
+										boxShadow: "0px 0px 5px 3px #012233DD",
+									},
+									transition: "all 0.2s ease-in",
+								}}
+								onClick={() => {
+									window.scrollTo(0, 0);
+									navigate("/cristalino");
+								}}>
+								<CardActionArea sx={{ p: { xs: 1, md: 2 } }}>
+									<Box
+										className='gradient'
 										sx={{
-											textAlign: "center",
-											fontFamily: "Cabin",
-											fontWeight: 400,
-											fontSize: "18px",
-											letterSpacing: "2px",
-											color: "white",
-											mt: -7,
-											zIndex: 18,
+											height: "100%",
+											width: "100%",
 										}}>
-										Añejo Cristalino
-									</Typography>
-								</CardContent>
-							</CardActionArea>
-						</Card>
+										<BlurHashedImage
+											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg?tr=q-50'
+											hash='LHD+;:_N%gjYE2xYD%M{00D%IAD%'
+											alt='Cristalino tequila'
+											height='225px'
+											cardMedia={true}
+											sx={{ zIndex: 1 }}
+										/>
+									</Box>
+									<CardContent
+										sx={{
+											display: "flex",
+											justifyContent: "center",
+											flexDirection: "column",
+											p: 0,
+										}}>
+										<Typography
+											component='h3'
+											sx={{
+												textAlign: "center",
+												fontFamily: "Cabin",
+												fontWeight: 400,
+												fontSize: "18px",
+												letterSpacing: "2px",
+												color: "white",
+												mt: -7,
+												zIndex: 18,
+											}}>
+											Añejo Cristalino
+										</Typography>
+									</CardContent>
+								</CardActionArea>
+							</Card>
+						</Box>
 					</Grid>
 				)}
 				<Grid item xs={10} mt={1} sx={{ display: "flex", justifyContent: "center" }}>
 					<Button
+						aria-label='Products'
 						variant='outlined'
 						color='primaryBlue'
 						sx={{

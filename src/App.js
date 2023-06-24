@@ -43,7 +43,7 @@ const Loader = ({ index }) => {
 				alignItems: "center",
 				backgroundColor: "#fffdf7",
 			}}>
-			<HashLoader color='#6c0d0f' loading={true} size={100} aria-label='Loading Spinner' />
+			<HashLoader color='#6c0d0f' loading={true} size={100} aria-busy aria-label='Page is Loading' />
 		</Box>
 	);
 };

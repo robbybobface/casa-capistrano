@@ -2,9 +2,9 @@ import { Box, Grid, Typography, Button, Paper } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import React, { useState } from "react";
 import FadeIn from "react-fade-in";
-import { ReactComponent as Logo } from "../media/logo-alt.svg";
 import { useCookies } from "react-cookie";
 import BlurHashedImage from "./BlurHashedImage";
+import { Helmet } from "react-helmet";
 
 const AgeGate = () => {
 	const [oldEnough, setOldEnough] = useState(true);
@@ -16,30 +16,15 @@ const AgeGate = () => {
 	}
 	return (
 		<>
-			{/* <Box
-				component='img'
-				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg'
-				alt='home-art'
-				sx={{
-					display: "block",
-					verticalAlign: "bottom",
-					objectFit: "cover",
-					minHeight: { xs: "600px", md: "800px", lg: "700px" },
-					height: "100vh",
-					width: "100%",
-					position: "relative",
-					filter: "brightness(80%) blur(1px)",
-					zIndex: 1000,
-					p: 0,
-				}}
-			/> */}
+			<Helmet>
+				<title>Casa Capistrano</title>
+			</Helmet>
 			<BlurHashedImage
-				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg?tr=w-1920'
+				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg?tr=q-50'
 				hash='L.Ko4RRjM{t7~qofkCof%2s.ayof'
 				display='block'
-				verticalAlign='bottom'
 				sx={{ objectFit: "cover" }}
-				alt='cactus art'
+				alt='background cactus art'
 				height='100vh'
 				width='100%'
 				minHeight={{ xs: "600px", md: "800px", lg: "700px" }}
@@ -49,6 +34,9 @@ const AgeGate = () => {
 				p={0}
 			/>
 			<Box
+				component='main'
+				role='main'
+				aria-label='Casa Capistrano Age Gate Screen'
 				sx={{
 					// maxWidth: "500px",
 					position: "absolute",
@@ -77,7 +65,8 @@ const AgeGate = () => {
 						flexDirection: "column",
 						justifyContent: "center",
 						alignItems: "center",
-						p: 2,
+						px: 2,
+						py: { xs: 0, md: 2 },
 					}}>
 					<FadeIn>
 						<Box
@@ -91,9 +80,25 @@ const AgeGate = () => {
 									md: "85%",
 								},
 							}}>
-							<Logo />
+							{/* <Logo aria-label='Casa Capistrano Tequila Logo' /> */}
+							<BlurHashedImage
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo-alt.png?tr=q-60'
+								hash='LNR:A~t7?cj[.8WBV@of_NWBMxj['
+								alt='Casa Capistrano Welcome Graphic'
+								edges={true}
+								width={{ xs: "90%", md: "100%" }}
+								height={{ xs: "150px", sm: "250px", md: "245px", lg: "275px" }}
+								display='flex'
+								justifyContent='center'
+								ignoreHeight={true}
+								// mb={2}
+								mx='auto'
+								// height={"275px"}
+							/>
 						</Box>
 						<Typography
+							component='h1'
+							aria-label='Welcome to Casa Capistrano!'
 							sx={{
 								fontFamily: "indie-flower, Roboto",
 								fontSize: {
@@ -112,6 +117,7 @@ const AgeGate = () => {
 						</Typography>
 						{!oldEnough ? (
 							<Typography
+								aria-label='Error'
 								sx={{
 									fontFamily: "calder-script, Roboto",
 									fontSize: {
@@ -132,6 +138,8 @@ const AgeGate = () => {
 						)}
 
 						<Typography
+							component='h2'
+							aria-label='Are you above the legal drinking age in your country?'
 							sx={{
 								fontFamily: "calder-script, Roboto",
 								fontSize: {
@@ -141,7 +149,7 @@ const AgeGate = () => {
 								color: "primaryBlue.main",
 								fontWeight: 300,
 								textAlign: "center",
-								px: { xs: 2, md: 4 },
+								px: { xs: 1, md: 4 },
 								mx: "auto",
 								pb: 1,
 							}}>
@@ -152,10 +160,11 @@ const AgeGate = () => {
 							spacing={0}
 							// columnGap={1}
 							mt={1}
-							mb={3}
+							mb={2}
 							sx={{ display: "flex", justifyContent: "center", alignItems: "center", mx: "auto" }}>
 							<Grid item xs={6} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 								<LoadingButton
+									aria-label='Yes'
 									variant='outlined'
 									color='primaryBlue'
 									loading={loading}
@@ -197,6 +206,7 @@ const AgeGate = () => {
 							</Grid>
 							<Grid item xs={6} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 								<Button
+									aria-label='No'
 									variant='outlined'
 									color='primaryBlue'
 									size='small'
@@ -231,17 +241,19 @@ const AgeGate = () => {
 							</Grid>
 						</Grid>
 						<Typography
+							aria-label='Casa Capistrano Disclaimer'
 							sx={{
 								fontFamily: "Roboto",
 								fontSize: {
-									xs: "9px",
-									sm: "10px",
+									xs: "12px",
+									sm: "12px",
 								},
 								color: "primaryBlue.main",
 								fontWeight: 300,
 								textAlign: "center",
-								px: 4,
+								px: { xs: 1, md: 3 },
 								mx: "auto",
+								mb: 0.5,
 							}}>
 							By entering this website, you certify that you are of legal drinking age in the state/region
 							in which you reside.

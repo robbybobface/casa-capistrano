@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { useLocation, useNavigate } from "react-router-dom";
+import { ControlledMenu, MenuDivider, MenuItem, useHover, useMenuState } from "@szhsin/react-menu";
 
 import {
 	AppBar,
@@ -16,24 +17,31 @@ import {
 	ListItemText,
 	ListItemButton,
 	Drawer,
-	Menu,
-	MenuItem,
+	Collapse,
+	ListItemIcon,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/transitions/slide.css";
+import { ChevronRight, ExpandLess, ExpandMore, RemoveSharp } from "@mui/icons-material";
+import FadeIn from "react-fade-in/lib/FadeIn";
 
 const Header = () => {
-	const drawerWidth = 240;
+	const drawerWidth = 260;
 	const pageTitles = ["HOME", "ABOUT", "PRODUCTS"];
-	const pageURLs = ["", "about", "products"];
+	const pageURLs = ["", "about", "blanco", "reposado", "cristalino", "products"];
+	const tequilaTypes = ["blanco", "reposado", "cristalino", "view All"];
 	const [mobileOpen, setMobileOpen] = useState(false);
+	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const [activePage, setActivePage] = useState("home");
 	const [transparent, setTransparent] = useState(true);
-	const [anchorEl, setAnchorEl] = useState(null);
 
 	const location = useLocation();
 	const navigate = useNavigate();
 
-	const open = Boolean(anchorEl);
+	const buttonRef = useRef(null);
+	const [menuState, toggle] = useMenuState({ transition: true });
+	const { anchorProps, hoverProps } = useHover(menuState.state, toggle);
 
 	const pageHandler = () => {
 		const url = location.pathname.split("/");
@@ -47,12 +55,13 @@ const Header = () => {
 			setActivePage("home");
 		}
 	};
-	const handleClose = () => {
-		setAnchorEl(null);
-	};
 
 	const handleDrawerToggle = () => {
 		setMobileOpen(!mobileOpen);
+	};
+
+	const handleDrawerProductsToggle = () => {
+		setDropdownOpen(!dropdownOpen);
 	};
 
 	const changeBackground = () => {
@@ -63,62 +72,187 @@ const Header = () => {
 			setTransparent(true);
 		}
 	};
+	const menuItemClassNameBlanco = ({ hover }) => (hover ? "blanco-hover" : "blanco");
+	const menuItemClassNameReposado = ({ hover }) => (hover ? "reposado-hover" : "reposado");
+	const menuItemClassNameCristalino = ({ hover }) => (hover ? "cristalino-hover" : "cristalino");
 
 	const drawer = (
-		<Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+		<Box sx={{ textAlign: "center" }} aria-label='navigation drawer'>
 			<Box
-				component='img'
-				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png'
-				alt='NavBar-Logo'
 				sx={{
-					width: {
-						xs: "200px",
-					},
-					py: 2,
-				}}
-			/>
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					flex: 1,
+				}}>
+				<Box
+					component='img'
+					src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png?tr=q-50'
+					width={"100%"}
+					alt='casa capistrano logo'
+					sx={{
+						width: {
+							xs: "200px",
+						},
+						py: 2,
+					}}
+				/>
+			</Box>
 			<Divider />
-			<List>
-				{pageTitles.map((item, index) => (
-					<ListItem key={item} disablePadding>
-						<ListItemButton
-							sx={{ textAlign: "center" }}
-							onClick={() => {
-								window.scrollTo(0, 0);
-								navigate(pageURLs.at(index));
-							}}>
-							<ListItemText
-								primary={
-									<Typography
-										sx={{
-											fontFamily: "Cabin",
-											fontSize: "1.2rem",
-											"&:hover": {
-												textDecoration: "underline",
-											},
-											color:
-												activePage === "home"
-													? transparent
-														? "primaryBlue.main"
-														: "primaryBlue.main"
-													: "primaryBlue.main",
-											...(pageURLs.at(index) === activePage && {
-												color: "primaryRed.main",
-												textDecoration: "underline",
-											}),
-											...(activePage === "home" &&
-												pageURLs.at(index) === "" && {
+			<List role='navigation' aria-label='navigation link list'>
+				<FadeIn visible={mobileOpen}>
+					{pageTitles.map((item, index) => (
+						<ListItem
+							key={item}
+							disablePadding
+							aria-label={item.toLowerCase().slice(0, 1).toUpperCase() + item.toLowerCase().slice(1)}>
+							<ListItemButton
+								role={index < 2 ? "navigation" : "button"}
+								aria-label={
+									index < 2
+										? item.toLowerCase().slice(0, 1).toUpperCase() + item.toLowerCase().slice(1)
+										: "open products submenu"
+								}
+								sx={{ textAlign: "left", pl: 4 }}
+								onClick={() => {
+									if (item !== "PRODUCTS") {
+										window.scrollTo(0, 0);
+										navigate(pageURLs.at(index));
+										handleDrawerToggle();
+									} else {
+										handleDrawerProductsToggle();
+									}
+								}}>
+								<ListItemText
+									aria-details={`navigation link ${item.toLowerCase()}`}
+									primary={
+										<Typography
+											sx={{
+												fontFamily: "Cabin",
+												fontSize: "1.2rem",
+												zIndex: 20,
+												"&:hover": {
+													textDecoration: "underline",
+												},
+												color:
+													activePage === "home"
+														? transparent
+															? "Blue.main"
+															: "primaryBlue.main"
+														: "primaryBlue.main",
+												...(pageURLs.at(index) === activePage && {
 													color: "primaryRed.main",
 													textDecoration: "underline",
 												}),
+												...(index === 2 &&
+													(activePage === "blanco" ||
+														activePage === "reposado" ||
+														activePage === "cristalino" ||
+														activePage === "products") && {
+														color: "primaryRed.main",
+														textDecoration: "underline",
+													}),
+												...(activePage === "home" &&
+													pageURLs.at(index) === "" && {
+														color: "primaryRed.main",
+														textDecoration: "underline",
+													}),
+											}}>
+											{item}
+										</Typography>
+									}
+								/>
+								{item === "PRODUCTS" ? (
+									dropdownOpen ? (
+										<ExpandLess sx={{ mr: 1 }} />
+									) : (
+										<ExpandMore sx={{ mr: 1 }} />
+									)
+								) : (
+									""
+								)}
+							</ListItemButton>
+						</ListItem>
+					))}
+					<Collapse in={dropdownOpen} timeout='auto' unmountOnExit>
+						<List dense component='div' disablePadding>
+							{tequilaTypes.map((item, index) => (
+								<ListItem
+									key={`tequila-${index}`}
+									disableGutters
+									disablePadding
+									aria-label={
+										item.toLowerCase().slice(0, 1).toUpperCase() + item.toLowerCase().slice(1)
+									}>
+									<ListItemButton
+										role='navigation'
+										aria-label={
+											item.toLowerCase().slice(0, 1).toUpperCase() + item.toLowerCase().slice(1)
+										}
+										sx={{ textAlign: "left", pl: 5 }}
+										onClick={() => {
+											window.scrollTo(0, 0);
+											navigate(pageURLs.at(index + 2));
+											handleDrawerToggle();
 										}}>
-										{item}
-									</Typography>
-								}
-							/>
-						</ListItemButton>
-					</ListItem>
-				))}
+										<ListItemIcon sx={{ minWidth: "32px !important" }}>
+											{index < 3 && (
+												<RemoveSharp
+													color={
+														index === 0
+															? "primaryBlanco"
+															: index === 1
+															? "primaryRed"
+															: "primaryBlack"
+													}
+													sx={{ fontSize: "18px" }}
+												/>
+											)}
+										</ListItemIcon>
+										<ListItemText
+											aria-details={`navigation drawer ${item.toLowerCase()}`}
+											primary={
+												<Typography
+													sx={{
+														fontFamily: "Cabin",
+														fontSize: "1.2rem",
+														zIndex: 20,
+														"&:hover": {
+															textDecoration: "underline",
+														},
+														color:
+															activePage === "home"
+																? transparent
+																	? "Blue.main"
+																	: "primaryBlue.main"
+																: "primaryBlue.main",
+														...(pageURLs.at(index + 2) === activePage && {
+															color:
+																index === 0
+																	? "primaryBlanco.main"
+																	: index === 1
+																	? "primaryRed.main"
+																	: index === 2
+																	? "primaryBlack.main"
+																	: "primaryRed.main",
+															textDecoration: "underline",
+														}),
+														...(activePage === "home" &&
+															pageURLs.at(index + 2) === "" && {
+																color: "primaryRed.main",
+																textDecoration: "underline",
+															}),
+													}}>
+													{item.slice(0, 1).toUpperCase() + item.slice(1)}
+												</Typography>
+											}
+										/>
+									</ListItemButton>
+								</ListItem>
+							))}
+						</List>
+					</Collapse>
+				</FadeIn>
 			</List>
 		</Box>
 	);
@@ -132,6 +266,8 @@ const Header = () => {
 	return (
 		<>
 			<AppBar
+				aria-label='header'
+				role='navigation'
 				position='sticky'
 				color={
 					activePage === "home"
@@ -159,7 +295,7 @@ const Header = () => {
 						<Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
 							<IconButton
 								size='large'
-								aria-label='account of current user'
+								aria-label='navigation menu toggle'
 								aria-controls='menu-appbar'
 								aria-haspopup='true'
 								onClick={handleDrawerToggle}
@@ -178,16 +314,11 @@ const Header = () => {
 						</Box>
 						<Box
 							component='img'
-							src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png'
-							alt='NavBar-Logo'
+							src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png?tr=q-50'
+							alt='casa capistrano navigation bar logo'
+							width={{ xs: "80%", sm: "65%", md: "400px", lg: "350px" }}
+							height={"80%"}
 							sx={{
-								height: "80%",
-								width: {
-									xs: "80%",
-									sm: "400px",
-									md: "400px",
-									lg: "350px",
-								},
 								"&:hover": {
 									cursor: "pointer",
 								},
@@ -197,29 +328,24 @@ const Header = () => {
 								navigate("/");
 							}}
 						/>
-						{/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
 						<Typography
-							variant='h5'
 							noWrap
-							component='a'
+							component='div'
 							href=''
 							sx={{
 								mr: 2,
 								display: { xs: "flex", md: "none" },
 								flexGrow: 1,
-								fontFamily: "Roboto",
-								fontWeight: 500,
-								letterSpacing: ".3rem",
-								color: "primaryBlue",
-								textDecoration: "none",
-								fontSize: "14px",
 							}}></Typography>
-						<Box sx={{ display: { xs: "none", md: "flex" }, ml: { xs: 1, lg: 3, xl: 4 } }}>
+						<Box
+							sx={{ display: { xs: "none", md: "flex" }, ml: { xs: 1, lg: 3, xl: 4 } }}
+							aria-label='navigation buttons'>
 							{pageTitles.length > 0 &&
 								pageTitles.map((page, index) => {
 									if (page !== "PRODUCTS") {
 										return (
 											<Button
+												aria-label={`${page.toLowerCase()}`}
 												key={index}
 												onClick={() => {
 													window.scrollTo(0, 0);
@@ -238,6 +364,7 @@ const Header = () => {
 													"&:hover": {
 														textDecoration: "underline",
 													},
+													transition: "all 0.1s ease-in-out",
 													color:
 														activePage === "home"
 															? transparent
@@ -259,23 +386,22 @@ const Header = () => {
 										);
 									} else {
 										return (
-											<React.Fragment key={index}>
+											<Box key={index}>
 												<Button
-													key={page}
+													aria-haspopup
+													ref={buttonRef}
+													aria-label={`${page.toLowerCase()}`}
 													onClick={() => {
+														console.log("clicked");
 														window.scrollTo(0, 0);
 														navigate(pageURLs.at(index));
 													}}
-													aria-owns={open ? "mouse-over-popover" : undefined}
-													aria-haspopup='true'
-													// onMouseOver={(e) => setAnchorEl(e.currentTarget)}
-													// onMouseEnter={(e) => setAnchorEl(e.currentTarget)}
 													color={activePage !== "home" ? "primaryBlack" : "primaryBeige"}
 													sx={{
 														mx: 1,
 														my: 2,
 														px: 2,
-														display: "block",
+														display: "flex",
 														textTransform: "none",
 														fontFamily: "Cabin",
 														fontWeight: 600,
@@ -289,7 +415,10 @@ const Header = () => {
 																	? "primaryWhite.main"
 																	: "primaryBlue.main"
 																: "primaryBlue.main",
-														...(pageURLs.at(index) === activePage && {
+														...((activePage === "products" ||
+															activePage === "blanco" ||
+															activePage === "reposado" ||
+															activePage === "cristalino") && {
 															color: "primaryRed.main",
 															textDecoration: "underline",
 														}),
@@ -298,72 +427,155 @@ const Header = () => {
 																color: "primaryRed.main",
 																textDecoration: "underline",
 															}),
-													}}>
+													}}
+													{...anchorProps}>
 													{page}
+													<ExpandMore
+														sx={{
+															ml: 0.5,
+															mr: -1,
+															transform:
+																menuState.state === "open" ||
+																menuState.state === "opening"
+																	? "rotate(180deg)"
+																	: "",
+															transition: "transform 0.1s ease-in-out",
+														}}
+													/>
 												</Button>
-											</React.Fragment>
+												<ControlledMenu
+													captureFocus={true}
+													align='center'
+													initialMounted={true}
+													aria-label='products menu'
+													menuClassName={
+														activePage === "home" ? (transparent ? "scroll" : "") : ""
+													}
+													arrowProps={{
+														className:
+															activePage === "home" ? (transparent ? "scroll" : "") : "",
+													}}
+													{...hoverProps}
+													{...menuState}
+													// state='open'
+													menuStyle={{
+														borderRadius: "0px",
+														fontFamily: "Cabin, roboto",
+														fontSize: "18px",
+														paddingRight: "0px",
+													}}
+													arrow
+													anchorRef={buttonRef}
+													onClose={() => toggle(false)}>
+													<MenuItem
+														className={menuItemClassNameBlanco}
+														style={{
+															paddingRight: "0px",
+														}}
+														onClick={() => {
+															window.scrollTo(0, 0);
+															navigate("/blanco");
+														}}>
+														{({ hover }) => (
+															<>
+																Blanco
+																<ChevronRight
+																	color='primaryBlanco'
+																	sx={{
+																		ml: hover ? 0.5 : 0,
+																		opacity: hover ? 1 : 0,
+																		transition: "all 0.2s ease-in",
+																	}}
+																/>
+															</>
+														)}
+													</MenuItem>
+													<MenuItem
+														className={menuItemClassNameReposado}
+														style={{
+															paddingRight: "0px",
+														}}
+														onClick={() => {
+															window.scrollTo(0, 0);
+															navigate("/reposado");
+														}}>
+														{({ hover }) => (
+															<>
+																Reposado
+																<ChevronRight
+																	color='primaryRed'
+																	sx={{
+																		ml: hover ? 0.5 : 0,
+																		opacity: hover ? 1 : 0,
+																		transition: "all 0.2s ease-in",
+																	}}
+																/>
+															</>
+														)}
+													</MenuItem>
+													<MenuItem
+														className={menuItemClassNameCristalino}
+														style={{
+															paddingRight: "0px",
+														}}
+														onClick={() => {
+															window.scrollTo(0, 0);
+															navigate("/cristalino");
+														}}>
+														{({ hover }) => (
+															<>
+																Cristalino
+																<ChevronRight
+																	color='primaryBlack'
+																	sx={{
+																		ml: hover ? 0.5 : 0,
+																		opacity: hover ? 1 : 0,
+																		transition: "all 0.2s ease-in",
+																	}}
+																/>
+															</>
+														)}
+													</MenuItem>
+													<MenuDivider />
+													<MenuItem
+														// style={{
+														// 	// fontFamily: "calder-script, cabin",
+														// 	fontSize: "22px",
+														// 	paddingVertical: "0px",
+														// }}
+														style={{
+															paddingRight: "0px",
+														}}
+														onClick={() => {
+															window.scrollTo(0, 0);
+															navigate("/products");
+														}}>
+														{({ hover }) => (
+															<>
+																View All
+																<ChevronRight
+																	sx={{
+																		ml: hover ? 0.5 : 0,
+																		opacity: hover ? 1 : 0,
+																		transition: "all 0.2s ease-in",
+																	}}
+																/>
+															</>
+														)}
+													</MenuItem>
+												</ControlledMenu>
+											</Box>
 										);
 									}
 								})}
-							<Menu
-								id='mouse-over-popover'
-								MenuListProps={{
-									"aria-labelledby": "fade-button",
-									onMouseLeave: handleClose,
-									textAlign: "center",
-								}}
-								anchorEl={anchorEl}
-								open={open}
-								onClose={handleClose}
-								// TransitionComponent={Fade}
-								anchorOrigin={{
-									vertical: "bottom",
-									horizontal: "center",
-								}}
-								transformOrigin={{
-									vertical: "top",
-									horizontal: "center",
-								}}
-								disableRestoreFocus
-								sx={{
-									"& .MuiPaper-root": {
-										display: "flex",
-										justifyContent: "center",
-										alignItems: "center",
-
-										textAlign: "center",
-									},
-									"& .MuiMenuItem-root": {
-										display: "flex",
-										justifyContent: "center",
-										alignItems: "center",
-										textAlign: "center",
-										px: 3,
-									},
-								}}>
-								<MenuItem
-									onClick={handleClose}
-									sx={{ fontFamily: "Cabin", textTransform: "uppercase", textAlign: "center" }}>
-									Blanco
-								</MenuItem>
-								<MenuItem
-									onClick={handleClose}
-									sx={{ fontFamily: "Cabin", textTransform: "uppercase" }}>
-									Reposado
-								</MenuItem>
-								<MenuItem
-									onClick={handleClose}
-									sx={{ fontFamily: "Cabin", textTransform: "uppercase" }}>
-									Cristalino
-								</MenuItem>
-							</Menu>
 						</Box>
 					</Toolbar>
 				</Container>
 			</AppBar>
-			<Box component='nav'>
+			<Box component='nav' id='menu-appbar' aria-label='mobile navigation drawer'>
 				<Drawer
 					variant='temporary'
+					anchor='left'
 					open={mobileOpen}
 					onClose={handleDrawerToggle}
 					ModalProps={{
@@ -374,10 +586,12 @@ const Header = () => {
 						"& .MuiDrawer-paper": {
 							boxSizing: "border-box",
 							width: drawerWidth,
-							backgroundColor: "#fffdf7",
+							backgroundColor: "rgba(255, 253, 247, 0.8);",
+							// boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 );",
+							backdropFilter: "blur( 7px );",
+							webkitBackdropFilter: "blur( 7px );",
 						},
-					}}
-					onClick={handleDrawerToggle}>
+					}}>
 					{drawer}
 				</Drawer>
 			</Box>

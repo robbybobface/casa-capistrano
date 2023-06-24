@@ -12,6 +12,9 @@ const Footer = () => {
 	const navigate = useNavigate();
 	return (
 		<Box
+			role='contentinfo'
+			aria-label='footer'
+			component='footer'
 			sx={{
 				display: "flex",
 				minHeight: "165px",
@@ -31,14 +34,16 @@ const Footer = () => {
 							}}>
 							<Box
 								component='img'
-								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png'
-								alt='NavBar-Logo'
+								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo_white.png?tr=q-50'
+								alt='Casa Capistrano logo'
+								width={"90%"}
 								sx={{
 									width: "90%",
 									mb: 2,
 								}}
 							/>
 							<Typography
+								aria-label='short description of Casa Capistrano'
 								sx={{
 									fontFamily: "cabin, Roboto",
 									fontSize: "14px",
@@ -53,6 +58,7 @@ const Footer = () => {
 								your palate.
 							</Typography>
 							<Box
+								aria-label="links to Casa Capistrano's socail media pages"
 								sx={{
 									display: "flex",
 									justifyContent: "center",
@@ -60,13 +66,13 @@ const Footer = () => {
 									width: "100%",
 									pb: 3,
 								}}>
-								<Box>
+								<Box role='link' aria-label='Facebook'>
 									<FacebookIcon sx={{ color: "white", px: 2 }} fontSize='small' />
 								</Box>
-								<Box>
+								<Box role='link' aria-label='Twitter'>
 									<TwitterIcon sx={{ color: "white", px: 2 }} fontSize='small' />
 								</Box>
-								<Box>
+								<Box role='link' aria-label='Instagram'>
 									<InstagramIcon sx={{ color: "white", px: 2 }} fontSize='small' />
 								</Box>
 							</Box>
@@ -74,6 +80,8 @@ const Footer = () => {
 					</Grid>
 					<Grid item xs={10} md={4} pb={1}>
 						<Box
+							role='navigation'
+							aria-label='footer navigation'
 							sx={{
 								display: "flex",
 								flexDirection: "column",
@@ -81,6 +89,7 @@ const Footer = () => {
 								justifyContent: "flex-start",
 							}}>
 							<Typography
+								component={"h2"}
 								sx={{
 									fontFamily: "Cabin",
 									fontSize: "20px",
@@ -94,8 +103,13 @@ const Footer = () => {
 								Navigation
 							</Typography>
 							<Typography
+								role='navigation'
+								component='a'
+								tabIndex={0}
+								focusable
+								aria-label='Home'
 								sx={{
-									fontFamily: "Roboto",
+									fontFamily: "Cabin",
 									fontSize: "15px",
 									fontWeight: 300,
 									color: "white",
@@ -113,8 +127,12 @@ const Footer = () => {
 								Home
 							</Typography>
 							<Typography
+								role='navigation'
+								component='a'
+								tabIndex={0}
+								aria-label='About'
 								sx={{
-									fontFamily: "Roboto",
+									fontFamily: "Cabin",
 									fontSize: "15px",
 									fontWeight: 300,
 									color: "white",
@@ -132,8 +150,12 @@ const Footer = () => {
 								About
 							</Typography>
 							<Typography
+								role='navigation'
+								component='a'
+								tabIndex={0}
+								aria-label='Products'
 								sx={{
-									fontFamily: "Roboto",
+									fontFamily: "Cabin",
 									fontSize: "15px",
 									fontWeight: 300,
 									color: "white",
@@ -161,6 +183,7 @@ const Footer = () => {
 								justifyContent: "flex-start",
 							}}>
 							<Typography
+								component={"h2"}
 								sx={{
 									fontFamily: "Cabin",
 									fontSize: "20px",
@@ -174,6 +197,7 @@ const Footer = () => {
 								Contact Info
 							</Typography>
 							<Typography
+								aria-label="Casa Capistrano's address"
 								component='div'
 								sx={{
 									fontFamily: "Cabin",
@@ -190,6 +214,7 @@ const Footer = () => {
 								Casa Capistrano, LLC PO Box 4297 Cedar Hill, TX 75106
 							</Typography>
 							<Typography
+								aria-label="Casa Capistrano's phone number"
 								component='div'
 								sx={{
 									fontFamily: "Cabin",
@@ -206,6 +231,7 @@ const Footer = () => {
 								(620)-TEQUILA or (620)-837-8452
 							</Typography>
 							<Typography
+								aria-label="Casa Capistrano's email address"
 								component='div'
 								sx={{
 									fontFamily: "Cabin",
@@ -232,6 +258,7 @@ const Footer = () => {
 							flexDirection: "column",
 						}}>
 						<Typography
+							aria-label='Casa Capistrano LLC copywrite'
 							sx={{
 								color: "white",
 								fontSize: "10px",
@@ -244,6 +271,7 @@ const Footer = () => {
 							{`COPYRIGHT ©${new Date().getFullYear()} IMPORTED BY CASA CAPISTRANO LLC`}
 						</Typography>
 						<Typography
+							aria-label='Drink Responsibly!'
 							sx={{
 								color: "white",
 								fontSize: "10px",
@@ -256,10 +284,24 @@ const Footer = () => {
 							PLEASE DO NOT SHARE WITH ANYONE UNDER THE LEGAL PURCHASE AGE FOR ALCOHOL. DRINK RESPONSIBLY
 						</Typography>
 					</Grid>
-					<Grid container rowSpacing={1.5} mt={1} sx={{ display: "flex", justifyContent: "center" }}>
-						<Grid item xs={10} sm={6} md={3}>
+					<Grid
+						role='navigation'
+						aria-label='Cookie Policy, Privacy Statement, Imprint, and Disclaimer'
+						container
+						rowSpacing={1.5}
+						mt={1}
+						sx={{ display: "flex", justifyContent: "center" }}>
+						<Grid
+							item
+							xs={10}
+							sm={6}
+							md={3}
+							sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 							<Typography
-								component='div'
+								role='navigation'
+								component='a'
+								tabIndex={0}
+								aria-label='Cookie Policy'
 								onClick={() => {
 									if (navigator.language === "en-US" || navigator.language === "en-us") {
 										window.scrollTo(0, 0);
@@ -279,9 +321,10 @@ const Footer = () => {
 									}
 								}}
 								sx={{
+									flex: 1,
 									textAlign: "center",
 									color: "white",
-									fontFamily: "Roboto",
+									fontFamily: "Cabin",
 									fontWeight: 300,
 									fontSize: "11px",
 									textTransform: "uppercase",
@@ -293,9 +336,17 @@ const Footer = () => {
 								Cookie Policy
 							</Typography>
 						</Grid>
-						<Grid item xs={10} sm={6} md={3}>
+						<Grid
+							item
+							xs={10}
+							sm={6}
+							md={3}
+							sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 							<Typography
-								component='div'
+								role='navigation'
+								component='a'
+								tabIndex={0}
+								aria-label='Privacy Statement'
 								onClick={() => {
 									if (navigator.language === "en-US" || navigator.language === "en-us") {
 										window.scrollTo(0, 0);
@@ -315,9 +366,10 @@ const Footer = () => {
 									}
 								}}
 								sx={{
+									flex: 1,
 									textAlign: "center",
 									color: "white",
-									fontFamily: "Roboto",
+									fontFamily: "Cabin",
 									fontWeight: 300,
 									fontSize: "11px",
 									textTransform: "uppercase",
@@ -333,17 +385,26 @@ const Footer = () => {
 								Privacy Statement
 							</Typography>
 						</Grid>
-						<Grid item xs={10} sm={6} md={3}>
+						<Grid
+							item
+							xs={10}
+							sm={6}
+							md={3}
+							sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 							<Typography
-								component='div'
+								role='navigation'
+								component='a'
+								tabIndex={0}
+								aria-label='Imprint'
 								onClick={() => {
 									window.scrollTo(0, 0);
 									navigate("/imprint");
 								}}
 								sx={{
+									flex: 1,
 									textAlign: "center",
 									color: "white",
-									fontFamily: "Roboto",
+									fontFamily: "Cabin",
 									fontWeight: 300,
 									fontSize: "11px",
 									textTransform: "uppercase",
@@ -356,17 +417,26 @@ const Footer = () => {
 								Imprint
 							</Typography>
 						</Grid>
-						<Grid item xs={10} sm={6} md={3}>
+						<Grid
+							item
+							xs={10}
+							sm={6}
+							md={3}
+							sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 							<Typography
-								component='div'
+								role='navigation'
+								component='a'
+								tabIndex={0}
+								aria-label='Disclaimer'
 								onClick={() => {
 									window.scrollTo(0, 0);
 									navigate("/disclaimer");
 								}}
 								sx={{
+									flex: 1,
 									textAlign: "center",
 									color: "white",
-									fontFamily: "Roboto",
+									fontFamily: "Cabin",
 									fontWeight: 300,
 									fontSize: "11px",
 									textTransform: "uppercase",
