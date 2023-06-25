@@ -14,15 +14,13 @@ function OtherTequilas({ current }) {
 			<Typography
 				component={"h2"}
 				sx={{
-					fontFamily: "Cabin",
 					fontSize: { xs: "28px", sm: "32px", md: "40px" },
+					fontFamily: "Gilroy-Heavy, Cabin",
 					textAlign: "center",
-
 					fontWeight: 600,
 					color: "primaryBlack.main",
 					textTransform: "uppercase",
-					letterSpacing: "9.9px",
-					// fontStyle: "italic",
+					letterSpacing: "12px",
 				}}>
 				Other Tequilas
 			</Typography>
@@ -87,10 +85,10 @@ function OtherTequilas({ current }) {
 											component='h3'
 											sx={{
 												textAlign: "center",
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												fontWeight: 400,
-												fontSize: "18px",
-												letterSpacing: "2px",
+												fontSize: { xs: "16px", sm: "20px", md: "24px" },
+												letterSpacing: "1px",
 												color: "white",
 												mt: -7,
 												zIndex: 18,
@@ -148,10 +146,10 @@ function OtherTequilas({ current }) {
 											component='h3'
 											sx={{
 												textAlign: "center",
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												fontWeight: 400,
-												fontSize: "18px",
-												letterSpacing: "2px",
+												fontSize: { xs: "16px", sm: "20px", md: "24px" },
+												letterSpacing: "1px",
 												color: "white",
 												mt: -7,
 												zIndex: 18,
@@ -208,10 +206,10 @@ function OtherTequilas({ current }) {
 											component='h3'
 											sx={{
 												textAlign: "center",
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												fontWeight: 400,
-												fontSize: "18px",
-												letterSpacing: "2px",
+												fontSize: { xs: "16px", sm: "20px", md: "24px" },
+												letterSpacing: "1px",
 												color: "white",
 												mt: -7,
 												zIndex: 18,
@@ -236,6 +234,7 @@ function OtherTequilas({ current }) {
 							fontFamily: "calder-script, cabin, roboto",
 							fontSize: "24px",
 							py: 0,
+							px: 3,
 							borderRadius: "0px",
 							backgroundColor: "white",
 							borderColor: "primaryBlue.main",

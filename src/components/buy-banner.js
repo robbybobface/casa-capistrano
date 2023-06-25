@@ -13,8 +13,12 @@ const BuyNowBanner = () => {
 				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg?tr=q-70'
 				hash='L.Ko4RRjM{t7~qofkCof%2s.ayof'
 				alt='Buy Now Banner Background Art'
-				sx={{ objectFit: "cover", objectPosition: "bottom", filter: "brightness(65%)" }}
-				height='200px'
+				sx={{
+					objectFit: "cover",
+					objectPosition: "50% 65%",
+					filter: "brightness(50%) contrast(110%) saturate(110%)",
+				}}
+				height='180px'
 				width='100%'
 				mb={-1}
 			/>
@@ -27,22 +31,22 @@ const BuyNowBanner = () => {
 					transform: "translate(-50%, -50%)",
 				}}>
 				<Grid container spacing={2} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-					<Grid item xs={11} sm={11} md={6} lg={6} sx={{ textAlign: "center" }}>
+					<Grid item xs={11} sm={11} md={6} lg={7} sx={{ textAlign: "center" }}>
 						<Typography
 							component='h2'
 							sx={{
 								color: "white",
-								fontFamily: "roboto",
+								fontFamily: "Gilroy-Bold, roboto",
 								fontWeight: 600,
 								fontSize: {
 									xs: "16px",
 									sm: "22px",
-									md: "24px",
-									lg: "27px",
+									md: "26px",
+									lg: "30px",
 								},
 								// fontStyle: "italic",
 								textTransform: "uppercase",
-								letterSpacing: "5px",
+								letterSpacing: "2px",
 							}}>
 							Tequila Crafted For You
 						</Typography>
@@ -50,7 +54,7 @@ const BuyNowBanner = () => {
 							component='h1'
 							sx={{
 								color: "white",
-								fontFamily: "Roboto",
+								fontFamily: "Gilroy-Regular, Roboto",
 								fontWeight: 400,
 								fontSize: {
 									xs: "18px",
@@ -58,13 +62,13 @@ const BuyNowBanner = () => {
 									md: "35px",
 									lg: "40px",
 								},
-								letterSpacing: "5px",
+								letterSpacing: "4px",
 								textTransform: "uppercase",
 							}}>
 							Buy Casa Capistrano Now
 						</Typography>
 					</Grid>
-					<Grid item xs={6} md={4} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+					<Grid item xs={8} md={3} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Button
 							role='link'
 							aria-label='Buy Now'
@@ -82,6 +86,7 @@ const BuyNowBanner = () => {
 									lg: "28px",
 								},
 								py: 0,
+								px: 4,
 								maxWidth: "180px",
 								boxShadow: "1px 1px 3px 1px #012233",
 								backgroundColor: "white",

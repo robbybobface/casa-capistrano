@@ -292,14 +292,13 @@ const Home = () => {
 								<Typography
 									component='h2'
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Heavy, Cabin",
 										fontSize: "40px",
 										textAlign: "center",
-
 										fontWeight: 600,
 										color: "primaryBlack.main",
 										textTransform: "uppercase",
-										letterSpacing: "9.9px",
+										letterSpacing: "12px",
 										// fontStyle: "italic",
 									}}>
 									Our Tequilas
@@ -321,6 +320,7 @@ const Home = () => {
 										aria-label="Casa Capistrano's Blanco Tequila"
 										item
 										xs={11}
+										sm={6}
 										md={4}>
 										<Card
 											role='navigation'
@@ -363,10 +363,10 @@ const Home = () => {
 													<Typography
 														sx={{
 															textAlign: "center",
-															fontFamily: "Cabin",
+															fontFamily: "Gilroy-Heavy, Cabin",
 															fontWeight: 400,
-															fontSize: "18px",
-															letterSpacing: "2px",
+															fontSize: "24px",
+															letterSpacing: "1px",
 															color: "white",
 															mt: -7,
 															zIndex: 18,
@@ -382,6 +382,7 @@ const Home = () => {
 										aria-label="Casa Capistrano's Reposado Tequila"
 										item
 										xs={11}
+										sm={6}
 										md={4}>
 										<Card
 											role='navigation'
@@ -426,10 +427,10 @@ const Home = () => {
 													<Typography
 														sx={{
 															textAlign: "center",
-															fontFamily: "Cabin",
+															fontFamily: "Gilroy-Heavy, Cabin",
 															fontWeight: 400,
-															fontSize: "18px",
-															letterSpacing: "2px",
+															fontSize: "24px",
+															letterSpacing: "1px",
 															color: "white",
 															mt: -7,
 															zIndex: 18,
@@ -445,6 +446,7 @@ const Home = () => {
 										aria-label="Casa Capistrano's Cristalino Tequila"
 										item
 										xs={11}
+										sm={6}
 										md={4}>
 										<Card
 											role='navigation'
@@ -488,10 +490,10 @@ const Home = () => {
 													<Typography
 														sx={{
 															textAlign: "center",
-															fontFamily: "Cabin",
+															fontFamily: "Gilroy-Heavy, Cabin",
 															fontWeight: 400,
-															fontSize: "18px",
-															letterSpacing: "2px",
+															fontSize: "24px",
+															letterSpacing: "1px",
 															color: "white",
 															mt: -7,
 															zIndex: 18,
@@ -515,6 +517,7 @@ const Home = () => {
 												fontFamily: "calder-script, cabin, roboto",
 												fontSize: "24px",
 												py: 0,
+												px: 3,
 												borderRadius: "0px",
 												backgroundColor: "white",
 												borderColor: "primaryBlue.main",

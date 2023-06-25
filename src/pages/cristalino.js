@@ -96,15 +96,16 @@ const Cristalino = () => {
 								<Typography
 									component='h1'
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Bold, Cabin",
 										fontSize: {
 											xs: "26px",
 											sm: "27px",
+											md: "32px",
 										},
 										color: "primaryBlack.main",
 										fontWeight: 700,
 										textTransform: "uppercase",
-										letterSpacing: "9.9px",
+										letterSpacing: "8px",
 									}}>
 									Details
 								</Typography>
@@ -179,15 +180,16 @@ const Cristalino = () => {
 								<Typography
 									component='h1'
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Bold, Cabin",
 										fontSize: {
 											xs: "26px",
 											sm: "27px",
+											md: "32px",
 										},
 										color: "primaryBlack.main",
 										fontWeight: 700,
 										textTransform: "uppercase",
-										letterSpacing: "9.9px",
+										letterSpacing: "8px",
 										textAlign: "center",
 									}}>
 									Order Online
@@ -231,7 +233,8 @@ const Cristalino = () => {
 							</Grid>
 							<Grid
 								item
-								xs={11}
+								xs={12}
+								sm={10}
 								sx={{
 									display: { xs: "flex", md: "none" },
 									flexDirection: "column",
@@ -241,15 +244,15 @@ const Cristalino = () => {
 								<Typography
 									component='h1'
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Bold, Cabin",
 										fontSize: {
-											xs: "26px",
-											sm: "27px",
+											xs: "28px",
+											sm: "30px",
 										},
 										color: "primaryBlack.main",
 										fontWeight: 700,
 										textTransform: "uppercase",
-										letterSpacing: "9.9px",
+										letterSpacing: "8px",
 										textAlign: "center",
 									}}>
 									Order Online
@@ -293,7 +296,8 @@ const Cristalino = () => {
 							</Grid>
 							<Grid
 								item
-								xs={11}
+								xs={12}
+								sm={10}
 								sx={{
 									display: { xs: "flex", md: "none" },
 									flexDirection: "column",
@@ -303,15 +307,15 @@ const Cristalino = () => {
 								<Typography
 									component='h1'
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Bold, Cabin",
 										fontSize: {
-											xs: "26px",
-											sm: "27px",
+											xs: "28px",
+											sm: "30px",
 										},
 										color: "primaryBlack.main",
 										fontWeight: 700,
 										textTransform: "uppercase",
-										letterSpacing: "9.9px",
+										letterSpacing: "8px",
 									}}>
 									Details
 								</Typography>
@@ -457,8 +461,9 @@ const Cristalino = () => {
 												sx={{
 													textTransform: "uppercase",
 													fontWeight: 700,
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontSize: "18px",
+													letterSpacing: "0.5px",
 												}}>
 												REST:
 											</Typography>
@@ -479,8 +484,9 @@ const Cristalino = () => {
 												sx={{
 													textTransform: "uppercase",
 													fontWeight: 700,
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontSize: "18px",
+													letterSpacing: "0.5px",
 												}}>
 												REFINEMENT:
 											</Typography>
@@ -501,8 +507,9 @@ const Cristalino = () => {
 												sx={{
 													textTransform: "uppercase",
 													fontWeight: 700,
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontSize: "18px",
+													letterSpacing: "0.5px",
 												}}>
 												ALCOHOL:
 											</Typography>
@@ -523,8 +530,9 @@ const Cristalino = () => {
 												sx={{
 													textTransform: "uppercase",
 													fontWeight: 700,
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontSize: "18px",
+													letterSpacing: "0.5px",
 												}}>
 												AVAILABILITY:
 											</Typography>
@@ -565,11 +573,13 @@ const Cristalino = () => {
 										<Typography
 											aria-label='Cristalino Tequila Color'
 											sx={{
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												color: "primaryBlack.main",
 												textTransform: "uppercase",
 												fontWeight: 700,
 												my: 1,
+												fontSize: "16px",
+												letterSpacing: "1px",
 											}}>
 											Color
 										</Typography>
@@ -607,11 +617,13 @@ const Cristalino = () => {
 										<Typography
 											aria-label='Cristalino Tequila Aroma'
 											sx={{
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												color: "primaryBlack.main",
 												textTransform: "uppercase",
 												fontWeight: 700,
 												my: 1,
+												fontSize: "16px",
+												letterSpacing: "1px",
 											}}>
 											Aroma
 										</Typography>
@@ -649,11 +661,13 @@ const Cristalino = () => {
 										<Typography
 											aria-label='Cristalino Tequila Taste'
 											sx={{
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												color: "primaryBlack.main",
 												textTransform: "uppercase",
 												fontWeight: 700,
 												my: 1,
+												fontSize: "16px",
+												letterSpacing: "1px",
 											}}>
 											Taste
 										</Typography>
@@ -691,11 +705,13 @@ const Cristalino = () => {
 										<Typography
 											aria-label='Cristalino Tequila Finish'
 											sx={{
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												color: "primaryBlack.main",
 												textTransform: "uppercase",
 												fontWeight: 700,
 												my: 1,
+												fontSize: "16px",
+												letterSpacing: "1px",
 											}}>
 											Finish
 										</Typography>
@@ -743,14 +759,20 @@ const Cristalino = () => {
 								rowGap={4}
 								mb={4}
 								sx={{ display: "flex", justifyContent: "center" }}>
-								<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
+								<Grid
+									item
+									xs={6}
+									sm={5.25}
+									md={3}
+									lg={3}
+									sx={{ display: "flex", justifyContent: "center" }}>
 									<Card
 										sx={{
 											borderRadius: "0px",
 											boxShadow: "0px 0px 10px 0.5px #0204069e;",
 											backgroundColor: "white",
 											minHeight: { xs: "360px", sm: "410px", lg: "450px" },
-											maxHeight: { xs: "360px", sm: "410px", lg: "450px" },
+											maxHeight: { xs: "360px", sm: "410px", md: "430px", lg: "450px" },
 											minWidth: "90%",
 											maxWidth: "90%",
 											pb: 2,
@@ -772,16 +794,18 @@ const Cristalino = () => {
 												justifyContent: "center",
 												flexDirection: "column",
 												alignItems: "center",
+												px: { xs: 0, md: 2 },
 											}}>
 											<Typography
 												aria-label='Cristalino Tequila 2021 PR%F Silver Award'
 												sx={{
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontWeight: 700,
 													color: "primaryBlack.main",
 													lineHeight: 2,
 													fontSize: "16px",
 													textAlign: "center",
+													letterSpacing: "1px",
 												}}>
 												2021 PR%F Awards
 											</Typography>
@@ -798,14 +822,20 @@ const Cristalino = () => {
 										</CardContent>
 									</Card>
 								</Grid>
-								<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
+								<Grid
+									item
+									xs={6}
+									sm={5.25}
+									md={3}
+									lg={3}
+									sx={{ display: "flex", justifyContent: "center" }}>
 									<Card
 										sx={{
 											borderRadius: "0px",
 											boxShadow: "0px 0px 10px 0.5px #020406DD;",
 											backgroundColor: "white",
 											minHeight: { xs: "360px", sm: "410px", lg: "450px" },
-											maxHeight: { xs: "360px", sm: "410px", lg: "450px" },
+											maxHeight: { xs: "360px", sm: "410px", md: "430px", lg: "450px" },
 											minWidth: "90%",
 											maxWidth: "90%",
 											borderBottom: "3px solid #020406;",
@@ -827,21 +857,18 @@ const Cristalino = () => {
 												justifyContent: "center",
 												flexDirection: "column",
 												alignItems: "center",
+												px: { xs: 0, lg: 2 },
 											}}>
 											<Typography
 												aria-label="Cristalino Tequila's 2021 Sunset International Spirits Award"
 												sx={{
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontWeight: 700,
 													color: "primaryBlack.main",
 													lineHeight: 2,
 													fontSize: "16px",
 													textAlign: "center",
-													mx: {
-														xs: 0,
-														md: -1.5,
-														lg: 0,
-													},
+													letterSpacing: "1px",
 												}}>
 												2021 Sunset International Spirits Award
 											</Typography>

@@ -27,7 +27,7 @@ const CookiesCA = () => {
 					<Typography
 						component='h1'
 						sx={{
-							fontFamily: "Cabin",
+							fontFamily: "Gilroy-Heavy, Cabin",
 							fontWeight: 600,
 							textAlign: "center",
 							fontSize: { xs: "35px", sm: "40px", md: "52px" },
@@ -40,7 +40,7 @@ const CookiesCA = () => {
 					<Divider
 						sx={{
 							width: "100%",
-							pt: 2,
+							pt: 1,
 							mb: { xs: 1, md: 4 },
 							borderColor: "primaryBlack.main",
 							borderBottomWidth: 1,

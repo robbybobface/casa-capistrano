@@ -129,6 +129,7 @@ const Header = () => {
 										<Typography
 											sx={{
 												fontFamily: "Cabin",
+												fontWeight: 700,
 												fontSize: "1.2rem",
 												zIndex: 20,
 												"&:hover": {
@@ -215,6 +216,7 @@ const Header = () => {
 												<Typography
 													sx={{
 														fontFamily: "Cabin",
+														fontWeight: 500,
 														fontSize: "1.2rem",
 														zIndex: 20,
 														"&:hover": {
@@ -368,7 +370,7 @@ const Header = () => {
 													color:
 														activePage === "home"
 															? transparent
-																? "primaryWhite.main"
+																? "primaryBackground.main"
 																: "primaryBlue.main"
 															: "primaryBlue.main",
 													...(pageURLs.at(index) === activePage && {
@@ -412,7 +414,7 @@ const Header = () => {
 														color:
 															activePage === "home"
 																? transparent
-																	? "primaryWhite.main"
+																	? "primaryBackground.main"
 																	: "primaryBlue.main"
 																: "primaryBlue.main",
 														...((activePage === "products" ||
@@ -586,7 +588,7 @@ const Header = () => {
 						"& .MuiDrawer-paper": {
 							boxSizing: "border-box",
 							width: drawerWidth,
-							backgroundColor: "rgba(255, 253, 247, 0.8);",
+							backgroundColor: "rgba(255, 253, 247, 0.65);",
 							// boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 );",
 							backdropFilter: "blur( 7px );",
 							webkitBackdropFilter: "blur( 7px );",

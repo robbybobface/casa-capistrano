@@ -31,14 +31,11 @@ const Products = () => {
 				<Container
 					component='main'
 					role='main'
+					id='main'
 					aria-label="Casa Capistrano Tequila's Products"
 					sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
 					<FadeIn>
-						<Box
-							component='section'
-							role='section'
-							id='main'
-							aria-label='Casa Capistrano Tequila - Our Tequilas'>
+						<Box component='section' role='region' aria-label='Casa Capistrano Tequila - Our Tequilas'>
 							<Box
 								focusable
 								sx={{
@@ -99,13 +96,14 @@ const Products = () => {
 						</Box>
 						<Grid
 							component='section'
+							role='region'
 							aria-label='Blanco, Reposado, and Añejo Tequila product cards'
 							container
 							spacing={2}
 							mb={4}
 							mt={1}
-							sx={{ display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
-							<Grid item xs={11} sm={10} md={4}>
+							sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+							<Grid item xs={11} sm={6} md={4}>
 								<Box component='article' role='article' aria-label='Blanco Tequila'>
 									<Card
 										sx={{
@@ -114,7 +112,7 @@ const Products = () => {
 											backgroundColor: "white",
 											minHeight: {
 												xs: "600px",
-												md: "665px",
+												md: "675px",
 											},
 											"&:hover": {
 												boxShadow: "0px 0px 15px 2px #012233",
@@ -134,15 +132,16 @@ const Products = () => {
 												flexDirection: "column",
 												alignItems: "center",
 												pb: 1,
+												pt: 1.5,
 											}}>
 											<Typography
 												component='h2'
 												sx={{
 													textAlign: "center",
-													fontFamily: "Roboto",
+													fontFamily: "Gilroy-Heavy, Roboto",
 													fontWeight: 300,
-													fontSize: "30px",
-													letterSpacing: "2px",
+													fontSize: "32px",
+													letterSpacing: "0px",
 												}}>
 												Blanco
 											</Typography>
@@ -215,7 +214,7 @@ const Products = () => {
 									</Card>
 								</Box>
 							</Grid>
-							<Grid item xs={11} sm={10} md={4}>
+							<Grid item xs={11} sm={6} md={4}>
 								<Box component='article' role='article' aria-label='Reposado Tequila'>
 									<Card
 										sx={{
@@ -224,7 +223,7 @@ const Products = () => {
 											backgroundColor: "white",
 											minHeight: {
 												xs: "600px",
-												md: "665px",
+												md: "675px",
 											},
 											"&:hover": {
 												boxShadow: "0px 0px 15px 2px #012233",
@@ -252,15 +251,16 @@ const Products = () => {
 													md: 1.5,
 													lg: 2,
 												},
+												pt: 1.5,
 											}}>
 											<Typography
 												component='h2'
 												sx={{
 													textAlign: "center",
-													fontFamily: "Roboto",
+													fontFamily: "Gilroy-Heavy, Roboto",
 													fontWeight: 300,
-													fontSize: "30px",
-													letterSpacing: "2px",
+													fontSize: "32px",
+													letterSpacing: "0px",
 												}}>
 												Reposado
 											</Typography>
@@ -279,6 +279,7 @@ const Products = () => {
 													textAlign: "center",
 													px: {
 														xs: 2,
+														sm: 0,
 														md: 0,
 														lg: 2,
 													},
@@ -319,7 +320,7 @@ const Products = () => {
 									</Card>
 								</Box>
 							</Grid>
-							<Grid item xs={11} sm={10} md={4}>
+							<Grid item xs={11} sm={6} md={4}>
 								<Box component='article' role='article' aria-label='Cristalino Tequila'>
 									<Card
 										sx={{
@@ -328,7 +329,7 @@ const Products = () => {
 											backgroundColor: "white",
 											minHeight: {
 												xs: "550px",
-												md: "665px",
+												md: "675px",
 											},
 											"&:hover": {
 												boxShadow: "0px 0px 15px 2px #012233",
@@ -348,15 +349,16 @@ const Products = () => {
 												flexDirection: "column",
 												alignItems: "center",
 												pb: 1,
+												pt: 1.5,
 											}}>
 											<Typography
 												component='h2'
 												sx={{
 													textAlign: "center",
-													fontFamily: " Roboto",
+													fontFamily: "Gilroy-Heavy, Roboto",
 													fontWeight: 300,
-													fontSize: "30px",
-													letterSpacing: "2px",
+													fontSize: "32px",
+													letterSpacing: "0px",
 												}}>
 												Añejo Cristalino
 											</Typography>

@@ -96,15 +96,16 @@ const Reposado = () => {
 								<Typography
 									component='h1'
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Bold, Cabin",
 										fontSize: {
 											xs: "26px",
 											sm: "27px",
+											md: "32px",
 										},
 										color: "primaryRed.main",
 										fontWeight: 700,
 										textTransform: "uppercase",
-										letterSpacing: "9.9px",
+										letterSpacing: "8px",
 									}}>
 									Details
 								</Typography>
@@ -182,15 +183,16 @@ const Reposado = () => {
 								<Typography
 									component='h1'
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Bold, Cabin",
 										fontSize: {
 											xs: "26px",
 											sm: "27px",
+											md: "32px",
 										},
 										color: "primaryRed.main",
 										fontWeight: 700,
 										textTransform: "uppercase",
-										letterSpacing: "9.9px",
+										letterSpacing: "8px",
 										textAlign: "center",
 									}}>
 									Order Online
@@ -234,7 +236,8 @@ const Reposado = () => {
 							</Grid>
 							<Grid
 								item
-								xs={11}
+								xs={12}
+								sm={10}
 								sx={{
 									display: { xs: "flex", md: "none" },
 									flexDirection: "column",
@@ -244,15 +247,15 @@ const Reposado = () => {
 								<Typography
 									component='h1'
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Bold, Cabin",
 										fontSize: {
-											xs: "26px",
-											sm: "27px",
+											xs: "28px",
+											sm: "30px",
 										},
 										color: "primaryRed.main",
 										fontWeight: 700,
 										textTransform: "uppercase",
-										letterSpacing: "9.9px",
+										letterSpacing: "8px",
 										textAlign: "center",
 									}}>
 									Order Online
@@ -296,7 +299,8 @@ const Reposado = () => {
 							</Grid>
 							<Grid
 								item
-								xs={11}
+								xs={12}
+								sm={10}
 								sx={{
 									display: { xs: "flex", md: "none" },
 									flexDirection: "column",
@@ -306,15 +310,15 @@ const Reposado = () => {
 								<Typography
 									component='h1'
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Bold, Cabin",
 										fontSize: {
-											xs: "26px",
-											sm: "27px",
+											xs: "28px",
+											sm: "30px",
 										},
 										color: "primaryRed.main",
 										fontWeight: 700,
 										textTransform: "uppercase",
-										letterSpacing: "9.9px",
+										letterSpacing: "8px",
 									}}>
 									Details
 								</Typography>
@@ -464,8 +468,9 @@ const Reposado = () => {
 												sx={{
 													textTransform: "uppercase",
 													fontWeight: 700,
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontSize: "18px",
+													letterSpacing: "0.5px",
 												}}>
 												REST:
 											</Typography>
@@ -486,8 +491,9 @@ const Reposado = () => {
 												sx={{
 													textTransform: "uppercase",
 													fontWeight: 700,
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontSize: "18px",
+													letterSpacing: "0.5px",
 												}}>
 												REFINEMENT:
 											</Typography>
@@ -508,8 +514,9 @@ const Reposado = () => {
 												sx={{
 													textTransform: "uppercase",
 													fontWeight: 700,
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontSize: "18px",
+													letterSpacing: "0.5px",
 												}}>
 												ALCOHOL:
 											</Typography>
@@ -530,8 +537,9 @@ const Reposado = () => {
 												sx={{
 													textTransform: "uppercase",
 													fontWeight: 700,
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontSize: "18px",
+													letterSpacing: "0.5px",
 												}}>
 												AVAILABILITY:
 											</Typography>
@@ -572,11 +580,13 @@ const Reposado = () => {
 										<Typography
 											aria-label='Reposado Tequila Color'
 											sx={{
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												color: "primaryBlack.main",
 												textTransform: "uppercase",
 												fontWeight: 700,
 												my: 1,
+												fontSize: "16px",
+												letterSpacing: "1px",
 											}}>
 											Color
 										</Typography>
@@ -614,11 +624,13 @@ const Reposado = () => {
 										<Typography
 											aria-label='Reposado Tequila Aroma'
 											sx={{
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												color: "primaryBlack.main",
 												textTransform: "uppercase",
 												fontWeight: 700,
 												my: 1,
+												fontSize: "16px",
+												letterSpacing: "1px",
 											}}>
 											Aroma
 										</Typography>
@@ -656,11 +668,13 @@ const Reposado = () => {
 										<Typography
 											aria-label='Reposado Tequila Taste'
 											sx={{
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												color: "primaryBlack.main",
 												textTransform: "uppercase",
 												fontWeight: 700,
 												my: 1,
+												fontSize: "16px",
+												letterSpacing: "1px",
 											}}>
 											Taste
 										</Typography>
@@ -698,11 +712,13 @@ const Reposado = () => {
 										<Typography
 											aria-label='Reposado Tequila Finish'
 											sx={{
-												fontFamily: "Cabin",
+												fontFamily: "Gilroy-Heavy, Cabin",
 												color: "primaryBlack.main",
 												textTransform: "uppercase",
 												fontWeight: 700,
 												my: 1,
+												fontSize: "16px",
+												letterSpacing: "1px",
 											}}>
 											Finish
 										</Typography>
@@ -744,15 +760,20 @@ const Reposado = () => {
 									mx: "auto",
 								}}
 							/>
-							<Grid container spacing={2} mb={4} sx={{ display: "flex", justifyContent: "center" }}>
-								<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
+							<Grid
+								container
+								spacing={0}
+								rowGap={4}
+								mb={4}
+								sx={{ display: "flex", justifyContent: "center" }}>
+								<Grid item xs={6} sm={5.25} md={3} sx={{ display: "flex", justifyContent: "center" }}>
 									<Card
 										sx={{
 											borderRadius: "0px",
 											boxShadow: "0px 0px 10px 0.5px #6c0d0f9e;",
 											backgroundColor: "white",
 											minHeight: { xs: "360px", sm: "410px", md: "410px", lg: "450px" },
-											maxHeight: { xs: "360px", sm: "410px", md: "410px", lg: "450px" },
+											maxHeight: { xs: "360px", sm: "410px", md: "430px", lg: "450px" },
 											minWidth: "90%",
 											maxWidth: "90%",
 											borderBottom: "3px solid #6c0d0f",
@@ -774,19 +795,18 @@ const Reposado = () => {
 												justifyContent: "center",
 												flexDirection: "column",
 												alignItems: "center",
-												// pb: 1,
+												px: { xs: 0, md: 2 },
 											}}>
 											<Typography
 												aria-label="Reposado Tequila's Las Vegas Global Gold Award"
 												sx={{
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontWeight: 700,
 													color: "primaryRed.main",
 													lineHeight: 2,
 													fontSize: "16px",
 													textAlign: "center",
-													// px: 2,
-													// py: 1,
+													letterSpacing: "1px",
 												}}>
 												2021 Las Vegas Global Spirit Awards
 											</Typography>
@@ -801,14 +821,14 @@ const Reposado = () => {
 										</CardContent>
 									</Card>
 								</Grid>
-								<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
+								<Grid item xs={6} sm={5.25} md={3} sx={{ display: "flex", justifyContent: "center" }}>
 									<Card
 										sx={{
 											borderRadius: "0px",
 											boxShadow: "0px 0px 10px 0.5px #6c0d0fDD;",
 											backgroundColor: "white",
 											minHeight: { xs: "360px", sm: "410px", md: "410px", lg: "450px" },
-											maxHeight: { xs: "360px", sm: "410px", md: "410px", lg: "450px" },
+											maxHeight: { xs: "360px", sm: "410px", md: "430px", lg: "450px" },
 											minWidth: "90%",
 											maxWidth: "90%",
 											borderBottom: "3px solid #6c0d0f",
@@ -830,18 +850,19 @@ const Reposado = () => {
 												justifyContent: "center",
 												flexDirection: "column",
 												alignItems: "center",
+												px: { xs: 0, md: 2 },
 											}}>
 											<Typography
 												aria-label="Reposado Tequila's Sunset International Spirits Silver Award"
 												sx={{
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontWeight: 700,
 													color: "primaryRed.main",
 													lineHeight: 2,
 													fontSize: "16px",
 													textAlign: "center",
-													// px: 2,
-													// py: 1,
+													letterSpacing: "1px",
+
 													mx: {
 														xs: 0,
 														md: -2,
@@ -861,15 +882,19 @@ const Reposado = () => {
 										</CardContent>
 									</Card>
 								</Grid>
-
-								<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
+								<Grid
+									item
+									xs={6}
+									sm={5.25}
+									md={3}
+									sx={{ display: "flex", justifyContent: "center", flexGrow: 1 }}>
 									<Card
 										sx={{
 											borderRadius: "0px",
 											boxShadow: "0px 0px 10px 0.5px #6c0d0fDD;",
 											backgroundColor: "white",
 											minHeight: { xs: "330px", sm: "375px", md: "410px", lg: "450px" },
-											maxHeight: { xs: "330px", sm: "375px", md: "410px", lg: "450px" },
+											maxHeight: { xs: "360px", sm: "410px", md: "430px", lg: "450px" },
 											minWidth: "90%",
 											maxWidth: "90%",
 											borderBottom: "3px solid #6c0d0f",
@@ -877,6 +902,7 @@ const Reposado = () => {
 											"&:hover": {
 												boxShadow: "0px 0px 10px 2px #6c0d0f;",
 											},
+											flex: 1,
 										}}>
 										<BlurHashedImage
 											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Reposado.Silver.png?tr=q-70'
@@ -894,23 +920,25 @@ const Reposado = () => {
 												flexDirection: "column",
 												alignItems: "center",
 												// pb: 1,
+												px: { xs: 0, md: 2 },
+												flex: 1,
 											}}>
 											<Typography
 												aria-label="Reposado Tequila's San Diego Spirits Festival Silver Award"
 												sx={{
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontWeight: 700,
 													color: "primaryRed.main",
 													lineHeight: 2,
 													fontSize: "16px",
 													textAlign: "center",
-
-													mx: {
-														xs: 0,
-														sm: -1.5,
-														md: 0,
-														lg: 0,
-													},
+													letterSpacing: "1px",
+													// mx: {
+													// 	xs: 0,
+													// 	sm: -1.5,
+													// 	md: 0,
+													// 	lg: 0,
+													// },
 												}}>
 												2021 San Diego Spirits Festival
 											</Typography>
@@ -926,14 +954,19 @@ const Reposado = () => {
 										{/* </CardActionArea> */}
 									</Card>
 								</Grid>
-								<Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: "center" }}>
+								<Grid
+									item
+									xs={6}
+									sm={5.25}
+									md={3}
+									sx={{ display: "flex", justifyContent: "center", flex: 1 }}>
 									<Card
 										sx={{
 											borderRadius: "0px",
 											boxShadow: "0px 0px 10px 0.5px #6c0d0fDD;",
 											backgroundColor: "white",
 											minHeight: { xs: "330px", sm: "375px", md: "410px", lg: "450px" },
-											maxHeight: { xs: "330px", sm: "375px", md: "410px", lg: "450px" },
+											maxHeight: { xs: "360px", sm: "410px", md: "430px", lg: "450px" },
 											minWidth: "90%",
 											maxWidth: "90%",
 											borderBottom: "3px solid #6c0d0f",
@@ -941,6 +974,7 @@ const Reposado = () => {
 											"&:hover": {
 												boxShadow: "0px 0px 10px 2px #6c0d0f;",
 											},
+											flex: 1,
 										}}>
 										<BlurHashedImage
 											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.Proof.Reposado.Bronze.jpg?tr=q-10'
@@ -955,19 +989,19 @@ const Reposado = () => {
 												justifyContent: "center",
 												flexDirection: "column",
 												alignItems: "center",
-												// pb: 1,
+												px: { xs: 0, sm: 2 },
+												flex: 1,
 											}}>
 											<Typography
 												aria-label="Reposado Tequila's PR%F Bronze Award"
 												sx={{
-													fontFamily: "Cabin",
+													fontFamily: "Gilroy-Heavy, Cabin",
 													fontWeight: 700,
 													color: "primaryRed.main",
 													lineHeight: 2,
 													fontSize: "16px",
 													textAlign: "center",
-													// px: 2,
-													// py: 1,
+													letterSpacing: "1px",
 												}}>
 												2021 PR%F Awards
 											</Typography>

@@ -33,13 +33,13 @@ const About = () => {
 								<Typography
 									component={"h1"}
 									sx={{
-										fontFamily: "Cabin",
+										fontFamily: "Gilroy-Heavy, Cabin",
 										fontSize: { xs: "28px", sm: "32px", md: "40px" },
 										textAlign: "center",
 										fontWeight: 600,
 										color: "primaryBlack.main",
 										textTransform: "uppercase",
-										letterSpacing: { xs: "3px", md: "5px" },
+										letterSpacing: { xs: "8px", md: "12px" },
 										// fontStyle: "italic",
 									}}>
 									Our Story

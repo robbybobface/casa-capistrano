@@ -91,14 +91,14 @@ const Footer = () => {
 							<Typography
 								component={"h2"}
 								sx={{
-									fontFamily: "Cabin",
+									fontFamily: "Gilroy-Heavy, Cabin",
 									fontSize: "20px",
 									fontWeight: 700,
 									color: "white",
 									// textDecoration: "underline",
 									pb: 2,
 									textTransform: "uppercase",
-									letterSpacing: "2px",
+									letterSpacing: "4px",
 								}}>
 								Navigation
 							</Typography>
@@ -185,14 +185,14 @@ const Footer = () => {
 							<Typography
 								component={"h2"}
 								sx={{
-									fontFamily: "Cabin",
+									fontFamily: "Gilroy-Heavy, Cabin",
 									fontSize: "20px",
 									fontWeight: 700,
 									color: "white",
 									// textDecoration: "underline",
 									pb: 2,
 									textTransform: "uppercase",
-									letterSpacing: "2px",
+									letterSpacing: "4px",
 								}}>
 								Contact Info
 							</Typography>
@@ -261,10 +261,10 @@ const Footer = () => {
 							aria-label='Casa Capistrano LLC copywrite'
 							sx={{
 								color: "white",
-								fontSize: "10px",
+								fontSize: "12px",
 								textTransform: "uppercase",
 								textAlign: "center",
-								fontFamily: "Roboto",
+								fontFamily: "Gilroy-Light, Roboto",
 								fontWeight: 300,
 								pb: 2,
 							}}>
@@ -274,10 +274,10 @@ const Footer = () => {
 							aria-label='Drink Responsibly!'
 							sx={{
 								color: "white",
-								fontSize: "10px",
+								fontSize: "12px",
 								textTransform: "uppercase",
 								textAlign: "center",
-								fontFamily: "Roboto",
+								fontFamily: "Gilroy-Light, Roboto",
 								fontWeight: 300,
 								pb: 2,
 							}}>
@@ -324,9 +324,9 @@ const Footer = () => {
 									flex: 1,
 									textAlign: "center",
 									color: "white",
-									fontFamily: "Cabin",
+									fontFamily: "Gilroy-Light, Roboto",
 									fontWeight: 300,
-									fontSize: "11px",
+									fontSize: "12px",
 									textTransform: "uppercase",
 									borderRight: { xs: "none", sm: "0.5px solid white" },
 									"&:hover": {
@@ -369,9 +369,9 @@ const Footer = () => {
 									flex: 1,
 									textAlign: "center",
 									color: "white",
-									fontFamily: "Cabin",
+									fontFamily: "Gilroy-Light, Roboto",
 									fontWeight: 300,
-									fontSize: "11px",
+									fontSize: "12px",
 									textTransform: "uppercase",
 									borderLeft: { xs: "none", sm: "0.5px solid white" },
 									borderRight: {
@@ -404,9 +404,9 @@ const Footer = () => {
 									flex: 1,
 									textAlign: "center",
 									color: "white",
-									fontFamily: "Cabin",
+									fontFamily: "Gilroy-Light, Roboto",
 									fontWeight: 300,
-									fontSize: "11px",
+									fontSize: "12px",
 									textTransform: "uppercase",
 									borderLeft: { xs: "none", md: "0.5px solid white" },
 									borderRight: { xs: "none", sm: "0.5px solid white" },
@@ -436,9 +436,9 @@ const Footer = () => {
 									flex: 1,
 									textAlign: "center",
 									color: "white",
-									fontFamily: "Cabin",
+									fontFamily: "Gilroy-Light, Roboto",
 									fontWeight: 300,
-									fontSize: "11px",
+									fontSize: "12px",
 									textTransform: "uppercase",
 									borderLeft: { xs: "none", sm: "0.5px solid white" },
 									"&:hover": {
