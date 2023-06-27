@@ -49,7 +49,6 @@ const Footer = () => {
 									fontSize: "14px",
 									fontWeight: 300,
 									color: "white",
-									// letterSpacing: "1.px",
 									pb: 2,
 									textAlign: "center",
 								}}>
@@ -95,7 +94,6 @@ const Footer = () => {
 									fontSize: "20px",
 									fontWeight: 700,
 									color: "white",
-									// textDecoration: "underline",
 									pb: 2,
 									textTransform: "uppercase",
 									letterSpacing: "4px",
@@ -189,7 +187,6 @@ const Footer = () => {
 									fontSize: "20px",
 									fontWeight: 700,
 									color: "white",
-									// textDecoration: "underline",
 									pb: 2,
 									textTransform: "uppercase",
 									letterSpacing: "4px",

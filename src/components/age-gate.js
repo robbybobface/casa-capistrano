@@ -38,11 +38,9 @@ const AgeGate = () => {
 				role='main'
 				aria-label='Casa Capistrano Age Gate Screen'
 				sx={{
-					// maxWidth: "500px",
 					position: "absolute",
 					top: { xs: "15%", lg: "20%" },
 					width: "100%",
-					// transform: "translate(-50%, -50%)",
 					zIndex: 9999,
 					display: "flex",
 					flexDirection: "column",
@@ -80,7 +78,6 @@ const AgeGate = () => {
 									md: "85%",
 								},
 							}}>
-							{/* <Logo aria-label='Casa Capistrano Tequila Logo' /> */}
 							<BlurHashedImage
 								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo-alt.png?tr=q-60'
 								hash='LNR:A~t7?cj[.8WBV@of_NWBMxj['
@@ -91,9 +88,7 @@ const AgeGate = () => {
 								display='flex'
 								justifyContent='center'
 								ignoreHeight={true}
-								// mb={2}
 								mx='auto'
-								// height={"275px"}
 							/>
 						</Box>
 						<Typography
@@ -109,7 +104,6 @@ const AgeGate = () => {
 								fontWeight: 900,
 								textAlign: "center",
 								px: { xs: 0, md: 4 },
-								// fontStyle: "italic",
 								letterSpacing: "1px",
 								mx: "auto",
 							}}>
@@ -158,7 +152,6 @@ const AgeGate = () => {
 						<Grid
 							container
 							spacing={0}
-							// columnGap={1}
 							mt={1}
 							mb={2}
 							sx={{ display: "flex", justifyContent: "center", alignItems: "center", mx: "auto" }}>
@@ -183,7 +176,6 @@ const AgeGate = () => {
 										borderColor: "primaryBlue.main",
 										width: "90%",
 										py: { xs: 0, md: 0 },
-										// boxShadow: "2px 2px 4px 2px #012233",
 										"&:hover": {
 											boxShadow: "0 0.7em 0.7em -0.4em #0122336f",
 											transform: "translateY(-0.1em)",
@@ -224,7 +216,6 @@ const AgeGate = () => {
 										borderColor: "primaryBlue.main",
 										width: "90%",
 										py: { xs: 0, md: 0 },
-										// boxShadow: "2px 2px 4px 2px #012233",
 										"&:hover": {
 											boxShadow: "0 0.7em 0.7em -0.4em #0122336f",
 											transform: "translateY(-0.1em)",

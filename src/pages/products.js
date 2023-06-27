@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import FadeIn from "react-fade-in";
-
 import { Box, Container, Typography, Divider, Grid, Card, CardContent, Button } from "@mui/material";
-
-// import { ReactComponent as OurTequilas } from "../media/our-tequilas.svg";
 import BlurHashedImage from "../components/BlurHashedImage";
 import { Helmet } from "react-helmet";
 import SkipToMain from "../components/SkipToMain";
@@ -48,7 +45,6 @@ const Products = () => {
 									my: 2,
 									mx: "auto",
 								}}>
-								{/* <OurTequilas aria-label='Casa Capistrano Tequila - Our Tequilas' /> */}
 								<BlurHashedImage
 									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/our-tequilas.png?tr=q-40'
 									hash='LES6D8D$?b%N?vWBWAtR_N%gIUM{'
@@ -59,9 +55,7 @@ const Products = () => {
 									display='flex'
 									justifyContent='center'
 									ignoreHeight={true}
-									// mb={2}
 									mx='auto'
-									// height={"275px"}
 								/>
 							</Box>
 							<Divider

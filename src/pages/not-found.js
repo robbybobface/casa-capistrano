@@ -62,12 +62,10 @@ const NotFound = () => {
 							md: "65%",
 							lg: "50%",
 						},
-						// maxWidth: "500px",
 						zIndex: 10,
 						display: "flex",
 						flexDirection: "column",
 						justifyContent: "center",
-						// alignItems: "center",
 						px: 5,
 					}}>
 					<FadeIn>
@@ -84,7 +82,6 @@ const NotFound = () => {
 									md: "140px",
 									lg: "160px",
 								},
-								// fontStyle: "italic",
 								width: {
 									xs: "90%",
 									sm: "90%",

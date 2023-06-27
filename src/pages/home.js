@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import FadeIn from "react-fade-in";
 import { useNavigate } from "react-router-dom";
 import { Box, Container, Divider, Typography, Grid, Card, CardContent, CardActionArea, Button } from "@mui/material";
-// import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import BlurHashedImage from "../components/BlurHashedImage";
 import { Helmet } from "react-helmet";
 import SkipToMain from "../components/SkipToMain";
@@ -14,7 +13,6 @@ const Home = () => {
 
 	const navigate = useNavigate();
 	const changeText = () => {
-		// console.log(window.scrollY);
 		if (window.scrollY >= 66) {
 			setHideScrollIndicator(false);
 		} else {
@@ -82,7 +80,6 @@ const Home = () => {
 									md: "100px",
 									lg: "120px",
 								},
-								// fontStyle: "italic",
 								width: {
 									xs: "100%",
 									sm: "90%",
@@ -161,20 +158,6 @@ const Home = () => {
 									}}>
 									Scroll To Explore
 								</Typography>
-								{/* <KeyboardDoubleArrowDownIcon
-									sx={{
-										color: "white",
-										fontSize: {
-											xs: "75px",
-											lg: "100px",
-										},
-										mt: {
-											xs: -0.5,
-											lg: -2,
-										},
-									}}
-									fontSize='80px'
-								/> */}
 								<Lottie
 									title='scroll down animation'
 									aria-label='scroll down animation'
@@ -212,7 +195,6 @@ const Home = () => {
 											md: "75%",
 										},
 									}}>
-									{/* <HomeLogo aria-label='casa capistrano logo large' /> */}
 									<BlurHashedImage
 										src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/home-logo.png?tr=q-90'
 										hash='LdRCxhozt7ayj[j[WBay_Nafj[kC'
@@ -223,9 +205,7 @@ const Home = () => {
 										display='flex'
 										justifyContent='center'
 										ignoreHeight={true}
-										// mb={2}
 										mx='auto'
-										// height={"275px"}
 									/>
 								</Box>
 								<Divider
@@ -299,7 +279,6 @@ const Home = () => {
 										color: "primaryBlack.main",
 										textTransform: "uppercase",
 										letterSpacing: "12px",
-										// fontStyle: "italic",
 									}}>
 									Our Tequilas
 								</Typography>

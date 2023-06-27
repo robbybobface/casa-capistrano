@@ -20,7 +20,7 @@ const PrivacyCA = () => {
 							textAlign: "center",
 							fontSize: { xs: "35px", sm: "40px", md: "52px" },
 							color: "primaryBlack.main",
-							// textTransform: "uppercase",
+							mt: { xs: 2, md: 1 },
 							letterSpacing: "2px",
 						}}>
 						Privacy Statement (CA)

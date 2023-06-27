@@ -44,7 +44,6 @@ const BuyNowBanner = () => {
 									md: "26px",
 									lg: "30px",
 								},
-								// fontStyle: "italic",
 								textTransform: "uppercase",
 								letterSpacing: "2px",
 							}}>
@@ -102,9 +101,7 @@ const BuyNowBanner = () => {
 								zIndex: 20,
 								transition: "all 200ms ease-in",
 							}}
-							onClick={() => {
-								// ref.current?.scrollIntoView({ behavior: "smooth" });
-							}}>
+							onClick={() => {}}>
 							Coming Soon
 						</Button>
 					</Grid>

@@ -58,10 +58,6 @@ function App() {
 		}),
 		[userReject, setUserReject]
 	);
-
-	useEffect(() => {
-		// setCookie("ageVerified", "verified", { path: "/", expires: new Date(Date.now() + 60 * 1000) });
-	}, []);
 	return (
 		<ThemeProvider theme={theme}>
 			<Router>

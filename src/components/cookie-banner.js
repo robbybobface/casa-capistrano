@@ -13,7 +13,6 @@ const CookieBanner = () => {
 	const [fontColor, setFontColor] = useState("primaryBlack.main");
 	const navigate = useNavigate();
 	const location = useLocation();
-	// location.pathname.split("/")[1] !== "" ? "primaryBlack.main" : !changeColor ? "primaryBlack.main" : "white";
 
 	const changeText = () => {
 		if (window.scrollY >= 66) {
@@ -24,11 +23,9 @@ const CookieBanner = () => {
 	};
 
 	useEffect(() => {
-		// console.log(location.pathname.split("/")[1] !== "");
 		if (location.pathname.split("/")[1] !== "") {
 			setFontColor("primaryBlack.main");
 		} else {
-			// console.log(changeColor === null);
 			setFontColor(
 				changeColor === null ? "primaryBlack.main" : !changeColor ? "primaryWhite.main" : "primaryBlack.main"
 			);
@@ -47,7 +44,6 @@ const CookieBanner = () => {
 			aria-label='Cookie Banner'
 			sx={{
 				width: "100%",
-				// backgroundColor: "white",
 				minHeight: { xs: "180px", sm: "130px" },
 				position: "fixed",
 				bottom: 0,
@@ -133,7 +129,6 @@ const CookieBanner = () => {
 							color='primaryBlue'
 							startIcon={<CookieOutlinedIcon fontSize='small' sx={{ color: "white" }} />}
 							sx={{
-								// mb: 3,
 								width: "80%",
 								textTransform: "none",
 								color: "white",
@@ -166,25 +161,20 @@ const CookieBanner = () => {
 							variant='contained'
 							color='primaryDarkerBeige'
 							sx={{
-								// mb: 3,
 								width: "80%",
 								textTransform: "none",
 								color: "primaryBlack.main",
 								fontFamily: "Gilroy-Bold,Cabin",
+								fontWeight: 600,
 								letterSpacing: "1.2px",
 								fontSize: { xs: "14px", md: "14px", lg: "16px" },
 								borderRadius: "0px",
 								border: "1px solid rgba(255, 253, 247, 0.1);",
 								background: "rgba(255, 253, 247, 0.5);",
-								// boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 );",
 								backdropFilter: "blur( 20px );",
 								webkitBackdropFilter: "blur( 20px );",
 							}}
 							onClick={() => {
-								// setCookie("accept_cookies", "false", {
-								// 	path: "/",
-								// 	expires: new Date(Date.now() + 60 * 1000),
-								// });
 								setStateUserReject(true);
 							}}>
 							Reject

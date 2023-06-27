@@ -45,13 +45,9 @@ const Header = () => {
 
 	const pageHandler = () => {
 		const url = location.pathname.split("/");
-		// console.log(url);
 		if (url[1] !== "") {
 			setActivePage(url[1]);
-
-			// console.log(page);
 		} else {
-			// console.log(page);
 			setActivePage("home");
 		}
 	};
@@ -65,7 +61,6 @@ const Header = () => {
 	};
 
 	const changeBackground = () => {
-		// console.log(window.scrollY);
 		if (window.scrollY >= 66) {
 			setTransparent(false);
 		} else {
@@ -279,10 +274,6 @@ const Header = () => {
 						: "primaryBackground"
 				}
 				sx={{
-					// py: 1,
-					// boxShadow: "none",
-					// boxShadow: "0px 2px 4px #DEDEDE;",
-					// color: activePage === "home" ? (transparent === true ? "transparent" : "white") : "white",
 					transition: "all 0.2s ease-in",
 					zIndex: 20,
 					boxShadow:
@@ -459,7 +450,6 @@ const Header = () => {
 													}}
 													{...hoverProps}
 													{...menuState}
-													// state='open'
 													menuStyle={{
 														borderRadius: "0px",
 														fontFamily: "Cabin, roboto",
@@ -540,11 +530,6 @@ const Header = () => {
 													</MenuItem>
 													<MenuDivider />
 													<MenuItem
-														// style={{
-														// 	// fontFamily: "calder-script, cabin",
-														// 	fontSize: "22px",
-														// 	paddingVertical: "0px",
-														// }}
 														style={{
 															paddingRight: "0px",
 														}}
@@ -581,7 +566,7 @@ const Header = () => {
 					open={mobileOpen}
 					onClose={handleDrawerToggle}
 					ModalProps={{
-						keepMounted: true, // Better open performance on mobile.
+						keepMounted: true,
 					}}
 					sx={{
 						display: { xs: "block", lg: "none" },
@@ -589,7 +574,6 @@ const Header = () => {
 							boxSizing: "border-box",
 							width: drawerWidth,
 							backgroundColor: "rgba(255, 253, 247, 0.65);",
-							// boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 );",
 							backdropFilter: "blur( 7px );",
 							webkitBackdropFilter: "blur( 7px );",
 						},

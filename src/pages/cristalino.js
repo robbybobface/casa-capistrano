@@ -54,9 +54,7 @@ const Cristalino = () => {
 								display='flex'
 								justifyContent='center'
 								ignoreHeight={true}
-								// mb={2}
 								mx='auto'
-								// height={"275px"}
 							/>
 						</Box>
 
@@ -159,7 +157,6 @@ const Cristalino = () => {
 									edges={true}
 									sx={{
 										objectFit: "contain",
-										// width: "100%",
 										position: "relative",
 										filter: "brightness(75%);",
 									}}
@@ -225,9 +222,7 @@ const Cristalino = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										// navigate("/blanco");
-									}}>
+									onClick={() => {}}>
 									Coming Soon
 								</Button>
 							</Grid>
@@ -288,9 +283,7 @@ const Cristalino = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										// navigate("/blanco");
-									}}>
+									onClick={() => {}}>
 									Coming Soon
 								</Button>
 							</Grid>
@@ -361,18 +354,13 @@ const Cristalino = () => {
 									justifyContent: "center",
 									alignItems: "flex-end",
 									width: {
-										xs: "80%",
-										md: "50%",
-										lg: "40%",
-									},
-									height: {
-										xs: "150px",
-										sm: "150px",
-										md: "170px",
+										xs: "70%",
+										md: "40%",
+										lg: "35%",
 									},
 									mt: {
-										// sm: -14,
-										md: -12.5,
+										xs: 7,
+										md: 0,
 									},
 									mx: "auto",
 								}}
@@ -419,7 +407,6 @@ const Cristalino = () => {
 												xs: 4,
 												md: 10,
 											},
-											// height: "164px",
 										}}>
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -450,7 +437,6 @@ const Cristalino = () => {
 											aria-label='Cristalino Tequila Resting Time'
 											color='primaryBlack.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -473,7 +459,6 @@ const Cristalino = () => {
 											aria-label='Cristalino Tequila Refinement'
 											color='primaryBlack.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -496,7 +481,6 @@ const Cristalino = () => {
 											aria-label='Cristalino Tequila Alcohol Content'
 											color='primaryBlack.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -519,7 +503,6 @@ const Cristalino = () => {
 											aria-label='Cristalino Tequila Availability'
 											color='primaryBlack.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -588,7 +571,7 @@ const Cristalino = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -632,7 +615,7 @@ const Cristalino = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -676,7 +659,7 @@ const Cristalino = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -720,7 +703,7 @@ const Cristalino = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>

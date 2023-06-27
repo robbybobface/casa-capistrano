@@ -237,9 +237,7 @@ const Blanco = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										// navigate("/blanco");
-									}}>
+									onClick={() => {}}>
 									Coming Soon
 								</Button>
 							</Grid>
@@ -305,9 +303,7 @@ const Blanco = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										// navigate("/blanco");
-									}}>
+									onClick={() => {}}>
 									Coming Soon
 								</Button>
 							</Grid>
@@ -386,13 +382,9 @@ const Blanco = () => {
 										md: "40%",
 										lg: "25%",
 									},
-									height: {
-										xs: "150px",
-										sm: "150px",
-										md: "170px",
-									},
 									mt: {
-										md: -12.5,
+										xs: 7,
+										md: 0,
 									},
 									mx: "auto",
 								}}
@@ -469,7 +461,6 @@ const Blanco = () => {
 											aria-label='Blanco Tequila Resting Time'
 											color='primaryBlanco.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -492,7 +483,6 @@ const Blanco = () => {
 											aria-label='Blanco Tequila Refinement'
 											color='primaryBlanco.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -515,7 +505,6 @@ const Blanco = () => {
 											aria-label='Blanco Tequila Alcohol Content'
 											color='primaryBlanco.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -538,7 +527,6 @@ const Blanco = () => {
 											aria-label='Blanco Tequila Available Sizes'
 											color='primaryBlanco.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -577,7 +565,7 @@ const Blanco = () => {
 											backgroundColor: "white",
 											boxShadow: "0px 0px 10px 0.5px #194792DD;",
 											minHeight: "150px",
-											// maxWidth: "200px",
+
 											minWidth: "70%",
 											maxWidth: "70%",
 											"&:hover": {
@@ -608,7 +596,7 @@ const Blanco = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -622,8 +610,6 @@ const Blanco = () => {
 											backgroundColor: "white",
 											boxShadow: "0px 0px 10px 0.5px #194792DD;",
 											minHeight: "150px",
-											// maxWidth: "150px",
-											// minWidth: "150px",
 											minWidth: "70%",
 											maxWidth: "70%",
 											"&:hover": {
@@ -654,7 +640,7 @@ const Blanco = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -668,8 +654,6 @@ const Blanco = () => {
 											backgroundColor: "white",
 											boxShadow: "0px 0px 10px 0.5px #1947929e;",
 											minHeight: "150px",
-											// maxWidth: "150px",
-											// minWidth: "150px",
 											minWidth: "70%",
 											maxWidth: "70%",
 											"&:hover": {
@@ -700,7 +684,7 @@ const Blanco = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -714,8 +698,6 @@ const Blanco = () => {
 											backgroundColor: "white",
 											boxShadow: "0px 0px 10px 0.5px #1947929e;",
 											minHeight: "150px",
-											// maxWidth: "150px",
-											// minWidth: "150px",
 											minWidth: "70%",
 											maxWidth: "70%",
 											"&:hover": {
@@ -746,7 +728,7 @@ const Blanco = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -925,7 +907,6 @@ const Blanco = () => {
 											hash='LYNS=#-iyGIXocoeofay%$RntSf+'
 											alt='Blanco San Diego Gold Award Photo'
 											height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
-											// sx={{ objectFit: "scale-down" }}
 											objectfit='scale-down'
 											cardMedia={true}
 										/>

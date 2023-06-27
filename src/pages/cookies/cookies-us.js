@@ -36,7 +36,7 @@ const CookiesUS = () => {
 							textAlign: "center",
 							fontSize: { xs: "35px", sm: "40px", md: "52px" },
 							color: "primaryBlack.main",
-							// textTransform: "uppercase",
+							mt: { xs: 2, md: 1 },
 							letterSpacing: "2px",
 						}}>
 						Cookie Policy (US)
@@ -73,9 +73,7 @@ const CookiesUS = () => {
 								sx={{ fontFamily: "Roboto", fontWeight: 500, fontSize: "22px", mb: 2 }}>
 								1. Introduction
 							</Typography>
-							<Typography
-								// aria-label='Introduction Content'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								Our website,{" "}
 								<Typography
 									component='span'
@@ -108,9 +106,7 @@ const CookiesUS = () => {
 								sx={{ fontFamily: "Roboto", fontWeight: 500, fontSize: "22px", mb: 2 }}>
 								2. Cookies
 							</Typography>
-							<Typography
-								// aria-label='Cookie Content'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								When you visit our website it can be necessary to store and/or read certain data from
 								your device by using technologies such as cookies.
 							</Typography>
@@ -119,9 +115,7 @@ const CookiesUS = () => {
 								sx={{ fontFamily: "Roboto", fontWeight: 700, fontSize: "14px", mb: 2 }}>
 								2.1 Technical or functional cookies
 							</Typography>
-							<Typography
-								// aria-label='2.1 Technical or functional cookies content'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								Some cookies ensure that certain parts of the website work properly and that your user
 								preferences remain known. By placing functional cookies, we make it easier for you to
 								visit our website. This way, you do not need to repeatedly enter the same information
@@ -145,9 +139,7 @@ const CookiesUS = () => {
 								sx={{ fontFamily: "Roboto", fontWeight: 500, fontSize: "22px", mb: 2 }}>
 								3. Placed cookies
 							</Typography>
-							<Typography
-								// aria-label='Placed Cookies Content'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								Most of these technologies have a function, a purpose, and an expiration period.
 							</Typography>
 							<ol
@@ -209,9 +201,7 @@ const CookiesUS = () => {
 								sx={{ fontFamily: "Roboto", fontWeight: 500, fontSize: "22px", mb: 2 }}>
 								4. Browser and Device based Consent
 							</Typography>
-							<Typography
-								// aria-label='Browser and Device based Consent Content'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								When you visit our website for the first time, we will show you a pop-up with an
 								explanation about cookies. You do have the right to opt-out and to object against the
 								further use of non-functional cookies.
@@ -223,9 +213,7 @@ const CookiesUS = () => {
 								sx={{ fontFamily: "Roboto", fontWeight: 500, fontSize: "22px", mb: 2 }}>
 								5. Enabling/disabling and deleting cookies
 							</Typography>
-							<Typography
-								// aria-label='Enabling/disabling and deleting cookies Content 1'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								You can use your internet browser to automatically or manually delete cookies. You can
 								also specify that certain cookies may not be placed. Another option is to change the
 								settings of your internet browser so that you receive a message each time a cookie is
@@ -233,9 +221,7 @@ const CookiesUS = () => {
 								the Help section of your browser.
 							</Typography>
 
-							<Typography
-								// aria-label='Enabling/disabling and deleting cookies Content 2'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								Please note that our website may not work properly if all cookies are disabled. If you
 								do delete the cookies in your browser, they will be placed again after your consent when
 								you visit our websites again.
@@ -247,9 +233,7 @@ const CookiesUS = () => {
 								sx={{ fontFamily: "Roboto", fontWeight: 500, fontSize: "22px", mb: 2 }}>
 								6. Your rights with respect to personal data
 							</Typography>
-							<Typography
-								// aria-label='Your rights with respect to personal data Content'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								You have the following rights with respect to your personal data:
 							</Typography>
 							<ul
@@ -286,16 +270,12 @@ const CookiesUS = () => {
 									</Typography>
 								</li>
 							</ul>
-							<Typography
-								// aria-label='Your rights with respect to personal data Content 2'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								To exercise these rights, please contact us. Please refer to the contact details at the
 								bottom of this Cookie Policy. If you have a complaint about how we handle your data, we
 								would like to hear from you.
 							</Typography>
-							<Typography
-								// aria-label='Your rights with respect to personal data Content 3'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								{`For more information about your rights with respect to personal data, please refer to our `}
 								<Typography
 									role='link'
@@ -338,9 +318,7 @@ const CookiesUS = () => {
 								sx={{ fontFamily: "Roboto", fontWeight: 500, fontSize: "22px", mb: 2 }}>
 								7. Contact details
 							</Typography>
-							<Typography
-								// aria-label='Contact Details Content'
-								sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
+							<Typography sx={{ fontFamily: "Roboto", fontWeight: 300, fontSize: "14px", mb: 2 }}>
 								For questions and/or comments about our Cookie Policy and this statement, please contact
 								us by using the following contact details:
 							</Typography>

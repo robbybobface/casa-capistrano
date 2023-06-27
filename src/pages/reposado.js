@@ -55,9 +55,7 @@ const Reposado = () => {
 								display='flex'
 								justifyContent='center'
 								ignoreHeight={true}
-								// mb={2}
 								mx='auto'
-								// height={"275px"}
 							/>
 						</Box>
 						<Grid
@@ -228,9 +226,7 @@ const Reposado = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										// navigate("/blanco");
-									}}>
+									onClick={() => {}}>
 									Coming Soon
 								</Button>
 							</Grid>
@@ -291,9 +287,7 @@ const Reposado = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										// navigate("/blanco");
-									}}>
+									onClick={() => {}}>
 									Coming Soon
 								</Button>
 							</Grid>
@@ -363,18 +357,13 @@ const Reposado = () => {
 									justifyContent: "center",
 									alignItems: "flex-end",
 									width: {
-										xs: "50%",
+										xs: "70%",
 										md: "40%",
 										lg: "25%",
 									},
-									height: {
-										xs: "150px",
-										sm: "150px",
-										md: "170px",
-									},
 									mt: {
-										// sm: -14,
-										md: -12.5,
+										xs: 7,
+										md: 0,
 									},
 									mx: "auto",
 								}}
@@ -457,7 +446,6 @@ const Reposado = () => {
 											aria-label='Reposado Resting Time'
 											color='primaryRed.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -480,7 +468,6 @@ const Reposado = () => {
 											aria-label="Reposado Tequila's Refinement"
 											color='primaryRed.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -503,7 +490,6 @@ const Reposado = () => {
 											aria-label="Reposado Tequila's Alcohol Content"
 											color='primaryRed.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -526,7 +512,6 @@ const Reposado = () => {
 											aria-label="Reposado Tequila's Available Sizes"
 											color='primaryRed.main'
 											sx={{
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												fontFamily: "Cabin",
 												fontSize: "18px",
@@ -595,7 +580,7 @@ const Reposado = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -639,7 +624,7 @@ const Reposado = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -683,7 +668,7 @@ const Reposado = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
+
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -727,7 +712,6 @@ const Reposado = () => {
 											sx={{
 												fontFamily: "Cabin",
 												color: "primaryBlack.main",
-												// textTransform: "uppercase",
 												fontWeight: 400,
 												textAlign: "center",
 											}}>
@@ -908,7 +892,6 @@ const Reposado = () => {
 											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/2021.SanDiego.Reposado.Silver.png?tr=q-70'
 											hash='L3E:0p~q00%M~q_3-;xu00-;4mRj'
 											alt='Reposado San Diego Award Photo'
-											// sx={{ objectFit: "scale-down" }}
 											height={{ xs: "220px", sm: "300px", md: "300px", lg: "345px" }}
 											cardMedia={true}
 											objectfit='scale-down'
@@ -919,7 +902,6 @@ const Reposado = () => {
 												justifyContent: "center",
 												flexDirection: "column",
 												alignItems: "center",
-												// pb: 1,
 												px: { xs: 0, md: 2 },
 												flex: 1,
 											}}>
@@ -933,12 +915,6 @@ const Reposado = () => {
 													fontSize: "16px",
 													textAlign: "center",
 													letterSpacing: "1px",
-													// mx: {
-													// 	xs: 0,
-													// 	sm: -1.5,
-													// 	md: 0,
-													// 	lg: 0,
-													// },
 												}}>
 												2021 San Diego Spirits Festival
 											</Typography>
@@ -951,7 +927,6 @@ const Reposado = () => {
 													fontSize: "16px",
 												}}>{`Silver`}</Typography>
 										</CardContent>
-										{/* </CardActionArea> */}
 									</Card>
 								</Grid>
 								<Grid

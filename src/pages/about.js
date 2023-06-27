@@ -40,7 +40,6 @@ const About = () => {
 										color: "primaryBlack.main",
 										textTransform: "uppercase",
 										letterSpacing: { xs: "8px", md: "12px" },
-										// fontStyle: "italic",
 									}}>
 									Our Story
 								</Typography>
@@ -53,18 +52,6 @@ const About = () => {
 										borderBottomWidth: 3,
 									}}
 								/>
-								{/* <Box
-								component='img'
-								src={"https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/barrels.jpg?tr=w-1000"}
-								alt='barrels'
-								sx={{
-									objectFit: "cover",
-									width: "100%",
-									// filter: "brightness(75%);",
-									boxShadow: "0px 0px 15px 2px #012233",
-									zIndex: 10,
-								}}
-							/> */}
 								<BlurHashedImage
 									src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/barrels.jpg?tr=q-50,w-1000,h-700'
 									hash='LNE3C%$zs8-;.ARjM{kC%ixtWBRj'
