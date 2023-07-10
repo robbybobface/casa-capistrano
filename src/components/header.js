@@ -439,7 +439,7 @@ const Header = () => {
 												<ControlledMenu
 													captureFocus={true}
 													align='center'
-													initialMounted={true}
+													// initialMounted={true}
 													aria-label='products menu'
 													menuClassName={
 														activePage === "home" ? (transparent ? "scroll" : "") : ""

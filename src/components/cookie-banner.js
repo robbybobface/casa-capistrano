@@ -130,12 +130,7 @@ const CookieBanner = () => {
 							startIcon={<CookieOutlinedIcon fontSize='small' sx={{ color: "white" }} />}
 							sx={{
 								width: "80%",
-								textTransform: "none",
-								color: "white",
-								fontFamily: "Gilroy-Bold, Cabin",
-								fontWeight: 600,
-								letterSpacing: "1.2px",
-								fontSize: { xs: "14px", md: "14px", lg: "16px" },
+								py: 1,
 								borderRadius: "0px",
 								border: "1px solid rgba( 1, 34, 51, 0.4 )",
 								background: "rgba( 1, 34, 51, 0.7 );",
@@ -145,9 +140,20 @@ const CookieBanner = () => {
 							onClick={() => {
 								setCookie("accept_cookies", "true", {
 									path: "/",
+									expires: new Date(Date.now() + 9999 * 365 * 24 * 60 * 60 * 1000),
 								});
 							}}>
-							Accept
+							<Typography
+								sx={{
+									textTransform: "none",
+									color: "white",
+									fontFamily: "Gilroy-Bold, Cabin",
+									fontWeight: 600,
+									letterSpacing: "1.2px",
+									fontSize: { xs: "14px", md: "14px", lg: "16px" },
+								}}>
+								Accept
+							</Typography>
 						</Button>
 					</Grid>
 					<Grid
@@ -162,12 +168,7 @@ const CookieBanner = () => {
 							color='primaryDarkerBeige'
 							sx={{
 								width: "80%",
-								textTransform: "none",
-								color: "primaryBlack.main",
-								fontFamily: "Gilroy-Bold,Cabin",
-								fontWeight: 600,
-								letterSpacing: "1.2px",
-								fontSize: { xs: "14px", md: "14px", lg: "16px" },
+								py: 1,
 								borderRadius: "0px",
 								border: "1px solid rgba(255, 253, 247, 0.1);",
 								background: "rgba(255, 253, 247, 0.5);",
@@ -177,7 +178,17 @@ const CookieBanner = () => {
 							onClick={() => {
 								setStateUserReject(true);
 							}}>
-							Reject
+							<Typography
+								sx={{
+									textTransform: "none",
+									color: "primaryBlack.main",
+									fontFamily: "Gilroy-Bold,Cabin",
+									fontWeight: 600,
+									letterSpacing: "1.2px",
+									fontSize: { xs: "14px", md: "14px", lg: "16px" },
+								}}>
+								Reject
+							</Typography>
 						</Button>
 					</Grid>
 				</Grid>

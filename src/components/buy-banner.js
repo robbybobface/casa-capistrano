@@ -12,13 +12,13 @@ const BuyNowBanner = () => {
 			<BlurHashedImage
 				src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/background.jpg?tr=q-70'
 				hash='L.Ko4RRjM{t7~qofkCof%2s.ayof'
-				alt='Buy Now Banner Background Art'
+				alt='Buy Now Banner Background Art of a cactus and agave plant'
 				sx={{
 					objectFit: "cover",
 					objectPosition: "50% 65%",
 					filter: "brightness(50%) contrast(110%) saturate(110%)",
 				}}
-				height='180px'
+				height={{ xs: "180px", lg: "150px" }}
 				width='100%'
 				mb={-1}
 			/>

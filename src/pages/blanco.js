@@ -3,12 +3,12 @@ import React, { useEffect, useRef } from "react";
 import FadeIn from "react-fade-in";
 
 import BuyNowBanner from "../components/buy-banner";
-import { ReactComponent as BlancoLogoAlt } from "../media/blanco/blanco-tequila.svg";
+import BlancoTequila from "../media/blanco/blanco-tequila";
 import BlancoColor from "../media/blanco/blanco-color";
 import BlancoAroma from "../media/blanco/blanco-aroma";
 import BlancoTaste from "../media/blanco/blanco-taste";
 import BlancoFinish from "../media/blanco/blanco-finish";
-import { ReactComponent as BlancoAwards } from "../media/blanco/blanco-awards.svg";
+import BlancoAwards from "../media/blanco/blanco-awards";
 import BlurHashedImage from "../components/BlurHashedImage";
 import OtherTequilas from "../components/OtherTequilas";
 import { Helmet } from "react-helmet";
@@ -30,7 +30,7 @@ const Blanco = () => {
 					aria-label='Blanco Tequila Page'
 					sx={{
 						display: "flex",
-						minHeight: "90vh",
+						// minHeight: "90vh",
 						flexDirection: "column",
 						justifyContent: "center",
 						alignItems: "center",
@@ -171,6 +171,7 @@ const Blanco = () => {
 										lg: "63vh",
 										xl: "63vh",
 									}}
+									maxHeight={"700px"}
 								/>
 							</Grid>
 							<Grid
@@ -374,6 +375,7 @@ const Blanco = () => {
 						<Box component='section' role='region' aria-label='Blanco Tequila Details'>
 							<Box
 								sx={{
+									scrollMarginTop: "100px",
 									display: "flex",
 									justifyContent: "center",
 									alignItems: "flex-end",
@@ -389,7 +391,7 @@ const Blanco = () => {
 									mx: "auto",
 								}}
 								ref={ref}>
-								<BlancoLogoAlt aria-label='Blanco Tequila Logo Variant' />
+								<BlancoTequila aria-label='Blanco Tequila Logo Variant' />
 							</Box>
 							<Divider
 								sx={{
@@ -432,10 +434,11 @@ const Blanco = () => {
 												md: 10,
 											},
 										}}>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-										nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-										Duis aute irure dolor in reprehenderit in voluptater.
+										Our Blanco Tequila is a exceptional spirit that captures the essence of the of
+										Mexico's finest agave. Crafted with the utmost care and expertise, our Blanco
+										tequila embodies the perfect balance of smoothness and virbrant flavor. Whether
+										sipped neat or mixed in a cocktail, our Blanco Tequila promises an unforgettable
+										experience.
 									</Typography>
 								</Grid>
 								<Grid
@@ -565,9 +568,7 @@ const Blanco = () => {
 											backgroundColor: "white",
 											boxShadow: "0px 0px 10px 0.5px #194792DD;",
 											minHeight: "150px",
-
-											minWidth: "70%",
-											maxWidth: "70%",
+											width: "70%",
 											"&:hover": {
 												boxShadow: "0px 0px 10px 2px #194792;",
 											},
@@ -610,8 +611,7 @@ const Blanco = () => {
 											backgroundColor: "white",
 											boxShadow: "0px 0px 10px 0.5px #194792DD;",
 											minHeight: "150px",
-											minWidth: "70%",
-											maxWidth: "70%",
+											width: "70%",
 											"&:hover": {
 												boxShadow: "0px 0px 10px 2px #194792;",
 											},
@@ -654,8 +654,7 @@ const Blanco = () => {
 											backgroundColor: "white",
 											boxShadow: "0px 0px 10px 0.5px #1947929e;",
 											minHeight: "150px",
-											minWidth: "70%",
-											maxWidth: "70%",
+											width: "70%",
 											"&:hover": {
 												boxShadow: "0px 0px 10px 2px #194792;",
 											},
@@ -698,8 +697,7 @@ const Blanco = () => {
 											backgroundColor: "white",
 											boxShadow: "0px 0px 10px 0.5px #1947929e;",
 											minHeight: "150px",
-											minWidth: "70%",
-											maxWidth: "70%",
+											width: "70%",
 											"&:hover": {
 												boxShadow: "0px 0px 10px 2px #194792;",
 											},
@@ -761,15 +759,11 @@ const Blanco = () => {
 									mx: "auto",
 								}}
 							/>
-							<Grid
-								container
-								spacing={0}
-								rowGap={4}
-								mb={4}
-								sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+							<Grid container spacing={0} rowGap={4} mb={4}>
 								<Grid item xs={6} sm={5.25} md={3} sx={{ display: "flex", justifyContent: "center" }}>
 									<Card
 										sx={{
+											flexGrow: 1,
 											borderRadius: "0px",
 											boxShadow: "0px 0px 10px 0.5px #1947929e;",
 											backgroundColor: "white",
@@ -792,7 +786,7 @@ const Blanco = () => {
 										/>
 										<CardContent
 											sx={{
-												px: { xs: 0, md: 2 },
+												px: { xs: 0, md: 0 },
 												display: "flex",
 												justifyContent: "center",
 												flexDirection: "column",
@@ -832,6 +826,7 @@ const Blanco = () => {
 								<Grid item xs={6} sm={5.25} md={3} sx={{ display: "flex", justifyContent: "center" }}>
 									<Card
 										sx={{
+											flexGrow: 1,
 											borderRadius: "0px",
 											boxShadow: "0px 0px 10px 0.5px #1947929e;",
 											backgroundColor: "white",

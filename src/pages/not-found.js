@@ -23,7 +23,7 @@ const NotFound = () => {
 				height='100vh'
 				width='100%'
 				sx={{ objectFit: "cover" }}
-				mt={{
+				offsetTop={{
 					xs: -7,
 					sm: -8,
 					md: -9.45,

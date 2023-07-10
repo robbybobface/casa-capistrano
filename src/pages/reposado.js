@@ -4,12 +4,12 @@ import FadeIn from "react-fade-in";
 
 import BuyNowBanner from "../components/buy-banner";
 
-import { ReactComponent as ReposadoLogoAlt } from "../media/reposado/reposado-tequila.svg";
+import ReposadoTequila from "../media/reposado/reposado-tequila";
 import ReposadoColor from "../media/reposado/reposado-color";
 import ReposadoAroma from "../media/reposado/reposado-aroma";
 import ReposadoTaste from "../media/reposado/reposado-taste";
 import ReposadoFinish from "../media/reposado/reposado-finish";
-import { ReactComponent as ReposadoAwards } from "../media/reposado/reposado-awards.svg";
+import ReposadoAwards from "../media/reposado/reposado-awards";
 import BlurHashedImage from "../components/BlurHashedImage";
 import OtherTequilas from "../components/OtherTequilas";
 import { Helmet } from "react-helmet";
@@ -135,7 +135,7 @@ const Reposado = () => {
 										zIndex: 10,
 									}}
 									onClick={() => {
-										ref.current?.scrollIntoView({ behavior: "smooth" });
+										ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 									}}>
 									View Details
 								</Button>
@@ -165,6 +165,7 @@ const Reposado = () => {
 									}}
 									position='relative'
 									filter='brightness(75%)'
+									maxHeight={"700px"}
 								/>
 							</Grid>
 							<Grid
@@ -353,6 +354,7 @@ const Reposado = () => {
 						<Box component='section' role='region' aria-label='Reposado Tequila Details'>
 							<Box
 								sx={{
+									scrollMarginTop: "100px",
 									display: "flex",
 									justifyContent: "center",
 									alignItems: "flex-end",
@@ -368,7 +370,7 @@ const Reposado = () => {
 									mx: "auto",
 								}}
 								ref={ref}>
-								<ReposadoLogoAlt aria-label='Reposado Tequila Logo Variant' />
+								<ReposadoTequila aria-label='Reposado Tequila Logo Variant' />
 							</Box>
 							<Divider
 								sx={{
@@ -417,10 +419,11 @@ const Reposado = () => {
 												md: 10,
 											},
 										}}>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-										nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-										Duis aute irure dolor in reprehenderit in voluptater.
+										Our Reposado tequila is a true testament to the art of tequila craftmanship.
+										Carefully aged in oak barrels, our Reposado acquires remarkable depth in flavor
+										while retaining the essence of pure agave. Enjoy this extraordinary tequila neat
+										or elevate your favorite cocktail with its nuanced character. Our Reposado is
+										the embodiment of sophistication and pleasure.
 									</Typography>
 								</Grid>
 								<Grid
@@ -484,7 +487,7 @@ const Reposado = () => {
 												}}>
 												REFINEMENT:
 											</Typography>
-											{` Something (w.i.p)`}
+											{` Blended for consistency and balance`}
 										</Typography>
 										<Typography
 											aria-label="Reposado Tequila's Alcohol Content"
@@ -834,7 +837,7 @@ const Reposado = () => {
 												justifyContent: "center",
 												flexDirection: "column",
 												alignItems: "center",
-												px: { xs: 0, md: 2 },
+												px: { xs: 0, md: 0 },
 											}}>
 											<Typography
 												aria-label="Reposado Tequila's Sunset International Spirits Silver Award"

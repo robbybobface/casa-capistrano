@@ -21,3 +21,7 @@ p {
 	user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+/* * {
+	scroll-margin-top: 100px;
+} */

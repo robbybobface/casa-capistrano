@@ -34,12 +34,13 @@ const Products = () => {
 					<FadeIn>
 						<Box component='section' role='region' aria-label='Casa Capistrano Tequila - Our Tequilas'>
 							<Box
-								focusable
 								sx={{
+									position: "relative",
 									display: "flex",
 									justifyContent: "center",
 									width: {
-										xs: "90%",
+										xs: "100%",
+										sm: "90%",
 										md: "60%",
 									},
 									my: 2,
@@ -50,9 +51,10 @@ const Products = () => {
 									hash='LES6D8D$?b%N?vWBWAtR_N%gIUM{'
 									alt='Casa Capistrano Tequilas Graphic'
 									edges={true}
-									width={{ xs: "90%", md: "100%" }}
-									height={{ xs: "150px", sm: "250px", md: "245px", lg: "275px" }}
+									width={{ xs: "320px", sm: "90%", md: "100%" }}
+									height={{ xs: "130px", sm: "250px", md: "245px", lg: "275px" }}
 									display='flex'
+									bottom={0}
 									justifyContent='center'
 									ignoreHeight={true}
 									mx='auto'
@@ -101,6 +103,7 @@ const Products = () => {
 								<Box component='article' role='article' aria-label='Blanco Tequila'>
 									<Card
 										sx={{
+											position: "relative",
 											borderRadius: "0px",
 											boxShadow: "0px 0px 15px 2px #acacac;",
 											backgroundColor: "white",
@@ -115,7 +118,7 @@ const Products = () => {
 										<BlurHashedImage
 											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg?tr=q-30'
 											hash='LCFiJb~p?csq00D$4T4oInEL-pt7'
-											alt='Blanco tequila setup'
+											alt='Blanco tequila in a margarita glass with a lime wedge and salted rim'
 											cardMedia={true}
 											height='450px'
 										/>
@@ -226,7 +229,7 @@ const Products = () => {
 										<BlurHashedImage
 											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg?tr=q-30'
 											hash='L9DSK|K600r?00#+=rELQRkC_N%M'
-											alt='Reposado tequila setup'
+											alt='Reposado tequila in a shot glass on a wooden table with lime wedges and salt'
 											cardMedia={true}
 											height='450px'
 										/>
@@ -318,6 +321,7 @@ const Products = () => {
 								<Box component='article' role='article' aria-label='Cristalino Tequila'>
 									<Card
 										sx={{
+											position: "relative",
 											borderRadius: "0px",
 											boxShadow: "0px 0px 15px 2px #acacac;",
 											backgroundColor: "white",
@@ -332,7 +336,7 @@ const Products = () => {
 										<BlurHashedImage
 											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg?tr=q-30'
 											hash='LHD+;:_N%gjYE2xYD%M{00D%IAD%'
-											alt='Cristalino tequila setup'
+											alt='Cristalino tequila in a shot glass on a wooden table with lime wedges and salt'
 											height='450px'
 											cardMedia={true}
 										/>

@@ -3,12 +3,12 @@ import React, { useEffect, useRef } from "react";
 import FadeIn from "react-fade-in";
 
 import BuyNowBanner from "../components/buy-banner";
-import { ReactComponent as CristalinoLogoAlt } from "../media/cristalino/cristalino-tequila.svg";
+import CristalinoTequila from "../media/cristalino/cristalino-tequila";
 import CristalinoColor from "../media/cristalino/cristalino-color";
 import CristalinoAroma from "../media/cristalino/cristalino-aroma";
 import CristalinoTaste from "../media/cristalino/cristalino-taste";
 import CristalinoFinish from "../media/cristalino/cristalino-finish";
-import { ReactComponent as CristalinoAwards } from "../media/cristalino/cristalino-awards.svg";
+import CristalinoAwards from "../media/cristalino/cristalino-awards";
 import BlurHashedImage from "../components/BlurHashedImage";
 import OtherTequilas from "../components/OtherTequilas";
 import { Helmet } from "react-helmet";
@@ -161,6 +161,7 @@ const Cristalino = () => {
 										filter: "brightness(75%);",
 									}}
 									height={{ xs: "45vh", sm: "50vh", md: "65vh", lg: "63vh", xl: "63vh" }}
+									maxHeight={"700px"}
 								/>
 							</Grid>
 							<Grid
@@ -350,6 +351,7 @@ const Cristalino = () => {
 						<Box component='section' role='region' aria-label='Cristalino Tequila Details'>
 							<Box
 								sx={{
+									scrollMarginTop: "100px",
 									display: "flex",
 									justifyContent: "center",
 									alignItems: "flex-end",
@@ -365,7 +367,7 @@ const Cristalino = () => {
 									mx: "auto",
 								}}
 								ref={ref}>
-								<CristalinoLogoAlt aria-label='Cristalino Tequila Logo Variant' />
+								<CristalinoTequila aria-label='Cristalino Tequila Logo Variant' />
 							</Box>
 							<Divider
 								sx={{
@@ -408,10 +410,12 @@ const Cristalino = () => {
 												md: 10,
 											},
 										}}>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-										nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-										Duis aute irure dolor in reprehenderit in voluptater.
+										Our Cristalino tequila is the pinnacle of refinement and innovation in the world
+										of tequila. Our exceptional Cristalino captures the essence of the finest aged
+										spirits while offering a unique twist of crystal clarity. Our Cristalino is a
+										spirit that demands to be savored and enjoyed neat to fully appreciate its
+										intricate nuances or elevate your favorite cockatails with its exquisite
+										character.
 									</Typography>
 								</Grid>
 								<Grid
@@ -840,7 +844,7 @@ const Cristalino = () => {
 												justifyContent: "center",
 												flexDirection: "column",
 												alignItems: "center",
-												px: { xs: 0, lg: 2 },
+												px: { xs: 0, lg: 0 },
 											}}>
 											<Typography
 												aria-label="Cristalino Tequila's 2021 Sunset International Spirits Award"

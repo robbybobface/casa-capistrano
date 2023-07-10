@@ -68,10 +68,10 @@ function OtherTequilas({ current }) {
 										<BlurHashedImage
 											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg?tr=q-50'
 											hash='LCFiJb~p?csq00D$4T4oInEL-pt7'
-											alt='Blanco tequila'
+											alt='Blanco tequila in a margarita glass with a lime wedge and salted rim'
 											cardMedia={true}
 											height='225px'
-											sx={{ zIndex: 1, objectPosition: "50% 80%" }}
+											sx={{ zIndex: 1, objectPosition: "50% 80%", filter: "brightness(0.8)" }}
 										/>
 									</Box>
 									<CardContent
@@ -129,10 +129,10 @@ function OtherTequilas({ current }) {
 										<BlurHashedImage
 											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg?tr=q-50'
 											hash='L9DSK|K600r?00#+=rELQRkC_N%M'
-											alt='Reposado tequila'
+											alt='Reposado tequila in a shot glass on a wooden table with lime wedges and salt'
 											cardMedia={true}
 											height='225px'
-											sx={{ zIndex: 1 }}
+											sx={{ zIndex: 1, filter: "brightness(0.8)" }}
 										/>
 									</Box>
 									<CardContent
@@ -189,10 +189,10 @@ function OtherTequilas({ current }) {
 										<BlurHashedImage
 											src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg?tr=q-50'
 											hash='LHD+;:_N%gjYE2xYD%M{00D%IAD%'
-											alt='Cristalino tequila'
+											alt='Cristalino tequila in a shot glass on a wooden table with lime wedges and salt'
 											height='225px'
 											cardMedia={true}
-											sx={{ zIndex: 1 }}
+											sx={{ zIndex: 1, filter: "brightness(0.75)" }}
 										/>
 									</Box>
 									<CardContent

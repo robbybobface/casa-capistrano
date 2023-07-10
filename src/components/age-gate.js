@@ -64,7 +64,7 @@ const AgeGate = () => {
 						justifyContent: "center",
 						alignItems: "center",
 						px: 2,
-						py: { xs: 0, md: 2 },
+						py: { xs: 1, sm: 2, md: 2 },
 					}}>
 					<FadeIn>
 						<Box
@@ -73,10 +73,13 @@ const AgeGate = () => {
 								justifyContent: "center",
 								alignItems: "center",
 								mx: "auto",
+								mt: 4,
+								mb: { xs: 0, sm: 2 },
 								width: {
-									xs: "95%",
+									xs: "100%",
 									md: "85%",
 								},
+								minHeight: 200,
 							}}>
 							<BlurHashedImage
 								src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/logo-alt.png?tr=q-60'
@@ -84,11 +87,12 @@ const AgeGate = () => {
 								alt='Casa Capistrano Welcome Graphic'
 								edges={true}
 								width={{ xs: "90%", md: "100%" }}
-								height={{ xs: "150px", sm: "250px", md: "245px", lg: "275px" }}
+								height={{ xs: "180px", sm: "220px", md: "225px", lg: "230px" }}
 								display='flex'
 								justifyContent='center'
+								bottom={0}
 								ignoreHeight={true}
-								mx='auto'
+								// mx='auto'
 							/>
 						</Box>
 						<Typography

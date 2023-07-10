@@ -58,6 +58,7 @@ const About = () => {
 									alt='Barrels at Casa Capistrano Tequila Distillery'
 									zIndex={10}
 									width='100%'
+									height={350}
 									sx={{ objectFit: "cover" }}
 									boxShadow='0px 0px 15px 2px #012233'
 								/>

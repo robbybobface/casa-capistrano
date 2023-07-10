@@ -41,19 +41,20 @@ const Home = () => {
 					<BlurHashedImage
 						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/home-art-alt.jpg?tr=q-80'
 						hash='L9C=;v%M00MdEl-o$%NG00w[~pbw'
-						alt='home hero image'
+						alt='tequila shot on a table with a lime and salt landing page image'
 						height='100vh'
 						width='100%'
-						mt={{
+						offsetTop={{
 							xs: -7,
 							sm: -8,
 							md: -9.45,
 							lg: -9.45,
 							objectFit: "cover",
 						}}
-						minHeight={{ xs: "600px", md: "800px", lg: "900px" }}
+						minHeight={{ xs: "600px", md: "650px" }}
 						position='relative'
 						filter='brightness(65%);'
+						banner={true}
 					/>
 					<Box
 						sx={{
@@ -77,14 +78,15 @@ const Home = () => {
 								fontSize: {
 									xs: "55px",
 									sm: "75px",
-									md: "100px",
-									lg: "120px",
+									md: "80px",
+									lg: "95px",
+									xl: "110px",
 								},
 								width: {
 									xs: "100%",
 									sm: "90%",
 									md: "90%",
-									lg: "80%",
+									lg: "90%",
 								},
 							}}>
 							Auténico Tequila
@@ -100,15 +102,16 @@ const Home = () => {
 								fontSize: {
 									xs: "40px",
 									sm: "40px",
-									md: "65px",
-									lg: "70px",
+									md: "45px",
+									lg: "55px",
+									xl: "60px",
 								},
 								width: {
 									xs: "90%",
 									sm: "60%",
 									lg: "50%",
 								},
-								letterSpacing: { xs: "3px", sm: "4px", md: "5px", lg: "8px" },
+								letterSpacing: { xs: "3px", sm: "4px", md: "5px", lg: "6px" },
 							}}>
 							Where every bottle has its own story to tell...
 						</Typography>
@@ -149,7 +152,8 @@ const Home = () => {
 											xs: "22px",
 											sm: "24px",
 											md: "26px",
-											lg: "30px",
+											lg: "28px",
+											xl: "30px",
 										},
 										fontWeight: 600,
 										fontStyle: "italic",
@@ -191,7 +195,8 @@ const Home = () => {
 										display: "flex",
 										justifyContent: "center",
 										width: {
-											xs: "90%",
+											xs: "100%",
+											sm: "90%",
 											md: "75%",
 										},
 									}}>
@@ -201,7 +206,7 @@ const Home = () => {
 										alt='Casa Capistrano Brand Logo'
 										edges={true}
 										width={{ xs: "90%", md: "100%" }}
-										height={{ xs: "150px", sm: "250px", md: "245px", lg: "250px" }}
+										height={{ xs: "120px", sm: "200px", md: "245px", lg: "250px" }}
 										display='flex'
 										justifyContent='center'
 										ignoreHeight={true}
@@ -326,7 +331,7 @@ const Home = () => {
 													<BlurHashedImage
 														src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/blanco-setup.jpg?tr=q-20'
 														hash='LCFiJb~p?csq00D$4T4oInEL-pt7'
-														alt='blanco tequila'
+														alt='Blanco tequila in a margarita glass with a lime wedge and salted rim'
 														cardMedia={true}
 														height='500px'
 														sx={{ zIndex: 1 }}
@@ -390,7 +395,7 @@ const Home = () => {
 													<BlurHashedImage
 														src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/reposado-setup.jpg?tr=q-30'
 														hash='L9DSK|K600r?00#+=rELQRkC_N%M'
-														alt='reposado tequila'
+														alt='Reposado tequila in a shot glass on a wooden table with lime wedges and salt'
 														cardMedia={true}
 														height='500px'
 														sx={{ zIndex: 1 }}
@@ -453,7 +458,7 @@ const Home = () => {
 													<BlurHashedImage
 														src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/cristalino-setup.jpg?tr=q-30'
 														hash='LHD+;:_N%gjYE2xYD%M{00D%IAD%'
-														alt='cristalino tequila'
+														alt='Cristalino tequila in a shot glass on a wooden table with lime wedges and salt'
 														height='500px'
 														cardMedia={true}
 														sx={{ zIndex: 1 }}
