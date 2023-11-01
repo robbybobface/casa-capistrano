@@ -39,7 +39,7 @@ const Home = () => {
 				<SkipToMain />
 				<Box component='section' aria-label='hero landing page'>
 					<BlurHashedImage
-						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/home-art-alt.jpg?tr=q-80'
+						src='https://ik.imagekit.io/5ywj5edvn/CasaCapistrano/home-art-alt.jpg'
 						hash='L9C=;v%M00MdEl-o$%NG00w[~pbw'
 						alt='tequila shot on a table with a lime and salt landing page image'
 						height='100vh'
@@ -49,7 +49,6 @@ const Home = () => {
 							sm: -8,
 							md: -9.45,
 							lg: -9.45,
-							objectFit: "cover",
 						}}
 						minHeight={{ xs: "600px", md: "650px" }}
 						position='relative'
@@ -89,7 +88,7 @@ const Home = () => {
 									lg: "90%",
 								},
 							}}>
-							Auténico Tequila
+							Auténtico Tequila
 						</Typography>
 						<Typography
 							component='h2'

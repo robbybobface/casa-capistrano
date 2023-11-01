@@ -202,7 +202,7 @@ const Reposado = () => {
 								<Button
 									role='button'
 									aria-label='Order'
-									disabled
+									// disabled
 									variant='outlined'
 									color='primaryBlack'
 									sx={{
@@ -227,8 +227,11 @@ const Reposado = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {}}>
-									Coming Soon
+									onClick={() => {
+										window.location.href =
+											"https://ishopliquor.com/products/casa-capistrano-reposado";
+									}}>
+									Buy Now
 								</Button>
 							</Grid>
 							<Grid
@@ -263,7 +266,7 @@ const Reposado = () => {
 								<Button
 									role='button'
 									aria-label='Order'
-									disabled
+									// disabled
 									variant='outlined'
 									color='primaryBlack'
 									sx={{
@@ -288,8 +291,11 @@ const Reposado = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {}}>
-									Coming Soon
+									onClick={() => {
+										window.location.href =
+											"https://ishopliquor.com/products/casa-capistrano-reposado";
+									}}>
+									Buy Now
 								</Button>
 							</Grid>
 							<Grid

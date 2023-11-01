@@ -213,7 +213,7 @@ const Blanco = () => {
 								<Button
 									role='button'
 									aria-label='Order'
-									disabled
+									// disabled
 									variant='outlined'
 									color='primaryBlack'
 									sx={{
@@ -238,8 +238,11 @@ const Blanco = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {}}>
-									Coming Soon
+									onClick={() => {
+										window.location.href =
+											"https://ishopliquor.com/products/casa-capistrano-blanco";
+									}}>
+									Buy Now
 								</Button>
 							</Grid>
 							<Grid
@@ -279,7 +282,7 @@ const Blanco = () => {
 								<Button
 									role='button'
 									aria-label='Order'
-									disabled
+									// disabled
 									variant='outlined'
 									color='primaryBlack'
 									sx={{
@@ -304,8 +307,11 @@ const Blanco = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {}}>
-									Coming Soon
+									onClick={() => {
+										window.location.href =
+											"https://ishopliquor.com/products/casa-capistrano-blanco";
+									}}>
+									Buy Now
 								</Button>
 							</Grid>
 							<Grid

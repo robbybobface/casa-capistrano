@@ -198,7 +198,7 @@ const Cristalino = () => {
 								<Button
 									role='button'
 									aria-label='Order'
-									disabled
+									// disabled
 									variant='outlined'
 									color='primaryBlack'
 									sx={{
@@ -223,8 +223,11 @@ const Cristalino = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {}}>
-									Coming Soon
+									onClick={() => {
+										window.location.href =
+											"https://ishopliquor.com/products/casa-capistrano-anejo-cristalino";
+									}}>
+									Buy Now
 								</Button>
 							</Grid>
 							<Grid
@@ -259,7 +262,7 @@ const Cristalino = () => {
 								<Button
 									role='button'
 									aria-label='Order'
-									disabled
+									// disabled
 									variant='outlined'
 									color='primaryBlack'
 									sx={{
@@ -284,8 +287,11 @@ const Cristalino = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {}}>
-									Coming Soon
+									onClick={() => {
+										window.location.href =
+											"https://ishopliquor.com/products/casa-capistrano-anejo-cristalino";
+									}}>
+									Buy Now
 								</Button>
 							</Grid>
 							<Grid

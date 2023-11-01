@@ -13,6 +13,7 @@ function BlurHashedImage({
 	edges,
 	ignoreHeight,
 	banner,
+	offsetTop,
 	...props
 }) {
 	const [imageLoaded, setImageLoaded] = useState(false);
@@ -32,7 +33,7 @@ function BlurHashedImage({
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
-				marginTop: props.offsetTop ?? 0,
+				marginTop: offsetTop ?? 0,
 			}}>
 			{!imageLoaded && (
 				<Box
@@ -87,6 +88,7 @@ function BlurHashedImage({
 					width={props.width ?? "100%"}
 					mt={mt}
 					sx={{
+						objectFit: "cover",
 						position: "absolute",
 						top: 0,
 						left: 0,

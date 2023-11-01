@@ -71,7 +71,7 @@ const BuyNowBanner = () => {
 						<Button
 							role='link'
 							aria-label='Buy Now'
-							disabled
+							// disabled
 							variant='outlined'
 							color='primaryBlack'
 							sx={{
@@ -101,8 +101,10 @@ const BuyNowBanner = () => {
 								zIndex: 20,
 								transition: "all 200ms ease-in",
 							}}
-							onClick={() => {}}>
-							Coming Soon
+							onClick={() => {
+								window.location.href = "https://ishopliquor.com/search?q=casa%20capistrano*";
+							}}>
+							Buy Now
 						</Button>
 					</Grid>
 				</Grid>
