@@ -12,8 +12,10 @@ import BlancoAwards from "../media/blanco/blanco-awards";
 import BlurHashedImage from "../components/BlurHashedImage";
 import OtherTequilas from "../components/OtherTequilas";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const Blanco = () => {
+	const navigate = useNavigate();
 	const ref = useRef(null);
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -238,10 +240,7 @@ const Blanco = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										window.location.href =
-											"https://ishopliquor.com/products/casa-capistrano-blanco";
-									}}>
+									onClick={() => navigate("/buy-now")}>
 									Buy Now
 								</Button>
 							</Grid>
@@ -307,10 +306,7 @@ const Blanco = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										window.location.href =
-											"https://ishopliquor.com/products/casa-capistrano-blanco";
-									}}>
+									onClick={() => navigate("/buy-now")}>
 									Buy Now
 								</Button>
 							</Grid>

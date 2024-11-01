@@ -12,8 +12,10 @@ import CristalinoAwards from "../media/cristalino/cristalino-awards";
 import BlurHashedImage from "../components/BlurHashedImage";
 import OtherTequilas from "../components/OtherTequilas";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const Cristalino = () => {
+	const navigate = useNavigate();
 	const ref = useRef(null);
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -223,10 +225,7 @@ const Cristalino = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										window.location.href =
-											"https://ishopliquor.com/products/casa-capistrano-anejo-cristalino";
-									}}>
+									onClick={() => navigate("/buy-now")}>
 									Buy Now
 								</Button>
 							</Grid>
@@ -287,10 +286,7 @@ const Cristalino = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										window.location.href =
-											"https://ishopliquor.com/products/casa-capistrano-anejo-cristalino";
-									}}>
+									onClick={() => navigate("/buy-now")}>
 									Buy Now
 								</Button>
 							</Grid>

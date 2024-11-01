@@ -1,22 +1,23 @@
 import "./App.css";
 import theme from "./theme";
 
-import React, { useEffect, useMemo, useState, lazy, Suspense } from "react";
+import React, { useMemo, useState, lazy, Suspense } from "react";
 import { useCookies } from "react-cookie";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { Box, ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { AppContext } from "./utils/AppContext";
-import { HashLoader } from "react-spinners";
 import CookieBanner from "./components/cookie-banner";
+import Loader from "./components/loader";
 
 const Home = lazy(() => import("./pages/home"));
 const About = lazy(() => import("./pages/about"));
 const Products = lazy(() => import("./pages/products"));
+const BuyNow = lazy(() => import("./pages/buy-now"));
 const Blanco = lazy(() => import("./pages/blanco"));
 const Reposado = lazy(() => import("./pages/reposado"));
 const Cristalino = lazy(() => import("./pages/cristalino"));
@@ -33,23 +34,8 @@ const Disclaimer = lazy(() => import("./pages/disclaimer"));
 const Imprint = lazy(() => import("./pages/imprint"));
 const NotFound = lazy(() => import("./pages/not-found"));
 
-const Loader = ({ index }) => {
-	return (
-		<Box
-			sx={{
-				minHeight: { xs: "calc(100vh - 60px)", sm: "calc(100vh - 70px)", lg: "calc(100vh - 75px)" },
-				display: "flex",
-				justifyContent: "center",
-				alignItems: "center",
-				backgroundColor: "#fffdf7",
-			}}>
-			<HashLoader color='#6c0d0f' loading={true} size={100} aria-busy aria-label='Page is Loading' />
-		</Box>
-	);
-};
-
 function App() {
-	const [cookies, setCookie] = useCookies(["age_verified", "accept_cookies"]);
+	const [cookies] = useCookies(["age_verified", "accept_cookies"]);
 	const [userReject, setUserReject] = useState(null);
 
 	const providerValue = useMemo(
@@ -95,6 +81,15 @@ function App() {
 									element={
 										<Suspense fallback={<Loader />}>
 											<Products />
+										</Suspense>
+									}
+								/>
+								<Route
+									exact={true}
+									path='/buy-now'
+									element={
+										<Suspense fallback={<Loader />}>
+											<BuyNow />
 										</Suspense>
 									}
 								/>

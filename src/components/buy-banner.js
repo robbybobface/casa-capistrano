@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import BlurHashedImage from "./BlurHashedImage";
+import { useNavigate } from "react-router-dom";
 
 const BuyNowBanner = () => {
+	const navigate = useNavigate();
 	return (
 		<Box
 			component='section'
@@ -101,9 +103,7 @@ const BuyNowBanner = () => {
 								zIndex: 20,
 								transition: "all 200ms ease-in",
 							}}
-							onClick={() => {
-								window.location.href = "https://ishopliquor.com/search?q=casa%20capistrano*";
-							}}>
+							onClick={() => navigate("/buy-now")}>
 							Buy Now
 						</Button>
 					</Grid>

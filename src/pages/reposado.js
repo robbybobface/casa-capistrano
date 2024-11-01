@@ -13,8 +13,10 @@ import ReposadoAwards from "../media/reposado/reposado-awards";
 import BlurHashedImage from "../components/BlurHashedImage";
 import OtherTequilas from "../components/OtherTequilas";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
 
 const Reposado = () => {
+	const navigate = useNavigate();
 	const ref = useRef(null);
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -227,10 +229,7 @@ const Reposado = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										window.location.href =
-											"https://ishopliquor.com/products/casa-capistrano-reposado";
-									}}>
+									onClick={() => navigate("/buy-now")}>
 									Buy Now
 								</Button>
 							</Grid>
@@ -291,10 +290,7 @@ const Reposado = () => {
 											xs: 3.5,
 										},
 									}}
-									onClick={() => {
-										window.location.href =
-											"https://ishopliquor.com/products/casa-capistrano-reposado";
-									}}>
+									onClick={() => navigate("/buy-now")}>
 									Buy Now
 								</Button>
 							</Grid>

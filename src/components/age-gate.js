@@ -39,7 +39,8 @@ const AgeGate = () => {
 				aria-label='Casa Capistrano Age Gate Screen'
 				sx={{
 					position: "absolute",
-					top: { xs: "15%", lg: "20%" },
+					top: 0,
+					height: "100vh",
 					width: "100%",
 					zIndex: 9999,
 					display: "flex",
@@ -51,10 +52,6 @@ const AgeGate = () => {
 					elevation={3}
 					sx={{
 						backgroundColor: "white",
-						height: {
-							xs: "52%",
-							md: "60%",
-						},
 						minHeight: "525px",
 						width: "80%",
 						maxWidth: "500px",
